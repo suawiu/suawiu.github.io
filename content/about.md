@@ -6,12 +6,13 @@ type: misc
 jobTitle: Undergraduate Student | Physics
 name: Seungmin Cha
 bio: true
+icon: ""
 ---
 
 ### 📚 Education
 
 * **Yonsei University, Seoul, South Korea (Mar 2022 - )**
-    * **Dept. of Physics**
+	* Dept. of Physics
 
 ---
 
