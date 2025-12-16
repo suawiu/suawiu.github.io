@@ -3,14 +3,37 @@
 type: misc
 
 # change these
-jobTitle: Blogger
-name: John Doe
+jobTitle: Undergraduate Student | Physics
+name: Seungmin Cha
 bio: true
-icon: ":coffee:"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id erat enim. Ut cursus magna sed luctus auctor. Sed eu augue dignissim, lobortis ipsum eu, dictum nisi. [Integer varius](https://lipsum.com) ex maximus quam lobortis accumsan. Morbi mollis vulputate metus, aliquam feugiat arcu porta a. Quisque id justo ultricies, lacinia elit quis, pulvinar odio. Fusce feugiat at velit vitae lobortis. Nulla fringilla metus et sem mattis posuere.
+### 📚 Education
 
-Nulla pellentesque quam sit amet est posuere, tincidunt auctor ligula bibendum. Donec dapibus lacinia nibh, convallis ultrices enim laoreet et. Duis auctor, lectus nec vehicula suscipit, sapien erat pellentesque augue, pulvinar tempus sapien leo sit amet erat. Proin porta, mauris vitae aliquet consectetur, erat eros maximus turpis, at suscipit nibh urna id leo. Nunc commodo sed diam ut aliquet. Duis eros mi, ullamcorper sit amet ex id, aliquet dignissim libero. Fusce at turpis eget nisl feugiat cursus eget vitae elit. Integer auctor enim vel orci fringilla facilisis. Praesent ac euismod tellus.
+* **Yonsei University, Seoul, South Korea (Mar 2022 - )**
+    * **Dept. of Physics**
 
+---
+
+### 🔬 Research Interests
+
+* **Quantum Computing:** Superconducting Qubits, Circuit Quantum Electrodynamics (cQED), Quantum Error Correction
+* **Condensed Matter Physics:** Low-temperature Systems
+* **Data Analysis:** Financial Time Series Analysis, Statistical Modeling
+
+---
+
+### 🏆 Honors and Awards
+
+* **Minister of Science and ICT Award (미래창조과학부 장관상)**, Republic of Korea
+* **KC Scholarship Foundation**, Scholarship for Outstanding STEM Talent
+* **5th Place**, DB GAPS Investment Competition
+
+---
+
+### 📝 Statement
+
+This blog serves as a personal research notebook dedicated to documenting my **knowledge and experiences in physics and other interesting fields.** I aim to systematically organize my academic growth and share insights with colleagues in both the academic and industrial fields.
+
+---
 ![About image](blog1/photo1.jpeg)
