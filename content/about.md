@@ -9,14 +9,14 @@ bio: true
 icon: ""
 ---
 
-### 📚 Education
+### Education
 
 * **Yonsei University, Seoul, South Korea (Mar 2022 - )**
 	* Dept. of Physics
 
 ---
 
-### 🔬 Research Interests
+### Research Interests
 
 * **Quantum Computing:** Superconducting Qubits, Circuit Quantum Electrodynamics (cQED), Quantum Error Correction
 * **Condensed Matter Physics:** Low-temperature Systems
@@ -24,7 +24,7 @@ icon: ""
 
 ---
 
-### 🏆 Honors and Awards
+### Honors and Awards
 
 * **Minister of Science and ICT Award (미래창조과학부 장관상)**, Republic of Korea
 * **KC Scholarship Foundation**, Scholarship for Outstanding STEM Talent
@@ -32,9 +32,8 @@ icon: ""
 
 ---
 
-### 📝 Statement
+### Statement
 
 This blog serves as a personal research notebook dedicated to documenting my **knowledge and experiences in physics and other interesting fields.** I aim to systematically organize my academic growth and share insights with colleagues in both the academic and industrial fields.
 
 ---
-![About image](blog1/photo1.jpeg)
