@@ -6,7 +6,7 @@ author:
   name: 'Seungmin Cha'
   image: images/photo.jpeg
   greeting: 'Yonsei University | Physics'
-  icon: ':wave:'
+  #icon: ':wave:'
 
 ############################
 ## Links

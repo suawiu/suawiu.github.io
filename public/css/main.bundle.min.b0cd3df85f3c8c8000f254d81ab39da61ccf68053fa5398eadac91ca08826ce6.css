@@ -109,4 +109,4 @@
 }@property --tw-scale-z{syntax: "*";
   inherits: false;
   initial-value: 1;
-}
+}body{background-color:#fff!important;color:#000!important}.dark body{background-color:#000!important;color:#fff!important}p,span,div,h1,h2,h3,h4,h5,h6,strong,em,li{color:inherit!important}ul,ol,blockquote,a{color:inherit!important}svg{fill:currentColor!important}#theme-toggle-dark-icon,#theme-toggle-light-icon,#theme-toggle-dark-icon svg,#theme-toggle-light-icon svg{color:#000!important;fill:#000!important}.dark #theme-toggle-dark-icon,.dark #theme-toggle-light-icon,.dark #theme-toggle-dark-icon svg,.dark #theme-toggle-light-icon svg{color:#fff!important;fill:#fff!important}
