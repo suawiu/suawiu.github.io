@@ -19,10 +19,9 @@
   <meta name="description" content="{{ . }}" />
 {{ end }}
 
-
 {{/* CSS bundle */}}
 {{ $assets := newScratch }}
-{{ $mainCSS :=resources.Get "css/compiled/main.css" }}
+{{ $mainCSS := resources.Get "css/compiled/main.css" }}
 {{ $assets.Add "css" (slice $mainCSS) }}
 {{ $customCSS := resources.Get "css/custom.css" }}
 {{ if $customCSS }}
@@ -43,18 +42,14 @@
 {{ $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint "sha256" }}
 <script defer src="{{ $bundleJS.RelPermalink }}" integrity="{{ $bundleJS.Data.Integrity }}"></script>
 
-{{/* Load Latex JS if needed */}}
-{{ if .Param "math" }}
-    {{ partialCached "math.html" . }}
-{{ end }}
-
-{{/* Favicon */}}
-{{ $icon := resources.GetMatch "icon.*" }}
-{{ with $icon }}
+{{/* Favicon - 고해상도 대응 (변수명 $favicon으로 통일) */}}
+{{ $favicon := resources.Get "favicon.png" }}
+{{ with $favicon }}
   {{ $iconApple := .Resize "180x180" }}
-  {{ $icon := $icon.Resize "32x32" }}
+  {{ $icon32 := .Resize "32x32" }}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ $iconApple.RelPermalink }}" />
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ $icon.RelPermalink }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ $icon32.RelPermalink }}" />
+  <link rel="icon" type="image/png" href="{{ .RelPermalink }}" />
 {{ end }}
 
 {{/* OpenGraph & Twitter Cards */}}
@@ -62,7 +57,7 @@
 {{ template "_internal/twitter_cards.html" . }}
 
 <script>
-  // set theme here to avoid flicker
+  // 테마 초기 설정 (깜빡임 방지)
   if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
     document.documentElement.classList.add("dark");
   } else {

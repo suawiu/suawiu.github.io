@@ -1,44 +1,44 @@
-/* 1. 순수 배경색 및 글자색 강제 설정 (body에 적용) */
-body {
-    background-color: #ffffff !important; 
-    color: #000000 !important;            
-}
+/* 1. 배경 및 글자색 */
+body { background-color: #ffffff !important; color: #000000 !important; }
+.dark body { background-color: #000000 !important; color: #ffffff !important; }
+p, span, div, h1, h2, h3, h4, h5, h6, strong, em, li, ul, ol, blockquote, a { color: inherit !important; }
 
-/* 2. 다크 모드 배경색 및 글자색 강제 설정 */
-.dark body {
-    background-color: #000000 !important; 
-    color: #ffffff !important;            
-}
-
-/* 3. HTML 텍스트 요소 강제 상속 추가 (p, span, div, h1-h6 등) */
-p, span, div, h1, h2, h3, h4, h5, h6, strong, em, li {
-    color: inherit !important;
-}
-
-/* 4. 목록, 인용구, 링크 등의 색상을 본문 색상과 동일하게 강제 상속받도록 설정 */
-ul, ol, blockquote, a {
-    color: inherit !important; 
-}
-
-/* 5. SVG 아이콘 색상 강제 통일 (소셜/토글 아이콘) */
-svg {
+/* 2. 다크 모드 토글 버튼 색상 강제 고정 */
+#theme-toggle svg {
     fill: currentColor !important;
 }
-
-/* 13. 다크 모드 토글 버튼 (아이콘) 색상 강제 통일 */
-/* theme-toggle ID나 SVG 아이콘에 직접 currentColor를 강제합니다. */
-#theme-toggle-dark-icon, #theme-toggle-light-icon, #theme-toggle-dark-icon svg, #theme-toggle-light-icon svg {
-    color: #000000 !important; /* 라이트 모드 (배경 흰색)에서는 검정색 아이콘 */
-    fill: #000000 !important;
+#theme-toggle {
+    color: #000000 !important; /* 라이트 모드일 때 검정 */
+}
+.dark #theme-toggle {
+    color: #ffffff !important; /* 다크 모드일 때 흰색 */
 }
 
-/* 14. 다크 모드일 때 버튼 색상 강제 통일 */
-.dark #theme-toggle-dark-icon, .dark #theme-toggle-light-icon, .dark #theme-toggle-dark-icon svg, .dark #theme-toggle-light-icon svg {
-    color: #ffffff !important; /* 다크 모드 (배경 검정색)에서는 흰색 아이콘 */
-    fill: #ffffff !important;
+/* 3. 로고 표시 강제 (Tailwind 미작동 대비) */
+.dark .dark\:hidden { display: none !important; }
+.dark .dark\:inline-block { display: inline-block !important; }
+
+/* 4. 굵은 글씨 진하게 */
+strong, b { font-weight: 800 !important; }
+
+/* --- 로고 모드별 전환 설정 --- */
+
+/* 1. 기본 상태 (라이트 모드): 검정 @ 표시 */
+.custom-logo-light {
+    display: inline-block !important;
+}
+.custom-logo-dark {
+    display: none !important;
 }
 
-/* 15. 볼드체 (<strong> 태그)의 굵기를 900으로 강제하여 더 진하게 만듭니다. */
-strong, b {
-    font-weight: 800 !important;
+/* 2. 다크 모드 활성화 시: 흰 @ 표시 */
+.dark .custom-logo-light {
+    display: none !important;
 }
+.dark .custom-logo-dark {
+    display: inline-block !important;
+}
+
+/* 3. 토글 버튼 색상 강제 */
+#theme-toggle { color: #000000 !important; }
+.dark #theme-toggle { color: #ffffff !important; }
