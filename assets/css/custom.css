@@ -277,14 +277,14 @@ html:not(.dark) #theme-toggle-dark-icon {
   line-height: 1.5;
   opacity: 0.85;
   max-width: 720px;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Contact */
 .hero-contact h2 {
   font-size: 2.0rem;
-  font-weight: 800;
-  margin-bottom: 1.0rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
 }
 
 .hero-contact a {
@@ -336,7 +336,7 @@ html.dark .hero-contact a {
   display: flex;
   flex-wrap: wrap;       /* 화면이 좁아지면 다음 줄로 */
   gap: 1.0rem;           /* 아이콘 사이 간격 */
-  margin-top: 1rem;
+  margin-top: 0.1rem;
   justify-content: flex-start; /* 왼쪽 정렬 */
   align-items: center;
 }
