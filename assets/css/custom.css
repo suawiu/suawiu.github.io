@@ -25,22 +25,24 @@ html.dark strong {
 }
 
 /* =========================
-   2. Spline 배경
+   2. Spline 배경 (강제 레이어 고정)
 ========================= */
 spline-viewer {
-  position: fixed;
-  inset: 0;
+  position: absolute; /* 화면에 완전히 고정 */
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 0;
+  z-index: -1 !important;    /* 👈 가장 중요: 모든 컨텐츠보다 뒤로 보냄 */
+  pointer-events: none;       /* 3D 모델이 클릭을 방해하지 않도록 설정 */
 }
 
-header, main, footer {
+/* 컨텐츠가 배경 위로 올라오도록 보장 */
+header, main, footer, .hero-wrapper {
   position: relative;
   z-index: 10;
   background: transparent !important;
 }
-
 header#main-header {
   z-index: 10020 !important;
 }
@@ -247,9 +249,9 @@ html:not(.dark) #theme-toggle-dark-icon {
 .hero-wrapper {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;         /* 가로 중앙 */
-  padding: 0 2rem; 
+  align-items: flex-start; /* 👈 중앙이 아닌 상단부터 배치 */
+  justify-content: center;
+  padding-top: 20vh;       /* 👈 상단으로부터의 거리 직접 조절 */
   padding-left: 8vw;
   padding-right: 8vw;
 }
@@ -265,22 +267,22 @@ html:not(.dark) #theme-toggle-dark-icon {
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 900;
   line-height: 1.15;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
   text-align: left;
 }
 
 /* 설명 */
 .hero-description {
-  font-size: 1.5rem;
-  line-height: 1.9;
+  font-size: 1.2rem;
+  line-height: 1.5;
   opacity: 0.85;
   max-width: 720px;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 /* Contact */
 .hero-contact h2 {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: 800;
   margin-bottom: 1.0rem;
 }
@@ -350,8 +352,8 @@ html.dark .hero-contact a {
 
 /* 🔑 핵심: 아이콘 크기 제어 */
 .contact-icon svg {
-  width: 40px !important;  /* 아이콘 가로 크기 (작게 조절) */
-  height: 40px !important; /* 아이콘 세로 크기 (작게 조절) */
+  width: 30px !important;  /* 아이콘 가로 크기 (작게 조절) */
+  height: 30px !important; /* 아이콘 세로 크기 (작게 조절) */
   fill: currentColor;      /* 텍스트 색상을 따름 */
   display: block;
   overflow: visible;       /* 잘림 방지 */

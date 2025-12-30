@@ -24,16 +24,32 @@ icon: ""
 
 ---
 
-### Honors and Awards
+### Experience
 
-* **Minister of Science and ICT Award (미래창조과학부 장관상)**, Republic of Korea
-* **KC Scholarship Foundation**, Scholarship for Outstanding STEM Talent
-* **5th Place**, DB GAPS Investment Competition
+* **Signals Intelligence (SIGINT) Specialist**, Republic of Korea Army (Aug 2024 - Feb 2026)
+    - Squad Leader
+* **Undergraduate Researcher**, Quantum Information Lab @ Yonsei (Jan 2024 – Jun 2024)
+    - Quantum computing based on Circuit QED Lab Advised by Prof. Kyungsun Moon
+
+---
+
+### Certifications
+
+* **ADsP (Advanced Data Analytics Semi-Professional)**, 2025
+* **Computer Literacy Level 2**, 2025
+* **SQLD (SQL Developer)**, 2023
 
 ---
 
-### Statement
+### Awards and Scholarships
 
-This blog serves as a personal research notebook dedicated to documenting my **knowledge and experiences in physics and other interesting fields.** I aim to systematically organize my academic growth and share insights with colleagues in both the academic and industrial fields.
+* **KC Scholarship Foundation**, Scholarship for Outstanding STEM Talent, 2024
+* **5th Place**, DB GAPS Investment Competition, 2023
+* **Minister of Science and ICT Award (미래창조과학부 장관상)**, 2013
 
 ---
+
+### Activities
+
+* **Kwang**, Crossfit Club @ Yonsei (Mar 2023 – )
+* **Gongsarang**, Basketball Club @ Yonsei (Mar 2022 - Dec 2022)

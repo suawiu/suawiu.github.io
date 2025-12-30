@@ -5,8 +5,10 @@
   </head>
 
   <body class="flex flex-col min-h-screen overflow-x-hidden">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.22/build/spline-viewer.js"></script>
-    <spline-viewer url="https://prod.spline.design/by2Kmf3IpsX6YwHB/scene.splinecode"></spline-viewer>
+    {{ if .IsHome }}
+      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.22/build/spline-viewer.js"></script>
+      <spline-viewer url="https://prod.spline.design/by2Kmf3IpsX6YwHB/scene.splinecode"></spline-viewer>
+    {{ end }}
 
     <div class="relative z-10 flex flex-col min-h-screen">
       <header id="main-header" class="sticky top-0 w-full z-[2000]">
