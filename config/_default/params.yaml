@@ -1,11 +1,14 @@
 ############################
 ## Author
 ############################
-
 author:
   name: 'Seungmin Cha'
   image: images/photo.jpeg
-  greeting: 'Yonsei University | Physics'
+  greeting: |
+    This blog serves as a personal research notebook dedicated to documenting my journey and expertise in physics and other interesting fields.
+    I aim to systematically archive my academic growth and share meaningful insights with peers in both academia and industry.
+
+
   #icon: ':wave:'
 
 ############################

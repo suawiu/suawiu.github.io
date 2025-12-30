@@ -11,24 +11,22 @@
       </div>
     {{ end }}
 
-
-    <h1 class="text-center text-4xl font-extrabold text-slate-700 dark:text-slate-200">
+    <h1 class="text-center text-4xl font-extrabold text-black dark:text-slate-200">
       {{ $name | markdownify | emojify }}
     </h1>
 
     {{ with .Params.jobTitle }}
-      <h2 class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400">
+      <h2 class="mt-2 text-center text-2xl text-black dark:text-slate-400">
         {{ . | markdownify | emojify }}
       </h2>
     {{ end }}
+
     <div class="mt-4 flex flex-wrap items-center justify-center">
       {{ range $links := .Site.Params.Links }}
         {{ range $type, $data := $links }}
-          {{ $href := $data }}
-          {{ $icon := $type }}
-          {{ $iconPath := resources.Get (print "icons/" $icon ".svg") }}
+          {{ $iconPath := resources.Get (print "icons/" $type ".svg") }}
           {{ with $iconPath }}
-            <a class="link" href="{{ $href }}" target="_blank" rel="me noopener noreferrer" aria-label="{{ $icon }}">
+            <a class="link text-black dark:text-white" href="{{ $data }}" target="_blank" rel="me noopener noreferrer">
               <span class="link_svg">
                 {{ $iconPath.Content | safeHTML }}
               </span>
@@ -37,13 +35,13 @@
         {{ end }}
       {{ end }}
     </div>
-  </div>
 
   <div class="justify-left mx-auto mt-8 flex max-w-(--breakpoint-lg) px-4">
     <article>
       {{ if .Params.bio }}
-        <h1 class="mb-4 text-4xl font-extrabold text-slate-700 dark:text-slate-200">About Me</h1>
-        <span class="prose prose-slate break-words text-lg text-slate-700 dark:prose-invert prose-pre:max-w-[90vw] dark:text-slate-200 md:prose-pre:max-w-(--breakpoint-md) prose-code:before:hidden prose-code:after:hidden">
+        <h1 class="mb-4 text-4xl font-extrabold text-black dark:text-slate-200">About Me</h1>
+        
+        <span class="prose prose-neutral break-words text-lg text-black dark:prose-invert prose-pre:max-w-[90vw] dark:text-slate-200 md:prose-pre:max-w-(--breakpoint-md) prose-code:before:hidden prose-code:after:hidden">
           {{ .Content }}
         </span>
       {{ end }}

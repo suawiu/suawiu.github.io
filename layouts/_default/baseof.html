@@ -5,42 +5,27 @@
   </head>
 
   <body class="flex flex-col min-h-screen overflow-x-hidden">
-    <!-- Spline 3D background -->
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.22/build/spline-viewer.js"></script>
     <spline-viewer url="https://prod.spline.design/by2Kmf3IpsX6YwHB/scene.splinecode"></spline-viewer>
 
-    <!-- Page content layer -->
     <div class="relative z-10 flex flex-col min-h-screen">
       <header id="main-header" class="sticky top-0 w-full z-[2000]">
         {{ partial "navbar" . }}
       </header>
 
+      <div id="fullscreen-menu" class="fixed inset-0">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
 
-
-      <!-- SLIDE-IN MENU (RIGHT) -->
-      <div
-      id="fullscreen-menu"
-      class="fixed inset-0 z-[3000] hidden"
-      >
-      <!-- background dim -->
-      <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
-
-      <!-- menu panel -->
-      <aside
-        class="menu-panel absolute right-0 top-0 h-full w-[70vw] max-w-[480px]
-              bg-black/90 flex items-center justify-center"
-      >
-        <nav class="flex flex-col gap-10 text-white text-5xl font-extrabold">
-          {{ range site.Menus.main }}
-            <a href="{{ .URL }}" class="menu-item">
-              {{ .Name }}
-            </a>
-          {{ end }}
-        </nav>
-      </aside>
+        <aside class="menu-panel absolute right-0 top-0 h-full w-[70vw] max-w-[480px] flex items-center justify-center">
+          <nav class="flex flex-col gap-10 text-white text-5xl font-extrabold">
+            {{ range site.Menus.main }}
+              <a href="{{ .URL }}" class="menu-item">
+                {{ .Name }}
+              </a>
+            {{ end }}
+          </nav>
+        </aside>
       </div>
-
-
 
       <main class="flex-grow">
         {{ block "main" . }}{{ end }}
