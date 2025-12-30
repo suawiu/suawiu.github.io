@@ -266,6 +266,7 @@ html:not(.dark) #theme-toggle-dark-icon {
   font-weight: 900;
   line-height: 1.15;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 /* 설명 */
