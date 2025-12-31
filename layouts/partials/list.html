@@ -1,0 +1,104 @@
+{{/* =========================
+  Blog List Partial (우측 하단 절대 고정 버전)
+========================= */}}
+
+{{/* 1. Title 섹션 */}}
+<div class="justify-left mx-auto mt-8 mb-20 flex max-w-(--breakpoint-xl) px-4">
+ <article>
+   <h1 class="text-4xl font-extrabold text-slate-700 dark:text-slate-200">
+     {{ if eq .Kind "term" }} # {{ .Title | emojify }} {{ else }} {{ .Title | emojify }} {{ end }}
+   </h1>
+   {{ with .Content }}
+     <div class="mt-2 text-lg text-slate-500 dark:text-slate-400">
+       {{ . | emojify }}
+     </div>
+   {{ end }}
+ </article>
+</div>
+
+{{/* 2. Category Filter */}}
+<div class="mx-auto max-w-(--breakpoint-xl) px-4" style="margin-top: 20px !important; margin-bottom: 30px !important;">
+ <div class="flex flex-wrap" style="gap: 16px !important;">
+  {{ $isAllActive := ne .Kind "term" }}
+  <a href="/blog/"
+     class="inline-flex items-center justify-center h-11 rounded-lg font-bold border"
+     style="width: 6rem !important; transition: all 0.3s ease-in-out !important; transform: translateY(0); filter: brightness(1); {{ if $isAllActive }}background-color: #f1f5f9 !important; color: #000000 !important; border-color: #cbd5e1 !important; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;{{ else }}background-color: #262626 !important; color: #94a3b8 !important; border-color: #404040 !important;{{ end }}"
+     onmouseover="this.style.transform='translateY(-4px)'; this.style.filter='brightness(1.2)'; this.style.boxShadow='0 10px 15px -3px rgb(0 0 0 / 0.2)';"
+     onmouseout="this.style.transform='translateY(0)'; this.style.filter='brightness(1)'; this.style.boxShadow='{{ if $isAllActive }}0 4px 6px -1px rgb(0 0 0 / 0.1){{ else }}none{{ end }}';">
+     All
+  </a>
+   {{ range .Site.Taxonomies.categories }}
+     {{ $isCurrent := eq $.Title .Page.Title }}
+     <a href="{{ .Page.RelPermalink }}"
+        class="inline-flex items-center justify-center h-11 rounded-lg font-bold border"
+        style="width: 6rem !important; transition: all 0.3s ease-in-out !important; transform: translateY(0); filter: brightness(1); {{ if $isCurrent }}background-color: #f1f5f9 !important; color: #000000 !important; border-color: #cbd5e1 !important; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;{{ else }}background-color: #262626 !important; color: #94a3b8 !important; border-color: #404040 !important;{{ end }}"
+        onmouseover="this.style.transform='translateY(-4px)'; this.style.filter='brightness(1.2)'; this.style.boxShadow='0 10px 15px -3px rgb(0 0 0 / 0.2)';"
+        onmouseout="this.style.transform='translateY(0)'; this.style.filter='brightness(1)'; this.style.boxShadow='{{ if $isCurrent }}0 4px 6px -1px rgb(0 0 0 / 0.1){{ else }}none{{ end }}';">
+       {{ .Page.Title }}
+     </a>
+   {{ end }}
+ </div>
+</div>
+
+{{/* 3. Post Grid (겹침 방지 + 우측 밀착 버전) */}}
+<div class="mx-auto max-w-(--breakpoint-xl)" style="margin-top: 20px !important;">
+  <div class="grid grid-cols-1 justify-items-center gap-8 px-4 lg:grid-cols-2">
+
+    {{ range .Pages.ByDate.Reverse }}
+      {{ $cardimage := resources.GetMatch (print "**" .Params.cardimage) }}
+
+      <a href="{{ .RelPermalink }}" class="w-full max-w-2xl block group" style="text-decoration: none !important;">
+        <div 
+          class="flex h-full max-h-80 rounded-xl bg-neutral-300 dark:bg-neutral-700 shadow-md transition-all duration-500 overflow-hidden"
+          style="transition: all 0.5s ease-out !important; transform: translateY(0); filter: brightness(1);"
+          onmouseover="this.style.transform='translateY(-8px)'; this.style.filter='brightness(1.1)'; this.style.boxShadow='0 25px 50px -12px rgb(0 0 0 / 0.5)';"
+          onmouseout="this.style.transform='translateY(0)'; this.style.filter='brightness(1)'; this.style.boxShadow='0 4px 6px -1px rgb(0 0 0 / 0.1)';"
+        >
+
+          {{ with $cardimage }}
+            {{ $cardimage = $cardimage.Filter (images.Process "fit 400x600 Lanczos q80 webp") }}
+            <div class="w-2/5 shrink-0 overflow-hidden">
+              <img src="{{ $cardimage.RelPermalink }}" alt="{{ $.Title }}" 
+                  style="transition: transform 0.5s ease !important;"
+                  class="h-full w-full object-cover group-hover:scale-110" />
+            </div>
+          {{ end }}
+
+          {{/* 텍스트 영역 */}}
+          <div class="flex flex-col p-6 w-3/5 h-full">
+            {{/* 상단: 제목과 본문 */}}
+            <div class="flex-none pb-4">
+              <h4 class="mb-2 line-clamp-2 text-base font-semibold text-slate-700 dark:text-slate-200 md:text-2xl transition-colors group-hover:text-blue-500">
+                {{ .Title }}
+              </h4>
+              <p class="line-clamp-3 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                {{ .Summary | emojify }}
+              </p>
+            </div>
+
+            {{/* 🚀 하단 고정 영역: mt-auto로 바닥에 붙이고, w-full로 가로폭을 꽉 채웁니다 */}}
+            <div class="mt-auto flex items-end w-full">
+              
+           
+
+              {{/* 🚀 핵심: ml-auto를 주어 왼쪽 아이콘들로부터 태그 뭉치를 오른쪽 끝으로 강하게 밀어냅니다 */}}
+              <div class="ml-auto flex flex-col items-end text-right">
+                {{ range .Params.categories }}
+                  <span class="text-xs font-black text-blue-500 dark:text-blue-400 uppercase tracking-widest leading-none mb-1">
+                    #{{ . }}
+                  </span>
+                {{ end }}
+                <div class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-bold leading-none">
+                  {{ .Date | time.Format ":date_medium" }}
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </a>
+    {{ end }}
+
+  </div>
+</div>

@@ -1,68 +1,34 @@
 ---
-title: Blog Post with Inline Images
-subtitle: "Blog post subtitle :zap:"
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-date: 2023-11-24
-cardimage: photo1_card.jpeg
-featureimage: photo1.jpeg
-caption: Image caption
+title: 1984
+subtitle: "자유는 예속, 무지는 힘"
+summary: “자유는 예속, 무지는 힘"
+date: 2025-12-31
+categories: ["Perspective"]
+cardimage: 1984.jpeg
+featureimage: 1984(2).jpeg
+caption: 1984
 authors:
-  - Christian: author.png
-toc: true
+  - suawiu: author.jpeg
+toc: False
 
 # enable Latex rendering
 params:
   math: true
 ---
 
-## Markdown h2 title
-Use the shortcode `figArray` to add images to your blog post. Add your images to a subfolder. Call the figArray shortcode using the following syntax:
+> **그건 단지 소극적인 것보다는 적극적인 편을 택했으면 하는 심리가 작용한 탓이지. 우리는 우리 자신이 지금 벌이고 있는 게임에서 승리할 수 없어. 하지만 같은 패배에도 더 나은 패배가 있는 법이야.**
 
-```go
-{{</* figArray subfolder="<subfoldername>" figCaption="Some caption" numCols=2 */>}}
-```
-### markdown h3 title
+이 책은 조지 오웰이 상상한 전체주의가 극심한 가상의 세상을 그린 소설이다. 전체주의 체제를 고수하는 나라에서 주인공 윈스턴은 자신의 생각과 감정을 지키려 하지만 결국 체제에 굴복하고 만다. 
 
-Both "figCaption" and "numCols" are optional. The shortcode will try to guess the best number of columns to use for the array of figures if "numCols" is not passed.
-You will need one subfolder containing images per call to the shortcode. The image files need to be one of the following types: png, jpg, jpeg or webp.
+> **자유는 예속, 무지는 힘**
 
-{{< figArray subfolder="images" numCols=3 figCaption="A nice figure caption :wave:" >}}
+책에 자주 등장하는 문구이다. 이 역설적인 슬로건은 권력에 비판적인 사고 없이 맹목적으로 따르는 현상에 대한 경각심을 일깨운다.
 
-## Latex rendering
+개인적으로 최근 읽은 책 중 가장 용두사미라고 느낀  소설이다. 책 초반부는 내가 조지 오웰이 상상한 세계에 살고 있는 것만 같은 착각을 불러일으킬 정도로 음미하게 만들었다. 소설 속 공간의 분위기와 냄새, 인물들의 표정과 말을 내가 직접 보고 듣고 맡고 있는 것만 같았다. 뿐만 아니라 소설에는 “신어”와 “골드스타인의 책”이라는 것이 등장하는데 오웰의 섬세함에 감탄할 수 밖에 없었다. 인간성을 말살하는 전체주의 체제를 낱낱이 고발하는 소재였다. 
 
-$$
-\begin{aligned}
-KL(\hat{y} || y) &= \sum_{c=1}^{M}\hat{y}_c \log{\frac{\hat{y}_c}{y_c}} \\
-JS(\hat{y} || y) &= \frac{1}{2}(KL(y||\frac{y+\hat{y}}{2}) + KL(\hat{y}||\frac{y+\hat{y}}{2}))
-\end{aligned}
-$$
+후반부에는 지루한 면이 없지 않았다. 등장인물 오브라이언은 어떤 사상을 지닌 인물인지 파악하기 어려웠던 혼란스러운 인물이었다. 드라마틱한 무언가가 기다리고 있을 것이라 기대하며 페이지를 넘겼지만 반전은 없었다. 끝끝내 반전은 없다는 게 작가의 의도이고 이 책이 시사하는 바일 것이다. 주인공이 끝까지 자신의 사상을 지키고 체제에 흠을 내는 영웅적인 스토리보다는 처음부터 끝까지 암울함만으로 전개하는 것이 오웰이 생각한 최고의 시나리오였을 것이다. 
 
-## Markdown subtitle
+>**말하자면 그들은 무지로 인해 정상적인 정신 상태를 유지한다고 볼 수 있다. 아무것이나 닥치는대로 집어삼키는데, 그래도 탈이 나지 않는다. 그것은 곡식의 낱알이 소화되지 않은 채 새의 창자를 거쳐 그대로 나오는 경우처럼 뒤에 아무런 찌꺼기도 남지 않기 때문이다.**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id erat enim. Ut cursus magna sed luctus auctor. Sed eu augue dignissim, lobortis ipsum eu, dictum nisi. Integer varius ex maximus quam lobortis accumsan. Morbi mollis vulputate metus, aliquam feugiat arcu porta a. Quisque id justo ultricies, lacinia elit quis, pulvinar odio. Fusce feugiat at velit vitae lobortis. Nulla fringilla metus et sem mattis posuere :zap:.
 
-**Heading**
-- List item 1
-- List item 2
-- List item 3
 
-### Markdown subsubtitle
-
-Cras ligula velit, aliquet ac orci dapibus, molestie ultricies libero. Donec at bibendum est. Phasellus vulputate dapibus quam vel accumsan. Curabitur at felis euismod, lobortis urna id, lobortis dolor. Cras tortor ligula, euismod quis lacus faucibus, condimentum fringilla dolor. Mauris in maximus nisi. Phasellus facilisis lacus quis mi cursus, a ornare mi maximus. Nullam nunc lacus, tincidunt varius risus nec, pellentesque vulputate ligula. Etiam id purus et tortor porta mattis. Donec id sapien nulla. Vivamus at malesuada tellus, id ultricies ante. Maecenas ullamcorper mi massa, at rutrum risus aliquet a. Donec sem tortor, molestie quis ex a, faucibus commodo augue. Morbi convallis sem vel tellus facilisis, et sodales felis consequat. Aliquam ut ante tristique, volutpat lectus vestibulum, egestas sapien.
-
-#### Markdown h4 title
-
-Donec tellus est, faucibus eget ultricies ac, posuere non augue. Fusce ultrices lectus quis nunc lacinia, non tincidunt lectus ultrices. Morbi sodales nisi at felis luctus, eu convallis tortor commodo. Morbi tristique nibh neque, vel tristique dolor laoreet eget. Phasellus felis erat, mattis at suscipit id, faucibus in dolor. In vitae odio at lectus tincidunt dignissim. Fusce risus nisl, hendrerit a ultricies vitae, porta id sapien. Nam elit nunc, hendrerit ut sem quis, ultrices varius leo. Nullam eget lectus in sapien venenatis iaculis at at turpis. Etiam iaculis magna porttitor augue tempus suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam suscipit nibh leo, in pellentesque urna luctus et. Duis diam ipsum, posuere nec tellus sit amet, dignissim feugiat massa. Etiam ut sollicitudin lorem. Quisque commodo libero non mauris viverra malesuada. Morbi vitae auctor felis.
-
-Maecenas ac dignissim dolor. Sed vitae nisl vel ante rutrum tincidunt ac et diam. Integer id dignissim quam. Vestibulum quis enim sit amet tellus tincidunt sagittis ut vitae nunc. Sed hendrerit, quam ut fermentum imperdiet, augue purus cursus felis, in ultricies elit mauris in risus. Morbi hendrerit imperdiet vehicula. Etiam porttitor magna eu quam laoreet ullamcorper. Etiam a erat ante. Curabitur pharetra, lacus in porttitor cursus, libero lacus consectetur dui, sit amet auctor tellus magna et enim. Pellentesque tristique molestie fringilla. Vivamus sit amet tincidunt quam. Morbi eu nisi quam. Nunc ultrices vel sem sit amet aliquam.
-
-## Code blocks
-
-Let's try to add some code blocks:
-
-```yaml
-key: value
-key1:
-  - name: bla
-    type: blabla
-```

@@ -51,5 +51,6 @@ icon: ""
 
 ### Activities
 
+* **QIYA**, Quantum Informatics at Yonsei Academy (Jan 2026 - )
 * **Kwang**, Crossfit Club @ Yonsei (Mar 2023 – )
 * **Gongsarang**, Basketball Club @ Yonsei (Mar 2022 - Dec 2022)

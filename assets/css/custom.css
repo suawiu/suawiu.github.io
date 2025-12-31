@@ -103,16 +103,47 @@ html.dark .menu-panel {
   font-weight: 800;
   opacity: 0;
   transform: translateY(20px);
-  transition: .5s cubic-bezier(.16,1,.3,1);
+  /* transition에 transform이 포함되어 있어 호버 애니메이션도 부드럽게 작동합니다 */
+  transition: all 0.4s cubic-bezier(.16, 1, .3, 1); 
+  display: inline-block; 
+  position: relative;
 }
 
-html.dark .menu-item { color: #fff; }
-
+/* 메뉴가 활성화되었을 때 나타나는 애니메이션 */
 #fullscreen-menu.active .menu-item {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* 🔥 마우스 호버 효과 (X축 이동으로 변경) */
+.menu-item:hover {
+  color: #3b82f6 !important; 
+  transform: translateX(15px) !important; 
+  opacity: 1 !important;
+}
+
+/* 🔥 다크모드 호버 색상 */
+html.dark .menu-item:hover {
+  color: #60a5fa !important;
+}
+
+/* 🔥 밑줄 애니메이션 */
+.menu-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+  width: 100%;
+}
+
+/* 등장 딜레이 */
 .menu-item:nth-child(1) { transition-delay: 0.2s; } 
 .menu-item:nth-child(2) { transition-delay: 0.4s; } 
 .menu-item:nth-child(3) { transition-delay: 0.6s; }

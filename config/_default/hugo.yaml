@@ -13,9 +13,13 @@ theme: "qubt"
 ############################
 
 enableEmoji: true
-disableKinds: ['taxonomy', 'term']
+disableKinds: []
 languageCode: 'en-us'
 enableRobotsTXT: true
+
+taxonomies:
+  category: "categories"
+  tag: "tags"
 
 markup:
   _merge: deep
