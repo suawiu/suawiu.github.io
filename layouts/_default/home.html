@@ -4,13 +4,13 @@
 
     <h1 class="hero-title">
       Hello,<br />
-      I am suawiu
+      I am Suawiu.
     </h1>
 
     {{ with .Site.Params.Author.greeting }}
-      <p class="hero-description">
-        {{ . | markdownify }}
-      </p>
+    <p class="hero-description">
+      {{ . | markdownify }}
+    </p>
     {{ end }}
 
     <div class="hero-contact">
@@ -18,16 +18,16 @@
 
       <div class="contact-icons">
         {{ range .Site.Params.Links }}
-          {{ range $type, $url := . }}
-            {{ $iconPath := resources.Get (print "icons/" $type ".svg") }}
-            <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $type }}" class="contact-icon">
-              {{ if $iconPath }}
-                {{ $iconPath.Content | safeHTML }}
-              {{ else }}
-                {{ $type }}
-              {{ end }}
-            </a>
+        {{ range $type, $url := . }}
+        {{ $iconPath := resources.Get (print "icons/" $type ".svg") }}
+        <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $type }}" class="contact-icon">
+          {{ if $iconPath }}
+          {{ $iconPath.Content | safeHTML }}
+          {{ else }}
+          {{ $type }}
           {{ end }}
+        </a>
+        {{ end }}
         {{ end }}
       </div>
     </div>
