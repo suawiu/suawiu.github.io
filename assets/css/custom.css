@@ -537,21 +537,24 @@ html body .modern-gradient-text {
   /* Slate-900 */
 }
 
-/* Dark mode overrides if needed, but the above dark colors work well for high contrast on light bg too. */
+/* Dark mode overrides */
 html.dark .glass-button {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  color: #cbd5e1 !important;
-  /* Slate-300 */
+  background-color: rgba(30, 41, 59, 0.6) !important;
+  /* Slate-800 semi-transparent */
+  color: #e2e8f0 !important;
+  /* Slate-200 */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
 html.dark .glass-button.active {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  color: #fff !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+  border-color: #3b82f6 !important;
 }
 
 html.dark .glass-button:hover {
-  background-color: rgba(255, 255, 255, 0.15) !important;
+  background-color: rgba(30, 41, 59, 1.0) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 /* Card Hover Brightness */
