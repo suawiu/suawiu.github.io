@@ -53,35 +53,52 @@ Blog List Partial (우측 하단 절대 고정 버전)
         {{ end }}
 
         {{/* 텍스트 영역 */}}
-        <div class="flex flex-col p-6 w-3/5 h-full">
-          {{/* 상단: 제목과 본문 */}}
-          <div class="flex-none pb-4">
+        <div class="flex flex-col p-6 w-3/5 h-full relative">
+
+          {{/* 🚀 1. 상단: 카테고리 (좌측) + 날짜 (우측) */}}
+          <div class="flex items-center justify-between mb-3">
+            {{/* 카테고리 (Pill Shape) */}}
+            <div class="flex flex-wrap gap-2">
+              {{ range .Params.categories }}
+              <span
+                class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-cyan-500 border border-cyan-500/30 bg-cyan-500/10 rounded-full">
+                {{ . }}
+              </span>
+              {{ end }}
+            </div>
+
+            {{/* 날짜 */}}
+            <div class="text-xs text-slate-400 font-medium flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+              {{ .Date | time.Format "2006-01-02" }}
+            </div>
+          </div>
+
+          {{/* 🚀 2. 제목 */}}
+          <div class="flex-none mb-2">
             <h4
-              class="mb-2 line-clamp-2 text-base font-semibold text-slate-700 dark:text-slate-200 md:text-2xl transition-colors group-hover:text-blue-500">
+              class="mb-2 line-clamp-2 text-xl font-bold font-heading text-slate-800 dark:text-slate-100 transition-colors group-hover:text-cyan-400">
               {{ .Title }}
             </h4>
-            <p class="line-clamp-3 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+            <p class="line-clamp-3 text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-body">
               {{ .Summary | emojify }}
             </p>
           </div>
 
-          {{/* 🚀 하단 고정 영역: mt-auto로 바닥에 붙이고, w-full로 가로폭을 꽉 채웁니다 */}}
-          <div class="mt-auto flex items-end w-full">
-
-
-            {{/* 🚀 핵심: ml-auto를 주어 왼쪽 아이콘들로부터 태그 뭉치를 오른쪽 끝으로 강하게 밀어냅니다 */}}
-            <div class="ml-auto flex flex-col items-end text-right">
-              {{ range .Params.categories }}
-              <span
-                class="text-xs font-black text-blue-500 dark:text-blue-400 uppercase tracking-widest leading-none mb-1">
-                #{{ . }}
-              </span>
-              {{ end }}
-              <div class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-bold leading-none">
-                {{ .Date | time.Format ":date_medium" }}
-              </div>
-            </div>
-
+          {{/* 🚀 3. 하단: Read Entry (우측 하단) */}}
+          <div class="mt-auto flex items-end justify-end w-full">
+            <span
+              class="text-sm font-bold text-slate-400 group-hover:text-white transition-colors flex items-center gap-1">
+              Read Entry
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                </path>
+              </svg>
+            </span>
           </div>
         </div>
 
