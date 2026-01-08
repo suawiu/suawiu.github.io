@@ -1,3 +1,4 @@
 ---
-title: Blog
+title: Transmissions
 ---
+Thoughts, theories, and logs from the void.

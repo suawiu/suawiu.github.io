@@ -499,7 +499,7 @@ html:not(.dark) .link:hover svg {
 /* Gradient Text (Suawiu & Blog Title) - High Specificity to override dark mode defaults */
 html.dark .modern-gradient-text,
 html body .modern-gradient-text {
-  background: linear-gradient(to right, #22d3ee, #0ea5e9, #8b5cf6);
+  background: linear-gradient(to right, #3b82f6, #8b5cf6, #a855f7);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent !important;
