@@ -512,49 +512,52 @@ html body .modern-gradient-text {
 /* Glassmorphism Buttons (Category Chips) */
 /* Glassmorphism Buttons (Category Chips) */
 .glass-button {
-  background-color: rgba(30, 41, 59, 0.8) !important;
-  /* Slate-800 with opacity */
-  color: #f1f5f9 !important;
-  /* Slate-100 */
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: all 0.3s ease-in-out;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(30, 41, 59, 0.9)) !important;
+  color: #f8fafc !important;
+  /* Slate-50 */
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .glass-button.active {
-  background-color: #3b82f6 !important;
-  /* Blue-500 */
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+  /* Blue Gradient */
   color: #ffffff !important;
-  border-color: #3b82f6 !important;
-  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.5);
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+  /* Glow effect */
 }
 
 .glass-button:hover {
-  transform: translateY(-2px);
-  background-color: rgba(15, 23, 42, 0.9) !important;
-  /* Slate-900 */
+  transform: translateY(-2px) scale(1.02);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 }
 
 /* Dark mode overrides */
 html.dark .glass-button {
-  background-color: rgba(30, 41, 59, 0.6) !important;
-  /* Slate-800 semi-transparent */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
   color: #e2e8f0 !important;
-  /* Slate-200 */
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  text-shadow: none;
 }
 
 html.dark .glass-button.active {
-  background-color: #3b82f6 !important;
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
   color: #ffffff !important;
-  border-color: #3b82f6 !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
 }
 
 html.dark .glass-button:hover {
-  background-color: rgba(30, 41, 59, 1.0) !important;
-  border-color: rgba(255, 255, 255, 0.4) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2)) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 /* Card Hover Brightness */
