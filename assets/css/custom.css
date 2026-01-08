@@ -1,6 +1,6 @@
 /* =========================
    1. 기본 배경 및 테마 설정
-========================= */
+   ========================= */
 body {
   background-color: rgba(255, 255, 255, 0.6) !important;
   color: #000 !important;
@@ -26,7 +26,7 @@ html.dark strong {
 
 /* =========================
    2. Spline 배경 (강제 레이어 고정)
-========================= */
+   ========================= */
 spline-viewer {
   position: absolute; /* 화면에 완전히 고정 */
   top: 0;
@@ -49,7 +49,7 @@ header#main-header {
 
 /* =========================
    3. 로고
-========================= */
+   ========================= */
 .custom-logo-light { display: inline-block !important; }
 .custom-logo-dark { display: none !important; }
 
@@ -58,7 +58,7 @@ html.dark .custom-logo-dark { display: inline-block !important; }
 
 /* =========================
    4. 메뉴 오버레이
-========================= */
+   ========================= */
 #fullscreen-menu {
   position: fixed;
   inset: 0;
@@ -75,7 +75,7 @@ html.dark .custom-logo-dark { display: inline-block !important; }
 
 /* =========================
    5. 우측 슬라이드 패널
-========================= */
+   ========================= */
 .menu-panel {
   width: 480px;
   max-width: 80vw;
@@ -97,7 +97,7 @@ html.dark .menu-panel {
 
 /* =========================
    6. 메뉴 아이템
-========================= */
+   ========================= */
 .menu-item {
   font-size: 2.8rem;
   font-weight: 800;
@@ -150,7 +150,7 @@ html.dark .menu-item:hover {
 
 /* =========================
    7. 배경 및 메인 컨텐츠 블러 효과
-========================= */
+   ========================= */
 
 /* 메뉴가 열렸을 때 Spline 3D와 메인 컨텐츠 전체를 블러 처리 */
 body.menu-open spline-viewer,
@@ -163,7 +163,7 @@ body.menu-open main {
 
 /* =========================
    8. 버튼 (문제의 핵심)
-========================= */
+   ========================= */
 #hamburger-button,
 #theme-toggle {
   position: relative;
@@ -201,7 +201,7 @@ header .flex.items-center.space-x-10
 
 /* =========================
    Hamburger → X animation
-========================= */
+   ========================= */
 
 .hamburger {
   width: 25px;
@@ -237,7 +237,7 @@ body.menu-open .hamburger span:nth-child(3) {
 
 /* =========================
    Theme toggle animation
-========================= */
+   ========================= */
 
 #theme-toggle {
   position: relative;
@@ -275,7 +275,7 @@ html:not(.dark) #theme-toggle-dark-icon {
 
 /* =========================
    HERO HOME
-========================= */
+   ========================= */
 
 .hero-wrapper {
   min-height: 100vh;
@@ -332,7 +332,7 @@ html:not(.dark) #theme-toggle-dark-icon {
 
 /* =========================
    HERO TEXT COLOR FIX
-========================= */
+   ========================= */
 
 /* 라이트 모드 (기본) */
 .hero-title,
@@ -356,7 +356,7 @@ html.dark .hero-contact a {
 
 /* =========================
    Contact 섹션 아이콘 정렬 (가로 나열 & 크기 축소)
-========================= */
+   ========================= */
 
 .hero-contact {
   margin-top: 2rem;
@@ -402,7 +402,7 @@ html.dark .contact-icon { color: #fff; opacity: 1.0; }
 
 /* =========================
    About 페이지 글자색 강제 (라이트 모드)
-========================= */
+   ========================= */
 
 /* html:not(.dark)를 사용하여 라이트 모드일 때만 적용합니다 */
 html:not(.dark) .markdown,
@@ -423,7 +423,7 @@ html:not(.dark) .font-bold {
 
 /* =========================
    About 페이지 아이콘 색상 수정
-========================= */
+   ========================= */
 
 /* 라이트 모드일 때 아이콘 색상을 완전한 검정으로 */
 html:not(.dark) .link_svg svg,
@@ -438,4 +438,62 @@ html:not(.dark) .link svg {
 /* 마우스 올렸을 때만 살짝 투명도를 주어 반응 효과 생성 (선택 사항) */
 html:not(.dark) .link:hover svg {
   opacity: 0.7 !important;
+}
+
+
+/* =========================
+   NEW: Custom Gradients & Visual Effects
+   ========================= */
+
+/* Gradient Text (Suawiu & Blog Title) */
+.modern-gradient-text {
+  background: linear-gradient(to right, #22d3ee, #0ea5e9, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important; /* Force transparent text color */
+  display: inline-block;
+}
+
+/* Glassmorphism Buttons (Category Chips) */
+.glass-button {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  color: #94a3b8 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-button.active {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.glass-button:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Hover Brightness */
+.card-item {
+  transition: all 0.5s ease-out;
+  transform: translateY(0);
+  filter: brightness(1);
+}
+
+.card-item:hover {
+  transform: translateY(-8px);
+  filter: brightness(1.3); /* Increase brightness on hover */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.card-image {
+  transition: transform 0.5s ease;
+}
+
+.card-item:hover .card-image {
+  transform: scale(1.1);
 }

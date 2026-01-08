@@ -5,8 +5,7 @@ Blog List Partial (우측 하단 절대 고정 버전)
 {{/* 1. Title 섹션 */}}
 <div class="justify-left mx-auto mt-8 mb-20 flex max-w-(--breakpoint-xl) px-4">
   <article>
-    <h1
-      class="text-4xl font-extrabold bg-gradient-to-r from-[#22d3ee] via-[#0ea5e9] to-[#8b5cf6] bg-clip-text text-transparent">
+    <h1 class="text-4xl font-extrabold modern-gradient-text">
       {{ if eq .Kind "term" }} # {{ .Title | emojify }} {{ else }} {{ .Title | emojify }} {{ end }}
     </h1>
     {{ with .Content }}
@@ -21,19 +20,14 @@ Blog List Partial (우측 하단 절대 고정 버전)
 <div class="mx-auto max-w-(--breakpoint-xl) px-4" style="margin-top: 20px !important; margin-bottom: 30px !important;">
   <div class="flex flex-wrap" style="gap: 16px !important;">
     {{ $isAllActive := ne .Kind "term" }}
-    <a href="/blog/" class="inline-flex items-center justify-center h-11 rounded-lg font-bold border backdrop-blur-md"
-      style="width: 6rem !important; transition: all 0.3s ease-in-out !important; transform: translateY(0); {{ if $isAllActive }}background-color: rgba(255, 255, 255, 0.2) !important; color: #ffffff !important; border-color: rgba(255, 255, 255, 0.3) !important; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;{{ else }}background-color: rgba(0, 0, 0, 0.3) !important; color: #94a3b8 !important; border-color: rgba(255, 255, 255, 0.1) !important;{{ end }}"
-      onmouseover="this.style.transform='translateY(-4px)'; this.style.backgroundColor='rgba(255, 255, 255, 0.3)'; this.style.boxShadow='0 10px 15px -3px rgb(0 0 0 / 0.2)';"
-      onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='{{ if $isAllActive }}rgba(255, 255, 255, 0.2){{ else }}rgba(0, 0, 0, 0.3){{ end }}'; this.style.boxShadow='{{ if $isAllActive }}0 4px 6px -1px rgb(0 0 0 / 0.1){{ else }}none{{ end }}';">
+    <a href="/blog/"
+      class="inline-flex items-center justify-center h-11 rounded-lg font-bold border glass-button {{ if $isAllActive }}active{{ end }}">
       All
     </a>
     {{ range .Site.Taxonomies.categories }}
     {{ $isCurrent := eq $.Title .Page.Title }}
     <a href="{{ .Page.RelPermalink }}"
-      class="inline-flex items-center justify-center h-11 rounded-lg font-bold border backdrop-blur-md"
-      style="width: 6rem !important; transition: all 0.3s ease-in-out !important; transform: translateY(0); {{ if $isCurrent }}background-color: rgba(255, 255, 255, 0.2) !important; color: #ffffff !important; border-color: rgba(255, 255, 255, 0.3) !important; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;{{ else }}background-color: rgba(0, 0, 0, 0.3) !important; color: #94a3b8 !important; border-color: rgba(255, 255, 255, 0.1) !important;{{ end }}"
-      onmouseover="this.style.transform='translateY(-4px)'; this.style.backgroundColor='rgba(255, 255, 255, 0.3)'; this.style.boxShadow='0 10px 15px -3px rgb(0 0 0 / 0.2)';"
-      onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='{{ if $isCurrent }}rgba(255, 255, 255, 0.2){{ else }}rgba(0, 0, 0, 0.3){{ end }}'; this.style.boxShadow='{{ if $isCurrent }}0 4px 6px -1px rgb(0 0 0 / 0.1){{ else }}none{{ end }}';">
+      class="inline-flex items-center justify-center h-11 rounded-lg font-bold border glass-button {{ if $isCurrent }}active{{ end }}">
       {{ .Page.Title }}
     </a>
     {{ end }}
@@ -49,17 +43,12 @@ Blog List Partial (우측 하단 절대 고정 버전)
 
     <a href="{{ .RelPermalink }}" class="w-full max-w-2xl block group" style="text-decoration: none !important;">
       <div
-        class="flex h-full max-h-80 rounded-xl bg-neutral-300 dark:bg-neutral-700 shadow-md transition-all duration-500 overflow-hidden"
-        style="transition: all 0.5s ease-out !important; transform: translateY(0); filter: brightness(1);"
-        onmouseover="this.style.transform='translateY(-8px)'; this.style.filter='brightness(1.5)'; this.style.boxShadow='0 25px 50px -12px rgb(0 0 0 / 0.5)';"
-        onmouseout="this.style.transform='translateY(0)'; this.style.filter='brightness(1)'; this.style.boxShadow='0 4px 6px -1px rgb(0 0 0 / 0.1)';">
+        class="flex h-full max-h-80 rounded-xl bg-neutral-300 dark:bg-neutral-700 shadow-md overflow-hidden card-item">
 
         {{ with $cardimage }}
         {{ $cardimage = $cardimage.Filter (images.Process "fit 400x600 Lanczos q80 webp") }}
         <div class="w-2/5 shrink-0 overflow-hidden">
-          <img src="{{ $cardimage.RelPermalink }}" alt="{{ $.Title }}"
-            style="transition: transform 0.5s ease !important;"
-            class="h-full w-full object-cover group-hover:scale-110" />
+          <img src="{{ $cardimage.RelPermalink }}" alt="{{ $.Title }}" class="h-full w-full object-cover card-image" />
         </div>
         {{ end }}
 
@@ -78,7 +67,6 @@ Blog List Partial (우측 하단 절대 고정 버전)
 
           {{/* 🚀 하단 고정 영역: mt-auto로 바닥에 붙이고, w-full로 가로폭을 꽉 채웁니다 */}}
           <div class="mt-auto flex items-end w-full">
-
 
 
             {{/* 🚀 핵심: ml-auto를 주어 왼쪽 아이콘들로부터 태그 뭉치를 오른쪽 끝으로 강하게 밀어냅니다 */}}
