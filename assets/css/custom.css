@@ -511,33 +511,34 @@ html body .modern-gradient-text {
 
 /* Glassmorphism Buttons (Category Chips) */
 /* Glassmorphism Buttons (Category Chips) */
+/* Glassmorphism Buttons (Category Chips) */
 .glass-button {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(30, 41, 59, 0.9)) !important;
-  color: #f8fafc !important;
-  /* Slate-50 */
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(248, 250, 252, 0.8)) !important;
+  /* Brighter, low saturation */
+  color: #334155 !important;
+  /* Slate-700 for contrast */
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 .glass-button.active {
   background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
-  /* Blue Gradient */
   color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
-  /* Glow effect */
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.4);
 }
 
 .glass-button:hover {
-  transform: translateY(-2px) scale(1.02);
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)) !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(241, 245, 249, 0.9)) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  color: #0f172a !important;
+  /* Slate-900 */
 }
 
 /* Dark mode overrides */

@@ -55,23 +55,26 @@ Blog List Partial (우측 하단 절대 고정 버전)
         {{/* 텍스트 영역 */}}
         <div class="flex flex-col p-6 w-3/5 h-full relative">
 
-          {{/* 🚀 1. 상단: 카테고리 (좌측, 절대 배치된 날짜와 겹치지 않게 우측 패딩 추가) */}}
-          <div class="mb-4 flex flex-wrap gap-2 pr-24">
-            {{ range .Params.categories }}
-            <span
-              class="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-cyan-600 dark:text-cyan-400">
-              {{ . }}
-            </span>
-            {{ end }}
-          </div>
+          {{/* 🚀 1. 상단: 카테고리 (좌측) + 날짜 (우측) - Flex Layout to avoid overlap */}}
+          <div class="mb-4 flex items-start justify-between">
+            {{/* 카테고리 (Pill Shape) */}}
+            <div class="flex flex-wrap gap-2">
+              {{ range .Params.categories }}
+              <span
+                class="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-cyan-600 dark:text-cyan-400">
+                {{ . }}
+              </span>
+              {{ end }}
+            </div>
 
-          {{/* 🚀 날짜 (우측 상단 절대 배치) */}}
-          <div class="absolute right-6 top-6 flex items-center gap-1.5 text-xs font-bold text-slate-400">
-            <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-            <span>{{ .Date | time.Format "2006-01-02" }}</span>
+            {{/* 날짜 (우측 정렬, 줄바꿈 방지) */}}
+            <div class="ml-4 flex shrink-0 items-center gap-1.5 text-xs font-bold text-slate-400">
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+              <span>{{ .Date | time.Format "2006-01-02" }}</span>
+            </div>
           </div>
 
           {{/* 🚀 2. 제목 */}}
