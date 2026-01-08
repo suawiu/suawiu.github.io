@@ -4,8 +4,8 @@ subtitle: "Alpha Generation and Risk Smoothing Using Managed Volatility"
 summary: "S&P500 3배 레버리지 장기투자에 대한 고찰과 통찰"
 date: 2026-01-08
 categories: ["Perspective"]
-cardimage: photo2_card.jpeg
-featureimage: 1984(2).jpeg
+cardimage: sp500_leverage_paper.png
+featureimage: sp500_leverage_paper.png
 caption: "Investment Insight"
 authors:
   - suawiu: author.jpeg
