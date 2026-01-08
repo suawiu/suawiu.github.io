@@ -28,21 +28,28 @@ html.dark strong {
    2. Spline 배경 (강제 레이어 고정)
    ========================= */
 spline-viewer {
-  position: absolute; /* 화면에 완전히 고정 */
+  position: absolute;
+  /* 화면에 완전히 고정 */
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1 !important;    /* 👈 가장 중요: 모든 컨텐츠보다 뒤로 보냄 */
-  pointer-events: none;       /* 3D 모델이 클릭을 방해하지 않도록 설정 */
+  z-index: -1 !important;
+  /* 👈 가장 중요: 모든 컨텐츠보다 뒤로 보냄 */
+  pointer-events: none;
+  /* 3D 모델이 클릭을 방해하지 않도록 설정 */
 }
 
 /* 컨텐츠가 배경 위로 올라오도록 보장 */
-header, main, footer, .hero-wrapper {
+header,
+main,
+footer,
+.hero-wrapper {
   position: relative;
   z-index: 10;
   background: transparent !important;
 }
+
 header#main-header {
   z-index: 10020 !important;
 }
@@ -50,11 +57,21 @@ header#main-header {
 /* =========================
    3. 로고
    ========================= */
-.custom-logo-light { display: inline-block !important; }
-.custom-logo-dark { display: none !important; }
+.custom-logo-light {
+  display: inline-block !important;
+}
 
-html.dark .custom-logo-light { display: none !important; }
-html.dark .custom-logo-dark { display: inline-block !important; }
+.custom-logo-dark {
+  display: none !important;
+}
+
+html.dark .custom-logo-light {
+  display: none !important;
+}
+
+html.dark .custom-logo-dark {
+  display: inline-block !important;
+}
 
 /* =========================
    4. 메뉴 오버레이
@@ -84,7 +101,7 @@ html.dark .custom-logo-dark { display: inline-block !important; }
   backdrop-filter: blur(20px);
   padding: 4rem;
   transform: translateX(100%);
-  transition: transform .7s cubic-bezier(.16,1,.3,1);
+  transition: transform .7s cubic-bezier(.16, 1, .3, 1);
 }
 
 html.dark .menu-panel {
@@ -104,8 +121,8 @@ html.dark .menu-panel {
   opacity: 0;
   transform: translateY(20px);
   /* transition에 transform이 포함되어 있어 호버 애니메이션도 부드럽게 작동합니다 */
-  transition: all 0.4s cubic-bezier(.16, 1, .3, 1); 
-  display: inline-block; 
+  transition: all 0.4s cubic-bezier(.16, 1, .3, 1);
+  display: inline-block;
   position: relative;
 }
 
@@ -117,8 +134,8 @@ html.dark .menu-panel {
 
 /* 🔥 마우스 호버 효과 (X축 이동으로 변경) */
 .menu-item:hover {
-  color: #3b82f6 !important; 
-  transform: translateX(15px) !important; 
+  color: #3b82f6 !important;
+  transform: translateX(15px) !important;
   opacity: 1 !important;
 }
 
@@ -144,9 +161,17 @@ html.dark .menu-item:hover {
 }
 
 /* 등장 딜레이 */
-.menu-item:nth-child(1) { transition-delay: 0.2s; } 
-.menu-item:nth-child(2) { transition-delay: 0.4s; } 
-.menu-item:nth-child(3) { transition-delay: 0.6s; }
+.menu-item:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.menu-item:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.menu-item:nth-child(3) {
+  transition-delay: 0.6s;
+}
 
 /* =========================
    7. 배경 및 메인 컨텐츠 블러 효과
@@ -155,9 +180,12 @@ html.dark .menu-item:hover {
 /* 메뉴가 열렸을 때 Spline 3D와 메인 컨텐츠 전체를 블러 처리 */
 body.menu-open spline-viewer,
 body.menu-open main {
-  filter: blur(8px) brightness(0.7); /* 블러 강도와 밝기 조절 */
-  transition: filter 0.5s ease;      /* 부드러운 전환 */
-  pointer-events: none;               /* 메뉴 열린 동안 메인 클릭 방지 */
+  filter: blur(8px) brightness(0.7);
+  /* 블러 강도와 밝기 조절 */
+  transition: filter 0.5s ease;
+  /* 부드러운 전환 */
+  pointer-events: none;
+  /* 메뉴 열린 동안 메인 클릭 방지 */
 }
 
 
@@ -192,10 +220,12 @@ html:not(.dark) body.menu-open #theme-toggle {
   font-weight: 900;
 }
 
-/* 🔑 테마 버튼과 햄버거 버튼 사이 간격 확대 */ 
-header .flex.items-center.space-x-6, 
-header .flex.items-center.space-x-10 
-{ gap: 0.7rem !important; /* 버튼 사이를 약 40px로 넉넉히 벌림 */ }
+/* 🔑 테마 버튼과 햄버거 버튼 사이 간격 확대 */
+header .flex.items-center.space-x-6,
+header .flex.items-center.space-x-10 {
+  gap: 0.7rem !important;
+  /* 버튼 사이를 약 40px로 넉넉히 벌림 */
+}
 
 
 
@@ -219,7 +249,7 @@ header .flex.items-center.space-x-10
   width: 100%;
   background-color: currentColor;
   border-radius: 2px;
-  transition: all 0.8s cubic-bezier(.16,1,.3,1);
+  transition: all 0.8s cubic-bezier(.16, 1, .3, 1);
 }
 
 /* 🔥 메뉴 열렸을 때 → X */
@@ -250,7 +280,7 @@ body.menu-open .hamburger span:nth-child(3) {
   inset: 0;
   margin: auto;
   transition:
-    transform 1.0s cubic-bezier(.16,1,.3,1),
+    transform 1.0s cubic-bezier(.16, 1, .3, 1),
     opacity 0.75s ease;
 }
 
@@ -280,15 +310,18 @@ html:not(.dark) #theme-toggle-dark-icon {
 .hero-wrapper {
   min-height: 100vh;
   display: flex;
-  align-items: flex-start; /* 👈 중앙이 아닌 상단부터 배치 */
+  align-items: flex-start;
+  /* 👈 중앙이 아닌 상단부터 배치 */
   justify-content: center;
-  padding-top: 20vh;       /* 👈 상단으로부터의 거리 직접 조절 */
+  padding-top: 20vh;
+  /* 👈 상단으로부터의 거리 직접 조절 */
   padding-left: 8vw;
   padding-right: 8vw;
 }
 
 .hero-inner {
-  text-align: justify;     /* 양쪽 정렬 */
+  text-align: justify;
+  /* 양쪽 정렬 */
   max-width: 720px;
 }
 
@@ -365,10 +398,13 @@ html.dark .hero-contact a {
 /* 아이콘들을 담는 컨테이너 */
 .contact-icons {
   display: flex;
-  flex-wrap: wrap;       /* 화면이 좁아지면 다음 줄로 */
-  gap: 1.0rem;           /* 아이콘 사이 간격 */
+  flex-wrap: wrap;
+  /* 화면이 좁아지면 다음 줄로 */
+  gap: 1.0rem;
+  /* 아이콘 사이 간격 */
   margin-top: 0.1rem;
-  justify-content: flex-start; /* 왼쪽 정렬 */
+  justify-content: flex-start;
+  /* 왼쪽 정렬 */
   align-items: center;
 }
 
@@ -383,11 +419,15 @@ html.dark .hero-contact a {
 
 /* 🔑 핵심: 아이콘 크기 제어 */
 .contact-icon svg {
-  width: 30px !important;  /* 아이콘 가로 크기 (작게 조절) */
-  height: 30px !important; /* 아이콘 세로 크기 (작게 조절) */
-  fill: currentColor;      /* 텍스트 색상을 따름 */
+  width: 30px !important;
+  /* 아이콘 가로 크기 (작게 조절) */
+  height: 30px !important;
+  /* 아이콘 세로 크기 (작게 조절) */
+  fill: currentColor;
+  /* 텍스트 색상을 따름 */
   display: block;
-  overflow: visible;       /* 잘림 방지 */
+  overflow: visible;
+  /* 잘림 방지 */
 }
 
 /* 마우스 올렸을 때 효과 */
@@ -397,8 +437,15 @@ html.dark .hero-contact a {
 }
 
 /* 라이트/다크 모드 색상 */
-html:not(.dark) .contact-icon { color: #000; opacity: 1.0; }
-html.dark .contact-icon { color: #fff; opacity: 1.0; }
+html:not(.dark) .contact-icon {
+  color: #000;
+  opacity: 1.0;
+}
+
+html.dark .contact-icon {
+  color: #fff;
+  opacity: 1.0;
+}
 
 /* =========================
    About 페이지 글자색 강제 (라이트 모드)
@@ -412,11 +459,12 @@ html:not(.dark) h1,
 html:not(.dark) h2,
 html:not(.dark) h3,
 html:not(.dark) h4 {
-  color: #000000 !important; /* 완전한 검정색 */
+  color: #000000 !important;
+  /* 완전한 검정색 */
 }
 
 /* 만약 About Me라는 큰 제목도 바꾸고 싶다면 아래 클래스도 확인해 보세요 */
-html:not(.dark) .text-4xl, 
+html:not(.dark) .text-4xl,
 html:not(.dark) .font-bold {
   color: #000000 !important;
 }
@@ -430,9 +478,11 @@ html:not(.dark) .link_svg svg,
 html:not(.dark) .contact-icon svg,
 html:not(.dark) .link svg {
   fill: #000000 !important;
-  stroke: #000000 !important; /* 선으로 그려진 아이콘 대비 */
+  stroke: #000000 !important;
+  /* 선으로 그려진 아이콘 대비 */
   color: #000000 !important;
-  opacity: 1 !important;     /* 흐릿하게 보이지 않도록 투명도 제거 */
+  opacity: 1 !important;
+  /* 흐릿하게 보이지 않도록 투명도 제거 */
 }
 
 /* 마우스 올렸을 때만 살짝 투명도를 주어 반응 효과 생성 (선택 사항) */
@@ -446,11 +496,14 @@ html:not(.dark) .link:hover svg {
    ========================= */
 
 /* Gradient Text (Suawiu & Blog Title) */
-.modern-gradient-text {
+/* Gradient Text (Suawiu & Blog Title) - High Specificity to override dark mode defaults */
+html.dark .modern-gradient-text,
+html body .modern-gradient-text {
   background: linear-gradient(to right, #22d3ee, #0ea5e9, #8b5cf6);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent !important; /* Force transparent text color */
+  color: transparent !important;
+  /* Force transparent text color */
   display: inline-block;
 }
 
@@ -486,7 +539,8 @@ html:not(.dark) .link:hover svg {
 
 .card-item:hover {
   transform: translateY(-8px);
-  filter: brightness(1.3); /* Increase brightness on hover */
+  filter: brightness(1.3);
+  /* Increase brightness on hover */
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
