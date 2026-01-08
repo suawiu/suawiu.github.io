@@ -56,19 +56,19 @@ Blog List Partial (우측 하단 절대 고정 버전)
         <div class="flex flex-col p-6 w-3/5 h-full relative">
 
           {{/* 🚀 1. 상단: 카테고리 (좌측) + 날짜 (우측) */}}
-          <div class="flex items-center justify-between mb-3">
-            {{/* 카테고리 (Pill Shape) */}}
+          <div class="flex items-start justify-between mb-6">
+            {{/* 카테고리 (Pill Shape) - Size reduced */}}
             <div class="flex flex-wrap gap-2">
               {{ range .Params.categories }}
               <span
-                class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-cyan-500 border border-cyan-500/30 bg-cyan-500/10 rounded-full">
+                class="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-cyan-500 border border-cyan-500/30 bg-cyan-500/10 rounded-full">
                 {{ . }}
               </span>
               {{ end }}
             </div>
 
             {{/* 날짜 */}}
-            <div class="text-xs text-slate-400 font-medium flex items-center gap-1">
+            <div class="text-[10px] text-slate-400 font-bold flex items-center gap-1 shrink-0">
               <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
