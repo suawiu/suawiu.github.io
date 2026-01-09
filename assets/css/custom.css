@@ -13,15 +13,35 @@ html.dark body {
 }
 
 /* 다크모드 텍스트 */
+/* 다크모드 텍스트 */
 html.dark p,
 html.dark span,
 html.dark h1,
 html.dark h2,
 html.dark h3,
-html.dark a,
 html.dark li,
 html.dark strong {
   color: #fff !important;
+}
+
+/* 다크모드 링크 설정 */
+html.dark a {
+  color: inherit;
+  /* 기본적으로 부모 색상(흰색) 상속 */
+}
+
+/* 콘텐츠 내부 링크는 파란색으로 */
+html.dark .markdown a,
+html.dark article a {
+  color: #60a5fa !important;
+  /* Blue-400 */
+  transition: color 0.2s;
+}
+
+html.dark .markdown a:hover,
+html.dark article a:hover {
+  color: #93c5fd !important;
+  /* Blue-300 */
 }
 
 /* =========================
