@@ -2,45 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>suawiu</title>
-    <link>https://suawiu.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on suawiu</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://suawiu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>1984</title>
-      <link>https://suawiu.github.io/blog/post1/</link>
+      <title>ML with QC - Ch1</title>
+      <link>http://localhost:1313/blog/post5/</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/post5/</guid>
+      <description>A breakdown of Chapter 1 from &amp;lsquo;Machine Learning with Quantum Computers&amp;rsquo; with slides and explanations.</description>
+    </item>
+    <item>
+      <title>S&amp;P500 3배 레버리지 장기투자</title>
+      <link>http://localhost:1313/blog/post2/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/post2/</guid>
+      <description>S&amp;amp;P500 3배 레버리지 장기투자에 대한 고찰과 통찰</description>
+    </item>
+    <item>
+      <title>1984 - George Orwell</title>
+      <link>http://localhost:1313/blog/post1/</link>
       <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://suawiu.github.io/blog/post1/</guid>
+      <guid>http://localhost:1313/blog/post1/</guid>
       <description>“자유는 예속, 무지는 힘&amp;quot;</description>
     </item>
     <item>
       <title>Blog Post 3</title>
-      <link>https://suawiu.github.io/blog/post3/</link>
+      <link>http://localhost:1313/blog/post3/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://suawiu.github.io/blog/post3/</guid>
+      <guid>http://localhost:1313/blog/post3/</guid>
       <description>Coming Soon</description>
     </item>
     <item>
       <title>Blog Post 4</title>
-      <link>https://suawiu.github.io/blog/post4/</link>
+      <link>http://localhost:1313/blog/post4/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://suawiu.github.io/blog/post4/</guid>
-      <description>Coming Soon</description>
-    </item>
-    <item>
-      <title>Project1</title>
-      <link>https://suawiu.github.io/blog/post2/</link>
-      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://suawiu.github.io/blog/post2/</guid>
+      <guid>http://localhost:1313/blog/post4/</guid>
       <description>Coming Soon</description>
     </item>
     <item>
       <title></title>
-      <link>https://suawiu.github.io/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://suawiu.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;h3 id=&#34;education&#34;&gt;Education&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Yonsei University, Seoul, South Korea (Mar 2022 - )&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Dept. of Physics&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;research-interests&#34;&gt;Research Interests&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Quantum Computing:&lt;/strong&gt; Superconducting Qubits, Circuit Quantum Electrodynamics (cQED), Quantum Error Correction&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Condensed Matter Physics:&lt;/strong&gt; Low-temperature Systems&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Data Analysis:&lt;/strong&gt; Financial Time Series Analysis, Statistical Modeling&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;experience&#34;&gt;Experience&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Signals Intelligence (SIGINT) Specialist&lt;/strong&gt;, Republic of Korea Army (Aug 2024 - Feb 2026)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Squad Leader&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Undergraduate Researcher&lt;/strong&gt;, Quantum Information Lab @ Yonsei (Jan 2024 – Jun 2024)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Quantum computing based on Circuit QED Lab Advised by Prof. Kyungsun Moon&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;certifications&#34;&gt;Certifications&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;ADsP (Advanced Data Analytics Semi-Professional)&lt;/strong&gt;, 2025&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Computer Literacy Level 2&lt;/strong&gt;, 2025&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;SQLD (SQL Developer)&lt;/strong&gt;, 2023&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;awards-and-scholarships&#34;&gt;Awards and Scholarships&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;KC Scholarship Foundation&lt;/strong&gt;, Scholarship for Outstanding STEM Talent, 2024&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;5th Place&lt;/strong&gt;, DB GAPS Investment Competition, 2023&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Minister of Science and ICT Award (미래창조과학부 장관상)&lt;/strong&gt;, 2013&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;activities&#34;&gt;Activities&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;QIYA&lt;/strong&gt;, Quantum Informatics at Yonsei Academy (Jan 2026 - )&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Kwang&lt;/strong&gt;, Crossfit Club @ Yonsei (Mar 2023 – )&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Gongsarang&lt;/strong&gt;, Basketball Club @ Yonsei (Mar 2022 - Dec 2022)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

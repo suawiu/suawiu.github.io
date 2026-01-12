@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Perspective on suawiu</title>
-    <link>https://suawiu.github.io/categories/perspective/</link>
+    <link>http://localhost:1313/categories/perspective/</link>
     <description>Recent content in Perspective on suawiu</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://suawiu.github.io/categories/perspective/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/perspective/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>1984</title>
-      <link>https://suawiu.github.io/blog/post1/</link>
+      <title>S&amp;P500 3배 레버리지 장기투자</title>
+      <link>http://localhost:1313/blog/post2/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/post2/</guid>
+      <description>S&amp;amp;P500 3배 레버리지 장기투자에 대한 고찰과 통찰</description>
+    </item>
+    <item>
+      <title>1984 - George Orwell</title>
+      <link>http://localhost:1313/blog/post1/</link>
       <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://suawiu.github.io/blog/post1/</guid>
+      <guid>http://localhost:1313/blog/post1/</guid>
       <description>“자유는 예속, 무지는 힘&amp;quot;</description>
     </item>
     <item>
       <title>Blog Post 3</title>
-      <link>https://suawiu.github.io/blog/post3/</link>
+      <link>http://localhost:1313/blog/post3/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://suawiu.github.io/blog/post3/</guid>
+      <guid>http://localhost:1313/blog/post3/</guid>
       <description>Coming Soon</description>
     </item>
     <item>
       <title>Blog Post 4</title>
-      <link>https://suawiu.github.io/blog/post4/</link>
+      <link>http://localhost:1313/blog/post4/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://suawiu.github.io/blog/post4/</guid>
+      <guid>http://localhost:1313/blog/post4/</guid>
       <description>Coming Soon</description>
     </item>
   </channel>
