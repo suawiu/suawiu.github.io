@@ -1,11 +1,11 @@
 ---
-title: "Machine Learning with Quantum Computers - Chapter 1"
+title: "ML with QC - Ch1"
 subtitle: "Introduction to Quantum Machine Learning"
-summary: "A summary of Chapter 1: Introduction from the book 'Machine Learning with Quantum Computers'."
+summary: "A breakdown of Chapter 1 from 'Machine Learning with Quantum Computers' with slides and explanations."
 date: 2026-01-12
 categories: ["Physics"]
-cardimage: "post5/cover.jpg"
-featureimage: "post5/cover.jpg"
+cardimage: "post5/slide1.jpg"
+featureimage: "post5/slide1.jpg"
 caption: "Quantum Science and Technology"
 authors:
   - suawiu: author.jpeg
@@ -15,32 +15,55 @@ This post summarizes **Chapter 1. Introduction** of the book *"Machine Learning 
 
 ---
 
-### 1. Merging Two Disciplines
+### 1. Introduction
 
-**Quantum Machine Learning (QML)** lies at the fascinating intersection of two transformative fields: **Quantum Computing** and **Machine Learning**.
+![Chapter 1 Introduction Title Slide](slide1.jpg)
 
-*   **Machine Learning (ML)**: A field situated at the crossroads of statistics, mathematics, and computer science. It focuses on analyzing how computers can learn from data—often large datasets with complex, nonlinear relationships—to make predictions or solve unseen problems.
-*   **Quantum Computing (QC)**: A paradigm that utilizes the principles of quantum mechanics to perform computations.
+This chapter introduces the fundamental concepts of Quantum Machine Learning (QML). Ideally, it sets the stage for understanding how quantum computing principles can be applied to machine learning tasks. As the field is rapidly evolving, this book aims to bridge the gap between computer science, physics, and statistics.
 
-The merger of these two fields aims to improve computational efficiency by leveraging the unique properties of quantum computers, such as **parallelism** and **superposition**.
+---
 
-### 2. What is a Quantum Computer?
+### 2. Contents
 
-A **Quantum Computer** is a device whose computations can only be described by the laws of **Quantum Theory**. Unlike classical computers that operate on binary bits (0 or 1), quantum computers process information using **Qubits**.
+![Table of Contents Slide](slide2.jpg)
 
-*   **Physical Realization**: Small-scale microscopic systems like photons, electrons, and atoms are used directly to process information.
-*   **Challenges**: It requires the accurate control of these very small systems. A major challenge is preserving **quantum coherence**—the fragile state necessary for quantum computation. Disturbances can cause decoherence, making **error correction** a crucial aspect of development.
+The introductory chapter focuses on two main areas:
+1.  **Background**: Establishing the necessary context by defining what quantum computers are and how they relate to machine learning.
+2.  **A Toy Example**: Providing a simple, illustrative example of a quantum algorithm designed for classification to make the abstract concepts more concrete.
 
-#### Circuit Model
-The language of quantum algorithms is often formulated using the **Circuit Model**, which consists of:
-*   **Qubits**: The quantum counterpart to classical bits.
-*   **Quantum Gates**: Operations performed on qubits to execute computations.
+---
 
-### 3. Fault-Tolerant vs. Near-Term Approaches
+### 3. Merging Two Disciplines
 
-We are currently in an era of quantum computing development known as **NISQ**.
+![Merging Two Disciplines Slide](slide3.jpg)
 
-*   **NISQ (Noisy Intermediate-Scale Quantum)**: Represents the current state of technology (where we are today and the next ~5 years). These systems have a limited number of qubits and are subject to noise/errors, but can still be used for specific applications like quantum chemistry, optimization, and machine learning.
-*   **Fault-Tolerant QC**: The long-term goal. These systems will operate beyond the error correction threshold, allowing for large-scale, error-free quantum computations.
+**Quantum Machine Learning (QML)** is not just a subfield of one discipline but a merger of **Quantum Computing** and **Machine Learning**.
 
-While we strive towards fault-tolerant quantum computers, current research heavily focuses on extracting value from NISQ devices, which is where Quantum Machine Learning sees significant potential.
+*   **Machine Learning**: A field at the intersection of statistics, mathematics, and computer science. It deals with algorithms that allow computers to learn from data, identifying complex, nonlinear patterns to make predictions on unseen data.
+*   **Quantum Computing**: Leveraging the laws of quantum mechanics—specifically superposition and entanglement—to perform computations in ways that classical computers cannot.
+*   **The Intersection**: The goal of QML is to utilize the massive parallelism and unique capabilities of quantum processors to improve the efficiency and power of machine learning algorithms.
+
+---
+
+### 4. What is a Quantum Computer?
+
+![What is a Quantum Computer Slide](slide4.jpg)
+
+A **Quantum Computer** operates fundamentally differently from the classical devices we use every day.
+
+*   **Quantum Theory**: It relies on the mathematical framework of quantum theory, which describes the behavior of microscopic systems like photons, electrons, and atoms.
+*   **Fragility**: These systems are incredibly delicate. Maintaining **quantum coherence**—the state required for computation—is difficult because any interaction with the environment can cause "decoherence" or errors. This makes **error correction** a critical challenge.
+*   **Circuit Model**: The standard language for describing quantum algorithms. It replaces classical bits (0 and 1) with **Qubits** and uses **Quantum Gates** to manipulate them, similar to logic gates in classical circuits but with the added power of quantum mechanics.
+
+---
+
+### 5. Fault-Tolerant vs. Near-Term Approaches
+
+![Fault-Tolerant vs Near-Term Approaches Slide](slide5.jpg)
+
+The development of quantum computers is viewed through two main phases:
+
+*   **NISQ (Noisy Intermediate-Scale Quantum)**: This is "where we are today." NISQ devices have a limited number of qubits (intermediate scale) and are not yet fully error-corrected (noisy). However, they are still powerful enough to demonstrate advantages in specific tasks like chemistry simulations, optimization, and **machine learning**.
+*   **Fault-Tolerant QC**: This is the long-term goal—a large-scale quantum computer that can correct its own errors. The "error correction threshold" is the boundary we need to cross to achieve this.
+
+QML research is particularly active in the NISQ era, looking for algorithms that can be robust against noise and provide value even with today's imperfect hardware.
