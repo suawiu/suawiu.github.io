@@ -61,7 +61,7 @@ module.exports = {
       pattern: /grid-cols-.+/,
     },
     {
-      pattern: /(border|bg|text)-(cyan|violet|emerald|slate)-(400|500|600).*/,
+      pattern: /!?(border|bg|text)-(cyan|violet|emerald|slate)-(400|500|600).*/,
       variants: ['dark', 'hover'],
     },
   ],
