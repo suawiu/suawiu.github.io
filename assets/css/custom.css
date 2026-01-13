@@ -144,7 +144,8 @@ html.dark .menu-panel {
   opacity: 0;
   transform: translateY(20px);
   /* transition에 transform이 포함되어 있어 호버 애니메이션도 부드럽게 작동합니다 */
-  transition: all 0.4s cubic-bezier(.16, 1, .3, 1);
+  /* Color transition speed increased as requested */
+  transition: color 0.1s ease-out, transform 0.4s cubic-bezier(.16, 1, .3, 1), opacity 0.4s;
   display: inline-block;
   position: relative;
   color: #000000;
@@ -163,14 +164,16 @@ html.dark .menu-item {
 
 /* 🔥 마우스 호버 효과 (X축 이동으로 변경) */
 .menu-item:hover {
-  color: #3b82f6 !important;
+  color: #0891b2 !important;
+  /* Cyan-600 */
   transform: translateX(15px) !important;
   opacity: 1 !important;
 }
 
 /* 🔥 다크모드 호버 색상 */
 html.dark .menu-item:hover {
-  color: #60a5fa !important;
+  color: #22d3ee !important;
+  /* Cyan-400 */
 }
 
 /* 🔥 밑줄 애니메이션 */
