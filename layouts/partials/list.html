@@ -57,6 +57,7 @@ Blog List Partial (우측 하단 절대 고정 버전)
 
           {{/* 🚀 1. 상단: 카테고리 (Pill Shape) - Refined Size & Centering */}}
           <div class="mb-4 flex flex-wrap gap-2">
+            {{ range .Params.categories }}
             {{ $colorClass := "!border-slate-500/30 !bg-slate-500/10 !text-slate-600 dark:!text-slate-400" }}
             {{ $catLower := lower . }}
             {{ if eq $catLower "physics" }}
