@@ -243,12 +243,7 @@ html:not(.dark) body.menu-open #theme-toggle {
   font-weight: 900;
 }
 
-/* 🔑 테마 버튼과 햄버거 버튼 사이 간격 확대 */
-header .flex.items-center.space-x-6,
-header .flex.items-center.space-x-10 {
-  gap: 0.7rem !important;
-  /* 버튼 사이를 약 40px로 넉넉히 벌림 */
-}
+/* Gap removed to rely on Tailwind space-x-2 */
 
 
 

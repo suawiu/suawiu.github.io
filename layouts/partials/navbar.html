@@ -5,13 +5,13 @@
 <section class="mx-auto flex max-w-(--breakpoint-xl) items-center justify-between p-4">
   <a href="{{ .Site.BaseURL }}" class="flex items-center space-x-3">
     {{ with $logoLight }}
-      {{ $logo := .Filter (images.Process "resize 120x120 webp") }}
-      <img src="{{ $logo.RelPermalink }}" class="custom-logo-light h-8 w-8" alt="Logo Light" />
+    {{ $logo := .Filter (images.Process "resize 120x120 webp") }}
+    <img src="{{ $logo.RelPermalink }}" class="custom-logo-light h-8 w-8" alt="Logo Light" />
     {{ end }}
 
     {{ with $logoDark }}
-      {{ $logo := .Filter (images.Process "resize 120x120 webp") }}
-      <img src="{{ $logo.RelPermalink }}" class="custom-logo-dark h-8 w-8" alt="Logo Dark" />
+    {{ $logo := .Filter (images.Process "resize 120x120 webp") }}
+    <img src="{{ $logo.RelPermalink }}" class="custom-logo-dark h-8 w-8" alt="Logo Dark" />
     {{ end }}
 
     <span class="self-center whitespace-nowrap text-2xl font-semibold text-black dark:text-white">
@@ -19,13 +19,14 @@
     </span>
   </a>
 
-  <div class="flex items-center space-x-10">
+  <div class="flex items-center space-x-2">
     <button id="theme-toggle" type="button" aria-label="theme-switcher" class="flex items-center justify-center p-2">
       <svg id="theme-toggle-dark-icon" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8 0 1010.586 10.586z"></path>
       </svg>
 
-      <svg id="theme-toggle-light-icon" class="h-6 w-6" fill="currentColor" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <svg id="theme-toggle-light-icon" class="h-6 w-6" fill="currentColor" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="5"></circle>
         <line x1="12" y1="1" x2="12" y2="3"></line>
         <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -42,6 +43,6 @@
       <span></span>
       <span></span>
       <span></span>
-    </button>    
+    </button>
   </div>
 </section>
