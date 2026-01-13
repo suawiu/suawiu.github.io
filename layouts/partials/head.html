@@ -11,12 +11,12 @@
 
 {{/* Creator tag */}}
 {{ with .Site.Params.Author.name }}
-  <meta name="author" content="{{ . }}" />
+<meta name="author" content="{{ . }}" />
 {{ end }}
 
 {{/* Site description */}}
 {{ with .Site.Params.description }}
-  <meta name="description" content="{{ . }}" />
+<meta name="description" content="{{ . }}" />
 {{ end }}
 
 {{/* CSS bundle */}}
@@ -25,10 +25,12 @@
 {{ $assets.Add "css" (slice $mainCSS) }}
 {{ $customCSS := resources.Get "css/custom.css" }}
 {{ if $customCSS }}
-  {{ $assets.Add "css" (slice $customCSS) }}
+{{ $assets.Add "css" (slice $customCSS) }}
 {{ end }}
-{{ $bundleCSS := $assets.Get "css" | resources.Concat "css/main.bundle.css" | resources.Minify | resources.Fingerprint "sha256" }}
-<link type="text/css" rel="stylesheet" href="{{ $bundleCSS.RelPermalink }}" integrity="{{ $bundleCSS.Data.Integrity }}" />
+{{ $bundleCSS := $assets.Get "css" | resources.Concat "css/main.bundle.css" | resources.PostCSS | resources.Minify |
+resources.Fingerprint "sha256" }}
+<link type="text/css" rel="stylesheet" href="{{ $bundleCSS.RelPermalink }}"
+  integrity="{{ $bundleCSS.Data.Integrity }}" />
 
 {{/* JS bundle */}}
 {{ $mainJS := resources.Get "js/main.js" }}
@@ -37,19 +39,20 @@
 {{ $assets.Add "js" (slice $themeJS) }}
 {{ $customJS := resources.Get "js/custom.js" }}
 {{ if $customJS }}
-  {{ $assets.Add "js" (slice $customJS) }}
+{{ $assets.Add "js" (slice $customJS) }}
 {{ end }}
-{{ $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint "sha256" }}
+{{ $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint
+"sha256" }}
 <script defer src="{{ $bundleJS.RelPermalink }}" integrity="{{ $bundleJS.Data.Integrity }}"></script>
 
 {{/* Favicon - 고해상도 대응 (변수명 $favicon으로 통일) */}}
 {{ $favicon := resources.Get "favicon.png" }}
 {{ with $favicon }}
-  {{ $iconApple := .Resize "180x180" }}
-  {{ $icon32 := .Resize "32x32" }}
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ $iconApple.RelPermalink }}" />
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ $icon32.RelPermalink }}" />
-  <link rel="icon" type="image/png" href="{{ .RelPermalink }}" />
+{{ $iconApple := .Resize "180x180" }}
+{{ $icon32 := .Resize "32x32" }}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ $iconApple.RelPermalink }}" />
+<link rel="icon" type="image/png" sizes="32x32" href="{{ $icon32.RelPermalink }}" />
+<link rel="icon" type="image/png" href="{{ .RelPermalink }}" />
 {{ end }}
 
 {{/* OpenGraph & Twitter Cards */}}
