@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       pattern: /!?(border|bg|text)-(cyan|violet|emerald|slate)-(400|500|600|700).*/,
-      variants: ['dark', 'hover'],
+      variants: ['dark', 'hover', 'group-hover'],
     },
   ],
 };

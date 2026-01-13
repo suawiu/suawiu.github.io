@@ -475,8 +475,7 @@ html:not(.dark) p,
 html:not(.dark) li,
 html:not(.dark) h1,
 html:not(.dark) h2,
-html:not(.dark) h3,
-html:not(.dark) h4 {
+html:not(.dark) h3 {
   color: #000000 !important;
   /* 완전한 검정색 */
 }
