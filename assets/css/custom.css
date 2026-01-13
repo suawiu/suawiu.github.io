@@ -487,8 +487,7 @@ html:not(.dark) h4 {
 }
 
 /* 만약 About Me라는 큰 제목도 바꾸고 싶다면 아래 클래스도 확인해 보세요 */
-html:not(.dark) .text-4xl,
-html:not(.dark) .font-bold {
+html:not(.dark) .text-4xl {
   color: #000000 !important;
 }
 
