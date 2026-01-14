@@ -9,18 +9,25 @@
     <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ML with QC - Ch1</title>
+      <title>ML with QC - Ch1 (English)</title>
       <link>http://localhost:1313/blog/post5/</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/post5/</guid>
-      <description>A breakdown of Chapter 1 from &amp;lsquo;Machine Learning with Quantum Computers&amp;rsquo; with slides and explanations.</description>
+      <description>breakdown of Chapter 1 from &amp;lsquo;Machine Learning with Quantum Computers</description>
+    </item>
+    <item>
+      <title>ML with QC - Ch1 (한글)</title>
+      <link>http://localhost:1313/blog/post6/</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/post6/</guid>
+      <description>&amp;lsquo;Machine Learning with Quantum Computers&amp;rsquo; 1장 정리</description>
     </item>
     <item>
       <title>S&amp;P500 3배 레버리지 장기투자</title>
       <link>http://localhost:1313/blog/post2/</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/post2/</guid>
-      <description>S&amp;amp;P500 3배 레버리지 장기투자에 대한 고찰과 통찰</description>
+      <description>논문 리뷰로 보는 S&amp;amp;P500 3배 레버리지 장기투자에 대한 고찰</description>
     </item>
     <item>
       <title>1984 - George Orwell</title>

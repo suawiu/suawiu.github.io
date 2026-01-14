@@ -1,7 +1,7 @@
 ---
-title: "ML with QC - Ch1"
-subtitle: "Introduction to Quantum Machine Learning"
-summary: "A breakdown of Chapter 1 from 'Machine Learning with Quantum Computers' with slides and explanations."
+title: "ML with QC - Ch1 (English)"
+subtitle: "A breakdown of Chapter 1 from 'Machine Learning with Quantum Computers'"
+summary: "breakdown of Chapter 1 from 'Machine Learning with Quantum Computers"
 date: 2026-01-12
 categories: ["Physics"]
 cardimage: "post5/cover_new.png"
@@ -17,7 +17,7 @@ This post summarizes **Chapter 1. Introduction** of the book *"Machine Learning 
 
 ### 1. Introduction
 
-![Chapter 1 Introduction Title Slide](slide1.jpg)
+![Chapter 1 Introduction Title Slide](slide1_new.jpg)
 
 This chapter introduces the fundamental concepts of Quantum Machine Learning (QML). Ideally, it sets the stage for understanding how quantum computing principles can be applied to machine learning tasks. As the field is rapidly evolving, this book aims to bridge the gap between computer science, physics, and statistics.
 
