@@ -22,19 +22,5 @@
       <guid>http://localhost:1313/blog/post1/</guid>
       <description>“자유는 예속, 무지는 힘&amp;quot;</description>
     </item>
-    <item>
-      <title>Blog Post 3</title>
-      <link>http://localhost:1313/blog/post3/</link>
-      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/post3/</guid>
-      <description>Coming Soon</description>
-    </item>
-    <item>
-      <title>Blog Post 4</title>
-      <link>http://localhost:1313/blog/post4/</link>
-      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/post4/</guid>
-      <description>Coming Soon</description>
-    </item>
   </channel>
 </rss>

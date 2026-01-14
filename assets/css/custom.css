@@ -18,14 +18,8 @@ html.dark body {
 
 /* 다크모드 텍스트 */
 /* 다크모드 텍스트 */
-html.dark p,
-html.dark h1,
-html.dark h2,
-html.dark h3,
-html.dark li,
-html.dark strong {
-  color: #fff !important;
-}
+/* 다크모드 텍스트 - 기본적으로 tailwind dark:text-white 등을 따르게 함 */
+/* html.dark p, html.dark h1... 강제 적용 제거 */
 
 /* 다크모드 링크 설정 */
 html.dark a {
@@ -64,7 +58,6 @@ spline-viewer {
 }
 
 /* 컨텐츠가 배경 위로 올라오도록 보장 */
-header,
 main,
 footer,
 .hero-wrapper {
@@ -483,8 +476,7 @@ html:not(.dark) .markdown,
 html:not(.dark) p,
 html:not(.dark) li,
 html:not(.dark) h1,
-html:not(.dark) h2,
-html:not(.dark) h3 {
+html:not(.dark) h2 {
   color: #000000 !important;
   /* 완전한 검정색 */
 }
@@ -606,4 +598,57 @@ html.dark .glass-button:hover {
 
 .card-item:hover .card-image {
   transform: scale(1.1);
+}
+
+/* PDF Download Button Icon Force Color */
+/* PDF Download Button Icon Force Color */
+/* Light Mode: Dark Icon */
+html:not(.dark) .pdf-btn-icon {
+  color: #334155 !important;
+  /* slate-700 */
+  stroke: #334155 !important;
+}
+
+html:not(.dark) .group:hover .pdf-btn-icon {
+  color: #0891b2 !important;
+  /* cyan-600 */
+  stroke: #0891b2 !important;
+}
+
+/* Dark Mode: Light Icon */
+html.dark .pdf-btn-icon {
+  color: #cbd5e1 !important;
+  /* slate-300 */
+  stroke: #cbd5e1 !important;
+}
+
+html.dark .group:hover .pdf-btn-icon {
+  color: #22d3ee !important;
+  /* cyan-400 */
+  stroke: #22d3ee !important;
+}
+
+/* PDF Button Link Styles Override */
+/* Light Mode: Dark Text */
+html:not(.dark) a.pdf-download-btn-link {
+  color: #334155 !important;
+  /* slate-700 */
+  text-decoration: none !important;
+}
+
+html:not(.dark) a.pdf-download-btn-link:hover {
+  color: #0891b2 !important;
+  /* cyan-600 */
+}
+
+/* Dark Mode: Light Text */
+html.dark a.pdf-download-btn-link {
+  color: #e2e8f0 !important;
+  /* slate-200 */
+  text-decoration: none !important;
+}
+
+html.dark a.pdf-download-btn-link:hover {
+  color: #22d3ee !important;
+  /* cyan-400 */
 }

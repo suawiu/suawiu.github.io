@@ -14,24 +14,12 @@
 
 
 
-  <meta name="author" content="Seungmin Cha" />
+<meta name="author" content="Seungmin Cha" />
 
 
 
 
-  <meta name="description" content="Archive of Suawiu" />
-
-
-
-
-
-
-
-
-  
-
-
-<link type="text/css" rel="stylesheet" href="/css/main.bundle.min.04227b5c0e4b78e864bd55df0378187ef269f77401799df0c83db86796e5b9d9.css" integrity="sha256-BCJ7XA5LeOhkvVXfA3gYfvJp93QBeZ3wyD24Z5bludk=" />
+<meta name="description" content="Archive of Suawiu" />
 
 
 
@@ -41,16 +29,31 @@
 
 
 
-<script defer src="/js/main.bundle.min.2f9e19511633f72287a6ecc5b448c51a11e3d7ba91653f66fc7ace3e0d870c30.js" integrity="sha256-L54ZURYz9yKHpuzFtEjFGhHj17qRZT9m/HrOPg2HDDA="></script>
+
+
+<link type="text/css" rel="stylesheet" href="/css/main.bundle.min.aa7597e7c248a40c1df4cc4ecd160c079d4b4009f50d288127f67bc87ad6a0f2.css"
+  integrity="sha256-qnWX58JIpAwd9MxOzRYMB51LQAn1DSiBJ/Z7yHrWoPI=" />
 
 
 
 
-  
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_hu_d5336b2496b995a4.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_hu_7263c91d33d6a78f.png" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
+
+
+
+
+
+
+
+<script defer src="/js/main.bundle.min.e0a1003783857468ec6f7cab596cc7bb5f4e8c7a592911c8799c409c6a737544.js" integrity="sha256-4KEAN4OFdGjsb3yrWWzHu19OjHpZKRHIeZxAnGpzdUQ="></script>
+
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon_hu_d5336b2496b995a4.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon_hu_7263c91d33d6a78f.png" />
+<link rel="icon" type="image/png" href="/favicon.png" />
 
 
 
@@ -91,49 +94,54 @@
 
 
 
-<section class="mx-auto flex max-w-(--breakpoint-xl) items-center justify-between p-4">
-  <a href="http://localhost:1313/" class="flex items-center space-x-3">
-    
+<header
+  class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-black transition-colors duration-300 border-b border-gray-200 dark:border-gray-800">
+  <section class="flex w-full items-center justify-between px-6 py-4">
+    <a href="http://localhost:1313/" class="flex items-center space-x-3">
+      
       
       <img src="/logo2_hu_8de2513d23d6f851.webp" class="custom-logo-light h-8 w-8" alt="Logo Light" />
-    
+      
 
-    
+      
       
       <img src="/logo_hu_76241a2bf6592cf6.webp" class="custom-logo-dark h-8 w-8" alt="Logo Dark" />
-    
+      
 
-    <span class="self-center whitespace-nowrap text-2xl font-semibold text-black dark:text-white">
-      suawiu
-    </span>
-  </a>
+      <span class="self-center whitespace-nowrap text-2xl font-semibold text-black dark:text-white">
+        suawiu
+      </span>
+    </a>
 
-  <div class="flex items-center space-x-10">
-    <button id="theme-toggle" type="button" aria-label="theme-switcher" class="flex items-center justify-center p-2">
-      <svg id="theme-toggle-dark-icon" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8 0 1010.586 10.586z"></path>
-      </svg>
+    <div class="flex items-center space-x-2">
+      <button id="theme-toggle" type="button" aria-label="theme-switcher" class="flex items-center justify-center p-2">
+        <svg id="theme-toggle-dark-icon" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8 0 1010.586 10.586z"></path>
+        </svg>
 
-      <svg id="theme-toggle-light-icon" class="h-6 w-6" fill="currentColor" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-    </button>
+        <svg id="theme-toggle-light-icon" class="h-6 w-6" fill="currentColor" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
 
-    <button id="hamburger-button" aria-label="menu" class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>    
-  </div>
-</section>
+      <button id="hamburger-button" aria-label="menu" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </section>
+</header>
+<div class="h-[72px]"></div> 
       </header>
 
       <div id="fullscreen-menu" class="fixed inset-0">
@@ -160,32 +168,45 @@
 
       <main class="flex-grow">
         
-  
-  
-  
-  
-  
 
 
-  <div class="justify-left mx-auto mt-8 flex max-w-(--breakpoint-md) px-4">
-    <article>
-      <h1 class="text-4xl font-extrabold text-slate-700 dark:text-slate-200">
-        ML with QC - Ch1
-      </h1>
-      <h2 class="mt-4 text-2xl text-slate-500 dark:text-slate-400">
-        Introduction to Quantum Machine Learning
-      </h2>
-      <div class="mb-4 mt-2 text-sm text-slate-500 dark:text-slate-400">
-        Jan 12, 2026 - 3 minute read
-      </div>
-
-      
-
-      
 
 
-      <span class="prose prose-slate break-words text-lg text-slate-700 dark:prose-invert prose-pre:max-w-[90vw] dark:text-slate-200 md:prose-pre:max-w-(--breakpoint-md) prose-code:before:hidden prose-code:after:hidden">
-        <p>This post summarizes <strong>Chapter 1. Introduction</strong> of the book <em>&ldquo;Machine Learning with Quantum Computers&rdquo;</em> (2nd Edition) by Maria Schuld and Francesco Petruccione.</p>
+
+
+
+<div class="mx-auto mt-8 flex max-w-3xl flex-col px-6 md:px-10">
+    <article class="w-full">
+        <h1 class="text-4xl font-extrabold text-slate-700 dark:text-slate-200">
+            ML with QC - Ch1
+        </h1>
+        <h2 class="mt-4 text-2xl text-slate-500 dark:text-slate-400">
+            Introduction to Quantum Machine Learning
+        </h2>
+        <div class="mb-4 mt-2 text-sm text-slate-500 dark:text-slate-400">
+            Jan 12, 2026 - 4 minute read
+        </div>
+
+        
+        
+        <div class="flex flex-col mb-8">
+            
+            <img class="mt-4 h-auto w-full rounded-lg object-cover shadow-sm" src="/post5/cover_new_hu_8c05b740460c6d84.webp"
+                alt="feature image" height="1087" width="736" />
+            
+            <span class="mb-4 mt-2 text-center text-sm text-slate-600 dark:text-slate-400 italic">
+                Quantum Science and Technology
+            </span>
+            
+        </div>
+        
+
+        
+
+
+        <div
+            class="prose prose-slate max-w-none break-words text-lg text-slate-700 dark:prose-invert dark:text-slate-200 prose-headings:font-bold prose-headings:text-slate-800 dark:prose-headings:text-slate-100 prose-a:text-cyan-600 dark:prose-a:text-cyan-400 hover:prose-a:text-cyan-500">
+            <p>This post summarizes <strong>Chapter 1. Introduction</strong> of the book <em>&ldquo;Machine Learning with Quantum Computers&rdquo;</em> (2nd Edition) by Maria Schuld and Francesco Petruccione.</p>
 <hr>
 <h3 id="1-introduction">1. Introduction</h3>
 <p><img src="/blog/post5/slide1.jpg" alt="Chapter 1 Introduction Title Slide"></p>
@@ -225,10 +246,61 @@
 <li><strong>Fault-Tolerant QC</strong>: This is the long-term goal—a large-scale quantum computer that can correct its own errors. The &ldquo;error correction threshold&rdquo; is the boundary we need to cross to achieve this.</li>
 </ul>
 <p>QML research is particularly active in the NISQ era, looking for algorithms that can be robust against noise and provide value even with today&rsquo;s imperfect hardware.</p>
+<hr>
+<h3 id="6-nisq-details--terminology">6. NISQ Details &amp; Terminology</h3>
+<p><img src="/blog/post5/slide6.jpg" alt="NISQ vs Fault-Tolerant Details"></p>
+<p>This slide delves deeper into the current state of NISQ devices.</p>
+<ul>
+<li><strong>NISQ Characteristics</strong>: Limited qubits (dozens to hundreds) and significant noise.</li>
+<li><strong>Intermediate Stage</strong>: It&rsquo;s a stepping stone. Important experiments are happening here, and advancements in error correction will gradually improve these systems.</li>
+<li><strong>Fault-Tolerant</strong>: The ultimate goal is a fully developed quantum computer with superior error correction, though this faces immense technical challenges.</li>
+<li><strong>Near-Term</strong>: Focuses on what we can do <em>now</em>, accepting high error sensitivity but looking for quantum advantage in specific complex problems.</li>
+</ul>
+<hr>
+<h3 id="7-four-intersections">7. Four Intersections</h3>
+<p><img src="/blog/post5/slide7.jpg" alt="Four Intersections of QC and ML"></p>
+<p>There are four ways to combine Quantum Computing (QC) and Machine Learning (ML), depending on the data source and the processing device:</p>
+<ul>
+<li><strong>CC (Classical Data, Classical Device)</strong>: Standard machine learning.</li>
+<li><strong>CQ (Classical Data, Quantum Device)</strong>: Using quantum algorithms to process classical datasets. This is a major area of QML interest.</li>
+<li><strong>QC (Quantum Data, Classical Device)</strong>: Using classical ML to analyze states or data generated by a quantum system.</li>
+<li><strong>QQ (Quantum Data, Quantum Device)</strong>: &ldquo;True&rdquo; quantum machine learning where both data and processing are quantum.</li>
+</ul>
+<p><em>Note: The slide mentions &ldquo;Quantum machine learning is synonymous with CQ&rdquo; - highlighting that most current practical interest lies in applying quantum power to classical problems.</em></p>
+<hr>
+<h3 id="8-toy-example-interference-with-hadamard">8. Toy Example: Interference with Hadamard</h3>
+<p><img src="/blog/post5/slide8.jpg" alt="Toy Example Introduction"></p>
+<p>To understand how quantum algorithms work, consider a simplified analogy with coins.</p>
+<ul>
+<li><strong>Classical Coins</strong>: Tossing coins leads to probabilistic outcomes (Heads or Tails).</li>
+<li><strong>The Experiment</strong>:
+<ol>
+<li>Start with Heads.</li>
+<li>Toss coin 1.</li>
+<li>Toss coin 1 again.</li>
+</ol>
+</li>
+<li><strong>Result</strong>: In the classical world, probabilities define the state. You just add probabilities.</li>
+</ul>
+<hr>
+<h3 id="9-classical-vs-quantum-coin">9. Classical vs. Quantum Coin</h3>
+<p><img src="/blog/post5/slide9.jpg" alt="Classical Matrix Representation"></p>
+<ul>
+<li><strong>Classical</strong>: Can be represented by stochastic matrices. The law of total probability applies. If you randomize a state, you generally increase uncertainty (entropy). You can&rsquo;t go from &ldquo;uncertain&rdquo; back to &ldquo;certain&rdquo; easily just by flipping again randomly.</li>
+</ul>
+<hr>
+<h3 id="10-quantum-interference">10. Quantum Interference</h3>
+<p><img src="/blog/post5/slide10.jpg" alt="Quantum Hadamard Transformation"></p>
+<ul>
+<li><strong>Quantum</strong>: Here, we use the <strong>Hadamard Transform</strong>.</li>
+<li><strong>Amplitudes vs. Probabilities</strong>: Quantum states are described by complex amplitudes, not just positive probabilities.</li>
+<li><strong>Interference</strong>: The Hadamard matrix contains negative numbers ($-1$). When you apply it twice, positive and negative amplitudes can cancel each other out (<strong>interference</strong>).</li>
+<li><strong>Result</strong>: This allows a quantum system to return to a &ldquo;certain&rdquo; state (e.g., back to the initial state) even after operations that individually create uncertainty. This phenomenon—interference—is fundamental to how quantum algorithms achieve speedups.</li>
+</ul>
 
-      </span>
+        </div>
     </article>
-  </div>
+</div>
 
       </main>
 

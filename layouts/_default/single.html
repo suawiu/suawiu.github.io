@@ -1,0 +1,77 @@
+{{ define "main" }}
+{{ $featureimage := resources.GetMatch (print "**" .Params.featureimage) }}
+{{ $featuredcaption := .Params.caption }}
+{{ $date := .Date | time.Format ":date_medium" }}
+{{ $DPT := printf "%s - %d minute read" $date .ReadingTime }}
+{{ $toc := .Params.toc | default false }}
+
+
+<div class="mx-auto mt-8 flex max-w-3xl flex-col px-6 md:px-10">
+    <article class="w-full">
+        <h1 class="text-4xl font-extrabold text-slate-700 dark:text-slate-200">
+            {{ .Title | emojify }}
+        </h1>
+        <h2 class="mt-4 text-2xl text-slate-500 dark:text-slate-400">
+            {{ .Params.subtitle | emojify }}
+        </h2>
+        <div class="mb-4 mt-2 text-sm text-slate-500 dark:text-slate-400">
+            {{ $DPT }}
+        </div>
+
+        {{ with $featureimage }}
+        {{ $featureimage = $featureimage.Filter (images.Process "resize 736x Lanczos q100 webp" ) }}
+        <div class="flex flex-col mb-8">
+            <!-- Image Resizing and Styling -->
+            <img class="mt-4 h-auto w-full rounded-lg object-cover shadow-sm" src="{{ $featureimage.RelPermalink }}"
+                alt="feature image" height="{{ $featureimage.Height }}" width="{{ $featureimage.Width }}" />
+            {{ with $featuredcaption }}
+            <span class="mb-4 mt-2 text-center text-sm text-slate-600 dark:text-slate-400 italic">
+                {{ $featuredcaption | emojify }}
+            </span>
+            {{ end }}
+        </div>
+        {{ end }}
+
+        {{ if $toc }}
+        <aside
+            class="mb-8 mt-4 flex flex-col bg-slate-50 dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+            <h2 class="mb-4 text-xl font-bold text-slate-800 dark:text-slate-200">Table of Contents</h2>
+            <div class="text-base text-slate-600 dark:text-slate-300">
+                <nav>
+                    {{- range .Fragments.Headings }}
+                    <ul class="list-inside list-[upper-roman] space-y-1">
+                        {{- range .Headings }}
+                        <li class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"><a
+                                href="#{{ anchorize .ID }}">{{ .Title }}</a></li>
+                        {{- if .Headings }}
+                        <ul class="list-inside list-[lower-alpha] ml-4 mt-1 space-y-1">
+                            {{- range .Headings }}
+                            <li class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"><a
+                                    href="#{{ anchorize .ID }}">{{ .Title }}</a></li>
+                            {{- if .Headings }}
+                            <ul class="list-inside list-disc ml-8 mt-1">
+                                {{- range .Headings }}
+                                <li class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"><a
+                                        href="#{{ anchorize .ID }}">{{ .Title }}</a></li>
+                                {{- end }}
+                            </ul>
+                            {{- end }}
+                            {{- end }}
+                        </ul>
+                        {{- end }}
+                        {{- end }}
+                    </ul>
+                    {{- end }}
+                </nav>
+            </div>
+        </aside>
+        {{ end }}
+
+
+        <div
+            class="prose prose-slate max-w-none break-words text-lg text-slate-700 dark:prose-invert dark:text-slate-200 prose-headings:font-bold prose-headings:text-slate-800 dark:prose-headings:text-slate-100 prose-a:text-cyan-600 dark:prose-a:text-cyan-400 hover:prose-a:text-cyan-500">
+            {{ .Content }}
+        </div>
+    </article>
+</div>
+{{ end }}

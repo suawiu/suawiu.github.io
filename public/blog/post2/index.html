@@ -14,24 +14,12 @@
 
 
 
-  <meta name="author" content="Seungmin Cha" />
+<meta name="author" content="Seungmin Cha" />
 
 
 
 
-  <meta name="description" content="Archive of Suawiu" />
-
-
-
-
-
-
-
-
-  
-
-
-<link type="text/css" rel="stylesheet" href="/css/main.bundle.min.04227b5c0e4b78e864bd55df0378187ef269f77401799df0c83db86796e5b9d9.css" integrity="sha256-BCJ7XA5LeOhkvVXfA3gYfvJp93QBeZ3wyD24Z5bludk=" />
+<meta name="description" content="Archive of Suawiu" />
 
 
 
@@ -41,16 +29,31 @@
 
 
 
-<script defer src="/js/main.bundle.min.2f9e19511633f72287a6ecc5b448c51a11e3d7ba91653f66fc7ace3e0d870c30.js" integrity="sha256-L54ZURYz9yKHpuzFtEjFGhHj17qRZT9m/HrOPg2HDDA="></script>
+
+
+<link type="text/css" rel="stylesheet" href="/css/main.bundle.min.aa7597e7c248a40c1df4cc4ecd160c079d4b4009f50d288127f67bc87ad6a0f2.css"
+  integrity="sha256-qnWX58JIpAwd9MxOzRYMB51LQAn1DSiBJ/Z7yHrWoPI=" />
 
 
 
 
-  
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_hu_d5336b2496b995a4.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_hu_7263c91d33d6a78f.png" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
+
+
+
+
+
+
+
+<script defer src="/js/main.bundle.min.e0a1003783857468ec6f7cab596cc7bb5f4e8c7a592911c8799c409c6a737544.js" integrity="sha256-4KEAN4OFdGjsb3yrWWzHu19OjHpZKRHIeZxAnGpzdUQ="></script>
+
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon_hu_d5336b2496b995a4.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon_hu_7263c91d33d6a78f.png" />
+<link rel="icon" type="image/png" href="/favicon.png" />
 
 
 
@@ -91,49 +94,54 @@
 
 
 
-<section class="mx-auto flex max-w-(--breakpoint-xl) items-center justify-between p-4">
-  <a href="http://localhost:1313/" class="flex items-center space-x-3">
-    
+<header
+  class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-black transition-colors duration-300 border-b border-gray-200 dark:border-gray-800">
+  <section class="flex w-full items-center justify-between px-6 py-4">
+    <a href="http://localhost:1313/" class="flex items-center space-x-3">
+      
       
       <img src="/logo2_hu_8de2513d23d6f851.webp" class="custom-logo-light h-8 w-8" alt="Logo Light" />
-    
+      
 
-    
+      
       
       <img src="/logo_hu_76241a2bf6592cf6.webp" class="custom-logo-dark h-8 w-8" alt="Logo Dark" />
-    
+      
 
-    <span class="self-center whitespace-nowrap text-2xl font-semibold text-black dark:text-white">
-      suawiu
-    </span>
-  </a>
+      <span class="self-center whitespace-nowrap text-2xl font-semibold text-black dark:text-white">
+        suawiu
+      </span>
+    </a>
 
-  <div class="flex items-center space-x-10">
-    <button id="theme-toggle" type="button" aria-label="theme-switcher" class="flex items-center justify-center p-2">
-      <svg id="theme-toggle-dark-icon" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8 0 1010.586 10.586z"></path>
-      </svg>
+    <div class="flex items-center space-x-2">
+      <button id="theme-toggle" type="button" aria-label="theme-switcher" class="flex items-center justify-center p-2">
+        <svg id="theme-toggle-dark-icon" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8 0 1010.586 10.586z"></path>
+        </svg>
 
-      <svg id="theme-toggle-light-icon" class="h-6 w-6" fill="currentColor" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-    </button>
+        <svg id="theme-toggle-light-icon" class="h-6 w-6" fill="currentColor" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
 
-    <button id="hamburger-button" aria-label="menu" class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>    
-  </div>
-</section>
+      <button id="hamburger-button" aria-label="menu" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </section>
+</header>
+<div class="h-[72px]"></div> 
       </header>
 
       <div id="fullscreen-menu" class="fixed inset-0">
@@ -160,42 +168,45 @@
 
       <main class="flex-grow">
         
-  
-  
-  
-  
-  
 
 
-  <div class="justify-left mx-auto mt-8 flex max-w-(--breakpoint-md) px-4">
-    <article>
-      <h1 class="text-4xl font-extrabold text-slate-700 dark:text-slate-200">
-        S&P500 3배 레버리지 장기투자
-      </h1>
-      <h2 class="mt-4 text-2xl text-slate-500 dark:text-slate-400">
-        Alpha Generation and Risk Smoothing Using Managed Volatility
-      </h2>
-      <div class="mb-4 mt-2 text-sm text-slate-500 dark:text-slate-400">
-        Jan 8, 2026 - 5 minute read
-      </div>
 
-      
-        
-        <div class="flex flex-col">
-          <img class="mt-4 h-full w-full object-cover" src="/blog2/sp500_leverage_paper_hu_25bc5b0bc4d05e5a.webp" alt="feature image" height="877" width="736" />
-          
-            <span class="mb-4 mt-1 text-center text-sm text-slate-700 dark:text-slate-200">
-              Investment Insight
-            </span>
-          
+
+
+
+
+<div class="mx-auto mt-8 flex max-w-3xl flex-col px-6 md:px-10">
+    <article class="w-full">
+        <h1 class="text-4xl font-extrabold text-slate-700 dark:text-slate-200">
+            S&P500 3배 레버리지 장기투자
+        </h1>
+        <h2 class="mt-4 text-2xl text-slate-500 dark:text-slate-400">
+            Alpha Generation and Risk Smoothing Using Managed Volatility
+        </h2>
+        <div class="mb-4 mt-2 text-sm text-slate-500 dark:text-slate-400">
+            Jan 8, 2026 - 5 minute read
         </div>
-      
 
-      
+        
+        
+        <div class="flex flex-col mb-8">
+            
+            <img class="mt-4 h-auto w-full rounded-lg object-cover shadow-sm" src="/blog2/sp500_leverage_paper_hu_25bc5b0bc4d05e5a.webp"
+                alt="feature image" height="877" width="736" />
+            
+            <span class="mb-4 mt-2 text-center text-sm text-slate-600 dark:text-slate-400 italic">
+                Investment Insight
+            </span>
+            
+        </div>
+        
+
+        
 
 
-      <span class="prose prose-slate break-words text-lg text-slate-700 dark:prose-invert prose-pre:max-w-[90vw] dark:text-slate-200 md:prose-pre:max-w-(--breakpoint-md) prose-code:before:hidden prose-code:after:hidden">
-        <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1664823">Link to Paper</a></p>
+        <div
+            class="prose prose-slate max-w-none break-words text-lg text-slate-700 dark:prose-invert dark:text-slate-200 prose-headings:font-bold prose-headings:text-slate-800 dark:prose-headings:text-slate-100 prose-a:text-cyan-600 dark:prose-a:text-cyan-400 hover:prose-a:text-cyan-500">
+            <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1664823">Link to Paper</a></p>
 <p>이 글은 논문 “Alpha Generation and Risk Smoothing Using Managed Volatility”와 투자 동료 김민규의 통찰을 바탕으로 작성되었다.</p>
 <hr>
 <h3 id="목차">목차</h3>
@@ -243,9 +254,9 @@
 <h2 id="8-변동성과-리스크">8. 변동성과 리스크</h2>
 <p>레버리지는 변동성이 커서 리스크가 크다는 투자자들이 있다. 그러나 워렌 버핏, 찰스 멍거와 같은 투자의 신이 말하듯이 변동폭은 절대 리스크가 아니다. 리스크란 “하락을 극복하고 매수점을 회복할 수 없는 상태”와 “저조한 수익률” 두가지 만을 의미한다. 변동폭은 이 두가지 모두에 해당하지 않는다. 또한 수익률을 포기하더라도 변동폭을 줄이고 싶다는 투자자도 있다. 위에서 말했지만, S&amp;P500은 꾸준히 우상향한다. 변동폭에 의한 하락 역시 일시적일 뿐 조금만 기다리면 다 복구된다. 그러므로 변동폭 때문에 수익률을 포기하는 것은 미친 짓이다. “변동”이란 단어의 뜻을 잘 생각해보라. S&amp;P500 3배 레버리지를 매수하면 큰 변동폭 때문에 멘탈이 흔들릴 것이다. 그러나 변동폭은 리스크가 아니라는 것을 상기시키며 하락장을 버티면 마침내 초월적인 수익률을 기록할 것이다. 이 수익률은 high-risk high-return에 의한 수익률이 아니다. 시장의 잘못된 고정관념을 간파하고, 굳건한 멘탈로 변동폭을 견딘 투자자에게만 주어지는 zero-risk high-return 의 축복이다. 모두 부자되길 바란다.</p>
 
-      </span>
+        </div>
     </article>
-  </div>
+</div>
 
       </main>
 
