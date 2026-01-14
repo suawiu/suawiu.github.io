@@ -11,50 +11,7 @@ icon: ""
 
 <div class="space-y-20 max-w-4xl mx-auto py-8">
 
-  <!-- 1. Experience -->
-  <section>
-    <h2 class="flex items-center text-3xl font-extrabold text-cyan-500 dark:text-cyan-400 mb-8">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-      Experience
-    </h2>
-    <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-4 space-y-12">
-      
-      <!-- Item 1 -->
-      <div class="ml-10 relative">
-         <span class="absolute -left-[45px] top-1.5 h-6 w-6 rounded-full border-4 border-cyan-500 dark:border-cyan-400 bg-white dark:bg-slate-900 shadow-lg dark:shadow-cyan-900/20"></span>
-         <div class="flex flex-col md:flex-row md:justify-between md:items-start group">
-           <div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Signals Intelligence (SIGINT) Specialist</h3>
-              <div class="text-lg text-slate-600 dark:text-slate-400 mt-1 font-medium">Republic of Korea Army</div>
-           </div>
-           <div class="text-slate-500 dark:text-slate-500 font-mono text-sm mt-2 md:mt-0 whitespace-nowrap bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Aug 2024 — Feb 2026</div>
-         </div>
-         <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
-           Squad Leader
-         </p>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="ml-10 relative">
-         <span class="absolute -left-[45px] top-1.5 h-6 w-6 rounded-full border-4 border-cyan-500 dark:border-cyan-400 bg-white dark:bg-slate-900 shadow-lg dark:shadow-cyan-900/20"></span>
-         <div class="flex flex-col md:flex-row md:justify-between md:items-start group">
-           <div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Undergraduate Researcher</h3>
-              <div class="text-lg text-slate-600 dark:text-slate-400 mt-1 font-medium">Quantum Information Lab @ Yonsei</div>
-           </div>
-           <div class="text-slate-500 dark:text-slate-500 font-mono text-sm mt-2 md:mt-0 whitespace-nowrap bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Jan 2024 — Jun 2024</div>
-         </div>
-         <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
-           Quantum computing based on Circuit QED Lab, Advised by Prof. Kyungsun Moon
-         </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 2. Education -->
+  <!-- 1. Education -->
   <section>
     <h2 class="flex items-center text-3xl font-extrabold text-cyan-500 dark:text-cyan-400 mb-8">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -72,7 +29,7 @@ icon: ""
               <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Yonsei University</h3>
               <div class="text-lg text-slate-600 dark:text-slate-400 mt-1 font-medium">Seoul, South Korea</div>
            </div>
-           <div class="text-slate-500 dark:text-slate-500 font-mono text-sm mt-2 md:mt-0 whitespace-nowrap bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Mar 2022 — Present</div>
+           <div class="text-slate-500 dark:text-slate-500 font-mono text-sm mt-2 md:mt-0 whitespace-nowrap bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Mar 2022 - </div>
          </div>
          <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed">
            Dept. of Physics
@@ -81,7 +38,7 @@ icon: ""
     </div>
   </section>
 
-  <!-- 3. Research Interests -->
+  <!-- 2. Research Interests -->
   <section>
     <h2 class="flex items-center text-3xl font-extrabold text-cyan-500 dark:text-cyan-400 mb-8">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -89,10 +46,10 @@ icon: ""
       </svg>
       Research Interests
     </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
         <div class="p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
             <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Quantum Computing</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm">Superconducting Qubits, Circuit QED, Quantum Error Correction</p>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">Superconducting Qubits, Circuit Quantum Electrodynamics (cQED), Quantum Error Correction</p>
         </div>
         <div class="p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
             <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Condensed Matter Physics</h3>
@@ -105,10 +62,51 @@ icon: ""
     </div>
   </section>
 
-  <!-- 4. Certifications & Awards (Split Columns) -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-    
-    <section>
+  <!-- 3. Experience -->
+  <section>
+    <h2 class="flex items-center text-3xl font-extrabold text-cyan-500 dark:text-cyan-400 mb-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+      Experience
+    </h2>
+    <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-4 space-y-12">
+      
+      <!-- Item 1 -->
+      <div class="ml-10 relative">
+         <span class="absolute -left-[45px] top-1.5 h-6 w-6 rounded-full border-4 border-cyan-500 dark:border-cyan-400 bg-white dark:bg-slate-900 shadow-lg dark:shadow-cyan-900/20"></span>
+         <div class="flex flex-col md:flex-row md:justify-between md:items-start group">
+           <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Signals Intelligence (SIGINT) Specialist</h3>
+              <div class="text-lg text-slate-600 dark:text-slate-400 mt-1 font-medium">Republic of Korea Army</div>
+           </div>
+           <div class="text-slate-500 dark:text-slate-500 font-mono text-sm mt-2 md:mt-0 whitespace-nowrap bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Aug 2024 - Feb 2026</div>
+         </div>
+         <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+           Squad Leader
+         </p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="ml-10 relative">
+         <span class="absolute -left-[45px] top-1.5 h-6 w-6 rounded-full border-4 border-cyan-500 dark:border-cyan-400 bg-white dark:bg-slate-900 shadow-lg dark:shadow-cyan-900/20"></span>
+         <div class="flex flex-col md:flex-row md:justify-between md:items-start group">
+           <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Undergraduate Researcher</h3>
+              <div class="text-lg text-slate-600 dark:text-slate-400 mt-1 font-medium">Quantum Information Lab @ Yonsei</div>
+           </div>
+           <div class="text-slate-500 dark:text-slate-500 font-mono text-sm mt-2 md:mt-0 whitespace-nowrap bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Jan 2024 - Jun 2024</div>
+         </div>
+         <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+           Quantum computing based on Circuit QED Lab Advised by Prof. Kyungsun Moon
+         </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. Certifications -->
+  <section>
         <h2 class="flex items-center text-2xl font-bold text-cyan-500 dark:text-cyan-400 mb-6">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -119,8 +117,8 @@ icon: ""
             <li class="flex items-start">
                 <span class="mr-2 mt-1.5 h-2 w-2 rounded-full bg-cyan-500 shrink-0"></span>
                 <div>
-                    <strong class="text-slate-900 dark:text-slate-100">ADsP</strong>
-                    <span class="text-slate-500 text-sm block">Advanced Data Analytics Semi-Professional, 2025</span>
+                    <strong class="text-slate-900 dark:text-slate-100">ADsP (Advanced Data Analytics Semi-Professional)</strong>
+                    <span class="text-slate-500 text-sm block">2025</span>
                 </div>
             </li>
             <li class="flex items-start">
@@ -133,19 +131,20 @@ icon: ""
             <li class="flex items-start">
                 <span class="mr-2 mt-1.5 h-2 w-2 rounded-full bg-cyan-500 shrink-0"></span>
                 <div>
-                    <strong class="text-slate-900 dark:text-slate-100">SQLD</strong>
-                    <span class="text-slate-500 text-sm block">SQL Developer, 2023</span>
+                    <strong class="text-slate-900 dark:text-slate-100">SQLD (SQL Developer)</strong>
+                    <span class="text-slate-500 text-sm block">2023</span>
                 </div>
             </li>
         </ul>
-    </section>
+  </section>
 
-    <section>
+  <!-- 5. Awards and Scholarships -->
+  <section>
         <h2 class="flex items-center text-2xl font-bold text-cyan-500 dark:text-cyan-400 mb-6">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
-            Awards
+            Awards and Scholarships
         </h2>
         <ul class="space-y-4">
             <li class="flex items-start">
@@ -165,16 +164,14 @@ icon: ""
             <li class="flex items-start">
                <span class="mr-2 mt-1.5 h-2 w-2 rounded-full bg-amber-400 shrink-0"></span>
                 <div>
-                    <strong class="text-slate-900 dark:text-slate-100">Minister of Science and ICT Award</strong>
-                    <span class="text-slate-500 text-sm block">미래창조과학부 장관상, 2013</span>
+                    <strong class="text-slate-900 dark:text-slate-100">Minister of Science and ICT Award (미래창조과학부 장관상)</strong>
+                    <span class="text-slate-500 text-sm block">2013</span>
                 </div>
             </li>
         </ul>
-    </section>
+  </section>
 
-  </div>
-
-  <!-- 5. Activities (Timeline style again) -->
+  <!-- 6. Activities -->
   <section>
     <h2 class="flex items-center text-2xl font-bold text-cyan-500 dark:text-cyan-400 mb-8">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -191,7 +188,7 @@ icon: ""
               <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">QIYA</h3>
               <div class="text-slate-600 dark:text-slate-400 text-sm font-medium">Quantum Informatics at Yonsei Academy</div>
            </div>
-           <div class="text-slate-500 dark:text-slate-500 font-mono text-xs mt-1 md:mt-0 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Jan 2026 — </div>
+           <div class="text-slate-500 dark:text-slate-500 font-mono text-xs mt-1 md:mt-0 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Jan 2026 - </div>
          </div>
       </div>
 
@@ -202,7 +199,7 @@ icon: ""
               <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Kwang</h3>
               <div class="text-slate-600 dark:text-slate-400 text-sm font-medium">Crossfit Club @ Yonsei</div>
            </div>
-           <div class="text-slate-500 dark:text-slate-500 font-mono text-xs mt-1 md:mt-0 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Mar 2023 — </div>
+           <div class="text-slate-500 dark:text-slate-500 font-mono text-xs mt-1 md:mt-0 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Mar 2023 - </div>
          </div>
       </div>
 
@@ -213,7 +210,7 @@ icon: ""
               <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Gongsarang</h3>
               <div class="text-slate-600 dark:text-slate-400 text-sm font-medium">Basketball Club @ Yonsei</div>
            </div>
-           <div class="text-slate-500 dark:text-slate-500 font-mono text-xs mt-1 md:mt-0 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Mar 2022 — Dec 2022</div>
+           <div class="text-slate-500 dark:text-slate-500 font-mono text-xs mt-1 md:mt-0 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Mar 2022 - Dec 2022</div>
          </div>
       </div>
 
