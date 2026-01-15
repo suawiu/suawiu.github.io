@@ -19,7 +19,7 @@ This post summarizes **Chapter 2. Machine Learning** of the book *"Machine Learn
 
 ### 1. Introduction
 
-![Chapter 2 Machine Learning Title Slide](slide1.jpg)
+![Chapter 2 Machine Learning Title Slide](slide01.png)
 
 Chapter 2 provides a comprehensive overview of machine learning concepts that form the basis for understanding Quantum Machine Learning. It covers the types of learning problems, the essential ingredients of learning, and various methods used in the field.
 
@@ -27,7 +27,7 @@ Chapter 2 provides a comprehensive overview of machine learning concepts that fo
 
 ### 2. Contents
 
-![Table of Contents Slide](slide2.jpg)
+![Table of Contents Slide](slide02.png)
 
 The chapter is structured into several key sections:
 1.  **Examples of Typical Machine Learning Problems**: Understanding different problem types.
@@ -40,7 +40,7 @@ The chapter is structured into several key sections:
 
 ### 3. Examples of Typical Machine Learning Problems
 
-![Examples of Typical Machine Learning Problems Slide](slide3.jpg)
+![Examples of Typical Machine Learning Problems Slide](slide03.png)
 
 The field of machine learning can be broadly categorized based on the nature of the data and the learning objective.
 
@@ -48,7 +48,7 @@ The field of machine learning can be broadly categorized based on the nature of 
 
 ### 4. Machine Learning Types
 
-![Machine Learning Types Slide](slide4.jpg)
+![Machine Learning Types Slide](slide04.png)
 
 *   **Supervised Learning (X-Y)**: The algorithm learns from labeled data (input X, output Y). Examples include Regression and Classification.
 *   **Unsupervised Learning (X-X)**: The algorithm finds patterns in unlabeled data. Examples include Clustering Analysis, Principal Component Analysis (PCA), and Association Rule Learning.
@@ -58,7 +58,7 @@ The field of machine learning can be broadly categorized based on the nature of 
 
 ### 5. The Three Ingredients of a Learning Problem
 
-![The Three Ingredients of a Learning Problem Slide](slide5.jpg)
+![The Three Ingredients of a Learning Problem Slide](slide05.png)
 
 Any machine learning problem can be described using these core components:
 *   **Process**: The data-generating process or the underlying phenomenon we want to model.
@@ -70,7 +70,7 @@ Any machine learning problem can be described using these core components:
 
 ### 6. Process
 
-![Process Slide](slide6.jpg)
+![Process Slide](slide06.png)
 
 The machine learning process involves a series of steps:
 1.  **Data Collection**: Gathering raw data.
@@ -85,7 +85,7 @@ The machine learning process involves a series of steps:
 
 ### 7. Data: Preprocessing - Feature Scaling
 
-![Data Preprocessing - Feature Scaling Slide](slide7.jpg)
+![Data Preprocessing - Feature Scaling Slide](slide07.png)
 
 Scaling ensures that all features contribute equally to the result.
 *   **Z-Score scaling (Standardization)**: Transforms data to have a mean of 0 and a variance of 1.
@@ -97,7 +97,7 @@ Scaling ensures that all features contribute equally to the result.
 
 ### 8. Data: Preprocessing - Dimensionality Reduction
 
-![Data Preprocessing - Dimensionality Reduction Slide](slide8.jpg)
+![Data Preprocessing - Dimensionality Reduction Slide](slide08.png)
 
 Reducing the number of input variables can improve model performance and reduce computation.
 *   **Feature Selection**: Selecting a subset of relevant features (e.g., mRMR, SVM-RFE).
@@ -108,7 +108,7 @@ Reducing the number of input variables can improve model performance and reduce 
 
 ### 9. Data: Preprocessing - One-Hot Encoding
 
-![Data Preprocessing - One-Hot Encoding Slide](slide9.jpg)
+![Data Preprocessing - One-Hot Encoding Slide](slide09.png)
 
 *   **One-Hot Encoding**: Converts categorical variables into a binary matrix format (0s and 1s), making them suitable for machine learning algorithms.
 *   Other methods include Target Encoding and Ordered Target Encoding.
@@ -117,7 +117,7 @@ Reducing the number of input variables can improve model performance and reduce 
 
 ### 10. Model: Deterministic vs. Probabilistic
 
-![Model Types Slide](slide10.jpg)
+![Model Types Slide](slide10.png)
 
 Models can be categorized by how they handle uncertainty:
 *   **Deterministic Model**: The output is fully determined by the initial conditions and parameters. No randomness is involved (e.g., physical laws like $F=ma$).
@@ -127,7 +127,7 @@ Models can be categorized by how they handle uncertainty:
 
 ### 11. Model: Deterministic vs. Statistical
 
-![Model Types Detailed Slide](slide11.jpg)
+![Model Types Detailed Slide](slide11.png)
 
 While the previous slide introduced the concept, this slide formally contrasts two types of models:
 *   **Deterministic Model**: Assumes a precise relationship where $Y = X\beta$ . It essentially states that if you know the input $X$ and the parameters $\beta$, you can determine $Y$ exactly.
@@ -137,7 +137,7 @@ While the previous slide introduced the concept, this slide formally contrasts t
 
 ### 12. Loss: Classification
 
-![Loss Classification Slide](slide12.jpg)
+![Loss Classification Slide](slide12.png)
 
 For classification problems (where the output is a category), we evaluate performance differently:
 *   **Confusion Matrix**: A table that describes the performance of a classification model (True Positives, False Positives, etc.).
@@ -151,7 +151,7 @@ For classification problems (where the output is a category), we evaluate perfor
 
 ### 13. Loss: Regression
 
-![Loss Regression Slide](slide13.jpg)
+![Loss Regression Slide](slide13.png)
 
 For regression problems (predicting a continuous value), common loss functions include:
 *   **MAE (Mean Absolute Error)**: The average of the absolute differences between predictions and actual values.
@@ -163,7 +163,7 @@ For regression problems (predicting a continuous value), common loss functions i
 
 ### 14. Risk Minimization in Supervised Learning
 
-![Risk Minimization Title Slide](slide14.jpg)
+![Risk Minimization Title Slide](slide14.png)
 
 The core goal of supervised learning is **Risk Minimization**. This involves two key concepts:
 *   **Cost Function**: A mathematical formula that quantifies the error between predicted and actual values.
@@ -173,7 +173,7 @@ The core goal of supervised learning is **Risk Minimization**. This involves two
 
 ### 15. Cost Function & Regularization
 
-![Cost Function Slide](slide15.jpg)
+![Cost Function Slide](slide15.png)
 
 *   **Risk Minimization Problem**: We want to find the optimal parameters $\theta^*$ that minimize the empirical risk $\hat{R}_{f_\theta}$.
 *   **Overfitting**: This occurs when a model learns the training data *too* well, including its noise and outliers, resulting in poor performance on new, unseen data.
@@ -188,7 +188,7 @@ The core goal of supervised learning is **Risk Minimization**. This involves two
 
 ### 16. Cost Function Examples: Regularization
 
-![Cost Function Examples Slide](slide16.jpg)
+![Cost Function Examples Slide](slide16.png)
 
 Common regularization techniques involve adding a penalty term to the cost function:
 *   **Ridge Regression ($\ell_2$)**: Adds the sum of squared coefficients.
@@ -202,7 +202,7 @@ Common regularization techniques involve adding a penalty term to the cost funct
 
 ### 17. Optimization: Gradient Descent
 
-![Gradient Descent Optimization Slide](slide17.jpg)
+![Gradient Descent Optimization Slide](slide17.png)
 
 Optimization algorithms are used to find the parameters that minimize the cost function.
 *   **Gradient Descent (GD)**: Uses the entire dataset to calculate the gradient and update parameters.
@@ -217,7 +217,7 @@ Optimization algorithms are used to find the parameters that minimize the cost f
 
 ### 18. Mini-batch Gradient Descent
 
-![Mini-batch Gradient Descent Slide](slide18.jpg)
+![Mini-batch Gradient Descent Slide](slide18.png)
 
 *   **Mini-batch Gradient Descent**: A compromise between Batch GD and SGD.
     *   It processes data in small groups (batches) of size $n$ .
@@ -227,7 +227,7 @@ Optimization algorithms are used to find the parameters that minimize the cost f
 
 ### 19. Overfitting vs. Underfitting
 
-![Overfitting and Underfitting Visuals Slide](slide19.jpg)
+![Overfitting and Underfitting Visuals Slide](slide19.png)
 
 This slide visualizes the concepts of underfitting and overfitting using a regression example and a decision tree:
 *   **Model A (Underfitting)**: The model is too simple (a straight line) to capture the underlying pattern of the data. It has high correlation bias.
@@ -238,7 +238,7 @@ This slide visualizes the concepts of underfitting and overfitting using a regre
 
 ### 20. VC (Vapnik-Chervonenkis) Dimension
 
-![VC Dimension Slide](slide20.jpg)
+![VC Dimension Slide](slide20.png)
 
 The **VC Dimension** measures the capacity (complexity) of a statistical classification algorithm.
 *   **Concept**: It answers "How complex a dataset can this model classify?"
@@ -250,7 +250,7 @@ The **VC Dimension** measures the capacity (complexity) of a statistical classif
 
 ### 21. Training in Unsupervised Learning
 
-![Training in Unsupervised Learning Slide](slide21.jpg)
+![Training in Unsupervised Learning Slide](slide21.png)
 
 *   **Maximum Likelihood Estimation (MLE)**: A common method used in training unsupervised learning models.
 
@@ -258,21 +258,21 @@ The **VC Dimension** measures the capacity (complexity) of a statistical classif
 
 ### 22. Maximum Likelihood Estimation (Math)
 
-![Maximum Likelihood Estimation Math Slide](slide22.jpg)
+![Maximum Likelihood Estimation Math Slide](slide22.png)
 
 **Likelihood** refers to the probability of observing a given set of data under a specific model.
-*   **Likelihood Function**: (\Theta|x_1, ..., x_n)$
-*   **Joint Probability Density**: (x_1, ..., x_n|\Theta) = f(x_1|\Theta)...f(x_n|\Theta)$ (assuming independence)
+*   **Likelihood Function**: $L(\Theta|x_1, ..., x_n)$
+*   **Joint Probability Density**: $f(x_1, ..., x_n|\Theta) = f(x_1|\Theta)...f(x_n|\Theta)$ (assuming independence)
 *   **MLE Goal**: Find the parameter values $\hat{\Theta}$ that maximize this likelihood function, making the observed data most probable.
     *   $\hat{\Theta} = argmax_\Theta L(\Theta)$
     *   In practice, we often maximize the **log-likelihood** because it turns products into sums, making derivatives easier to compute:
-    *   ^*(\Theta) = \log(L(\Theta)) = \sum \log f(x_i)$
+    *   $L^*(\Theta) = \log(L(\Theta)) = \sum \log f(x_i)$
 
 ---
 
 ### 23. Maximum Likelihood Estimation (Visual)
 
-![Maximum Likelihood Estimation Graph Slide](slide23.jpg)
+![Maximum Likelihood Estimation Graph Slide](slide23.png)
 
 This graph visualizes MLE. We try to fit a distribution (like a Gaussian) to the data points (orange dots).
 *   The blue curve represents a model with parameters that don't fit well (low likelihood).
@@ -282,7 +282,7 @@ This graph visualizes MLE. We try to fit a distribution (like a Gaussian) to the
 
 ### 24. Methods in Machine Learning
 
-![Methods in Machine Learning Slide](slide24.jpg)
+![Methods in Machine Learning Slide](slide24.png)
 
 Common methods include:
 *   **Linear Models**: Simple, interpretable models (e.g., Linear Regression, Logistic Regression).
@@ -294,7 +294,7 @@ Common methods include:
 
 ### 25. Linear Models
 
-![Linear Models Slide](slide25.jpg)
+![Linear Models Slide](slide25.png)
 
 *   **Sigmoid Function**: A key component in linear classification (like Logistic Regression) and neural networks.
     *   $\sigma(x) = \frac{1}{1 + e^{-x}}$
@@ -304,40 +304,40 @@ Common methods include:
 
 ### 26. Linear Models: Least Squares & SVD
 
-![Linear Models Least Squares Slide](slide26.jpg)
+![Linear Models Least Squares Slide](slide26.png)
 
-*   **Linear Regression Model**: (x) = w^Tx$
-*   **Least-squares Estimation**: Finds the optimal weights $ by minimizing the sum of squared differences between predictions and actual values.
-    *   (w) = \frac{1}{M} \sum (w^Tx^m - y^m)^2$
-    *   **Analytical Solution**: The optimal weights can be calculated directly using the formula  = (X^TX)^{-1}X^Ty$.
-*   **Singular Value Decomposition (SVD)**: A method to decompose a matrix, often used to calculate the pseudo-inverse (^+$) when solving linear least squares problems, providing a numerically stable solution.
+*   **Linear Regression Model**: $f_w(x) = w^Tx$
+*   **Least-squares Estimation**: Finds the optimal weights $w$ by minimizing the sum of squared differences between predictions and actual values.
+    *   $C(w) = \frac{1}{M} \sum (w^Tx^m - y^m)^2$
+    *   **Analytical Solution**: The optimal weights can be calculated directly using the formula $w_{opt} = (X^TX)^{-1}X^Ty$.
+*   **Singular Value Decomposition (SVD)**: A method to decompose a matrix, often used to calculate the pseudo-inverse ($X^+$) when solving linear least squares problems, providing a numerically stable solution.
 
 ---
 
 ### 27. Linear Models: MSE
 
-![Linear Models MSE Slide](slide27.jpg)
+![Linear Models MSE Slide](slide27.png)
 
 *   **Mean Squared Error (MSE)**: The standard cost function for regression problems.
-    *    = \frac{1}{n} \sum (y - \hat{y})^2$
-    *   It measures the average squared difference between the estimated values ($\hat{y}$) and the actual value ($).
+    *   $MSE = \frac{1}{n} \sum (y - \hat{y})^2$
+    *   It measures the average squared difference between the estimated values ($\hat{y}$) and the actual value ($y$).
 
 ---
 
 ### 28. Neural Networks: Perceptron & MLP
 
-![Neural Networks Perceptron Slide](slide28.jpg)
+![Neural Networks Perceptron Slide](slide28.png)
 
-*   **Perceptron**: The simplest artificial neuron. It takes multiple inputs ($), multiplies them by weights ($), sums them up, and passes the result through an activation function to produce an output.
+*   **Perceptron**: The simplest artificial neuron. It takes multiple inputs ($x$), multiplies them by weights ($w$), sums them up, and passes the result through an activation function to produce an output.
 *   **Multi-Layer Perceptron (MLP)**: An acyclic feed-forward neural network composed of multiple layers of perceptrons (input, hidden, and output layers).
-    *   (x) = \phi_L(W_L ... \phi_2(W_2 \phi_1(W_1 x))...)$
+    *   $f(x) = \phi_L(W_L ... \phi_2(W_2 \phi_1(W_1 x))...)$
     *   It can learn non-linear relationships thanks to the activation functions and multiple layers.
 
 ---
 
 ### 29. Neural Networks: Activation Functions
 
-![Neural Networks Activation Function Slide](slide29.jpg)
+![Neural Networks Activation Function Slide](slide29.png)
 
 Activation functions introduce non-linearity into the network, allowing it to learn complex patterns.
 *   **Sigmoid**: $\sigma(x) = \frac{1}{1+e^{-x}}$. Output range (0, 1). Smoothes the step function.
@@ -348,10 +348,178 @@ Activation functions introduce non-linearity into the network, allowing it to le
 
 ### 30. Neural Networks: Backpropagation
 
-![Neural Networks Update Backpropagation Slide](slide30.jpg)
+![Neural Networks Update Backpropagation Slide](slide30.png)
 
 *   **Backpropagation**: The algorithm used to train neural networks.
-    *   It efficiently calculates the gradient of the loss function ($) with respect to each weight ($) in the network.
+    *   It efficiently calculates the gradient of the loss function ($E$) with respect to each weight ($w$) in the network.
     *   **Chain Rule**: The core mathematical principle behind backpropagation. It allows us to compute the derivative of a composite function by multiplying the derivatives of its constituent functions.
     *   $\frac{\partial E}{\partial w} = \frac{\partial E}{\partial y} \cdot \frac{\partial y}{\partial h} \cdot \frac{\partial h}{\partial w}$
-    *   Weights are updated to minimize the error: ^{new} = w - \eta \frac{\partial E}{\partial w}$
+    *   Weights are updated to minimize the error: $w^{new} = w - \eta \frac{\partial E}{\partial w}$
+
+---
+
+### 31. Graphical Models: Bayesian Networks
+
+![Slide 31](slide31.png)
+
+---
+
+### 32. Undirected Graphical Models
+
+![Slide 32](slide32.png)
+
+---
+
+### 33. Sampling Inference
+
+![Slide 33](slide33.png)
+
+---
+
+### 34. Variational Inference
+
+![Slide 34](slide34.png)
+
+---
+
+### 35. Kernel Methods
+
+![Slide 35](slide35.png)
+
+---
+
+### 36. Kernel Trick
+
+![Slide 36](slide36.png)
+
+---
+
+### 37. Kernel Trick Math
+
+![Slide 37](slide37.png)
+
+---
+
+### 38. Representer Theorem
+
+![Slide 38](slide38.png)
+
+---
+
+### 39. Kernel Ridge Regression
+
+![Slide 39](slide39.png)
+
+---
+
+### 40. Support Vector Machines
+
+![Slide 40](slide40.png)
+
+---
+
+### 41. SVM Optimization
+
+![Slide 41](slide41.png)
+
+---
+
+### 42. SVM Margin
+
+![Slide 42](slide42.png)
+
+---
+
+### 43. Kernel SVM
+
+![Slide 43](slide43.png)
+
+---
+
+### 44. Summary
+
+![Slide 44](slide44.png)
+
+---
+
+### 45. Quantum Machine Learning
+
+![Slide 45](slide45.png)
+
+---
+
+### 46. QML Potential
+
+![Slide 46](slide46.png)
+
+---
+
+### 47. QML Challenges
+
+![Slide 47](slide47.png)
+
+---
+
+### 48. Future of QML
+
+![Slide 48](slide48.png)
+
+---
+
+### 49. Conclusion
+
+![Slide 49](slide49.png)
+
+--- 
+
+### 50. Slide 50
+
+![Slide 50](slide50.png)
+
+--- 
+
+### 51. Slide 51
+
+![Slide 51](slide51.png)
+
+--- 
+
+### 52. Slide 52
+
+![Slide 52](slide52.png)
+
+--- 
+
+### 53. Slide 53
+
+![Slide 53](slide53.png)
+
+--- 
+
+### 54. Slide 54
+
+![Slide 54](slide54.png)
+
+--- 
+
+### 55. Slide 55
+
+![Slide 55](slide55.png)
+
+--- 
+
+### 56. Slide 56
+
+![Slide 56](slide56.png)
+
+--- 
+
+### 57. Slide 57
+
+![Slide 57](slide57.png)
+
+--- 
+
+### 58. Slide 58
+
+![Slide 58](slide58.png)
