@@ -299,3 +299,59 @@ Common methods include:
 *   **Sigmoid Function**: A key component in linear classification (like Logistic Regression) and neural networks.
     *   $\sigma(x) = \frac{1}{1 + e^{-x}}$
     *   It maps any real-valued input number into a value between 0 and 1, essentially converting a continuous value into a probability (binary output).
+
+---
+
+### 26. Linear Models: Least Squares & SVD
+
+![Linear Models Least Squares Slide](slide26.jpg)
+
+*   **Linear Regression Model**: (x) = w^Tx$
+*   **Least-squares Estimation**: Finds the optimal weights $ by minimizing the sum of squared differences between predictions and actual values.
+    *   (w) = \frac{1}{M} \sum (w^Tx^m - y^m)^2$
+    *   **Analytical Solution**: The optimal weights can be calculated directly using the formula  = (X^TX)^{-1}X^Ty$.
+*   **Singular Value Decomposition (SVD)**: A method to decompose a matrix, often used to calculate the pseudo-inverse (^+$) when solving linear least squares problems, providing a numerically stable solution.
+
+---
+
+### 27. Linear Models: MSE
+
+![Linear Models MSE Slide](slide27.jpg)
+
+*   **Mean Squared Error (MSE)**: The standard cost function for regression problems.
+    *    = \frac{1}{n} \sum (y - \hat{y})^2$
+    *   It measures the average squared difference between the estimated values ($\hat{y}$) and the actual value ($).
+
+---
+
+### 28. Neural Networks: Perceptron & MLP
+
+![Neural Networks Perceptron Slide](slide28.jpg)
+
+*   **Perceptron**: The simplest artificial neuron. It takes multiple inputs ($), multiplies them by weights ($), sums them up, and passes the result through an activation function to produce an output.
+*   **Multi-Layer Perceptron (MLP)**: An acyclic feed-forward neural network composed of multiple layers of perceptrons (input, hidden, and output layers).
+    *   (x) = \phi_L(W_L ... \phi_2(W_2 \phi_1(W_1 x))...)$
+    *   It can learn non-linear relationships thanks to the activation functions and multiple layers.
+
+---
+
+### 29. Neural Networks: Activation Functions
+
+![Neural Networks Activation Function Slide](slide29.jpg)
+
+Activation functions introduce non-linearity into the network, allowing it to learn complex patterns.
+*   **Sigmoid**: $\sigma(x) = \frac{1}{1+e^{-x}}$. Output range (0, 1). Smoothes the step function.
+*   **ReLU (Rectified Linear Unit)**: $\phi(a) = \max(0, a)$. Output range [0, $\infty$). Solves the vanishing gradient problem and is computationally efficient.
+*   **Tanh (Hyperbolic Tangent)**: $\phi(a) = \tanh(a)$. Output range (-1, 1). Zero-centered.
+
+---
+
+### 30. Neural Networks: Backpropagation
+
+![Neural Networks Update Backpropagation Slide](slide30.jpg)
+
+*   **Backpropagation**: The algorithm used to train neural networks.
+    *   It efficiently calculates the gradient of the loss function ($) with respect to each weight ($) in the network.
+    *   **Chain Rule**: The core mathematical principle behind backpropagation. It allows us to compute the derivative of a composite function by multiplying the derivatives of its constituent functions.
+    *   $\frac{\partial E}{\partial w} = \frac{\partial E}{\partial y} \cdot \frac{\partial y}{\partial h} \cdot \frac{\partial h}{\partial w}$
+    *   Weights are updated to minimize the error: ^{new} = w - \eta \frac{\partial E}{\partial w}$

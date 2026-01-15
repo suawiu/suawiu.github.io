@@ -73,11 +73,26 @@ header#main-header {
 /* =========================
    3. 로고
    ========================= */
-.custom-logo-light {
+/* =========================
+   3. 로고
+   ========================= */
+.custom-logo-light,
+.custom-logo-dark {
+  width: 2rem !important;
+  /* h-8 equivalent */
+  height: 2rem !important;
+  /* w-8 equivalent */
+  padding: 0 !important;
+  margin: 0 !important;
+  vertical-align: middle !important;
+  object-fit: contain !important;
+}
+
+html:not(.dark) .custom-logo-light {
   display: inline-block !important;
 }
 
-.custom-logo-dark {
+html:not(.dark) .custom-logo-dark {
   display: none !important;
 }
 
