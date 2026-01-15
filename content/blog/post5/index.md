@@ -9,6 +9,8 @@ featureimage: "post5/cover_new.png"
 caption: "Quantum Science and Technology"
 authors:
   - suawiu: author.jpeg
+params:
+  math: true
 ---
 
 This post summarizes **Chapter 1. Introduction** of the book *"Machine Learning with Quantum Computers"* (2nd Edition) by Maria Schuld and Francesco Petruccione.
