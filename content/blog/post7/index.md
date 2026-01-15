@@ -356,170 +356,305 @@ Activation functions introduce non-linearity into the network, allowing it to le
     *   $\frac{\partial E}{\partial w} = \frac{\partial E}{\partial y} \cdot \frac{\partial y}{\partial h} \cdot \frac{\partial h}{\partial w}$
     *   Weights are updated to minimize the error: $w^{new} = w - \eta \frac{\partial E}{\partial w}$
 
----
-
 ### 31. Graphical Models: Bayesian Networks
 
-![Slide 31](slide31.png)
+![Graphical Models: Bayesian Networks Slide](slide31.png)
+
+*   **Bayesian Networks (Directed Graphical Models)**: Represent causal relationships between variables using a directed acyclic graph (DAG).
+    *   Nodes represent random variables.
+    *   Edges represent conditional dependencies ($A \rightarrow B$ implies $B$ depends on $A$).
+    *   The joint probability distribution factorizes as: $p(x_1, ..., x_N) = \prod_{i=1}^N p(x_i | parent(x_i))$
 
 ---
 
 ### 32. Undirected Graphical Models
 
-![Slide 32](slide32.png)
+![Undirected Graphical Models Slide](slide32.png)
+
+*   **Markov Random Fields (Undirected Graphical Models)**: Represent dependencies where the direction is not specified (e.g., spatial correlation in pixels).
+    *   Based on the concept of **cliques** (fully connected subgraphs).
+    *   The joint probability is defined by potential functions $\psi_C$ over maximal cliques $C$:
+    *   $p(x) = \frac{1}{Z} \prod_{C} \psi_C(x_C)$
+    *   $Z$ is the partition function (normalization constant), which is often hard to compute.
 
 ---
 
 ### 33. Sampling Inference
 
-![Slide 33](slide33.png)
+![Sampling Inference Slide](slide33.png)
+
+Inference involves estimating parts of the probability distribution (e.g., $p(x_i | x_j)$). Exact inference can be computationally expensive.
+*   **Sampling (Monte Carlo Methods)**: Approximates the distribution by generating many random samples.
+*   **Gibbs Sampling**: A Markov Chain Monte Carlo (MCMC) algorithm where we iteratively sample each variable from its conditional distribution given the current integration of other variables.
+*   It is rigorous but slow to converge.
 
 ---
 
 ### 34. Variational Inference
 
-![Slide 34](slide34.png)
+![Variational Inference Slide](slide34.png)
+
+*   **Variational Inference**: An alternative to sampling that frames inference as an optimization problem.
+    *   It approximates the complex true distribution $p(x)$ with a simpler, tractable distribution $q(x)$ (e.g., a set of independent Gaussians).
+    *   **Goal**: Minimize the difference (KL Divergence) between $q(x)$ and $p(x)$, or equivalently, maximize the Evidence Lower Bound (ELBO).
+    *   It is faster than sampling but may be biased due to the approximation.
 
 ---
 
 ### 35. Kernel Methods
 
-![Slide 35](slide35.png)
+![Kernel Methods Slide](slide35.png)
+
+*   **Kernel Methods**: A class of algorithms for pattern analysis, with the **Support Vector Machine (SVM)** being the most famous.
+*   They work by mapping data into a high-dimensional features space where the problem (e.g., classification) becomes linearly separable.
+*   They rely on **linear models** in this new space.
 
 ---
 
 ### 36. Kernel Trick
 
-![Slide 36](slide36.png)
+![Kernel Trick Slide](slide36.png)
+
+*   **Feature Map ($\Phi$)**: Maps the input data $x$ from the original space ($\mathcal{X}$) to a high-dimensional feature space ($\mathcal{F}$).
+    *   $x \rightarrow \Phi(x)$
+*   **The Kernel Trick**: We can compute the inner product in the high-dimensional space *without* explicitly calculating the coordinates in that space.
+    *   $K(x, x') = \langle \Phi(x), \Phi(x') \rangle_{\mathcal{F}}$
+    *   This saves immense computational cost.
 
 ---
 
 ### 37. Kernel Trick Math
 
-![Slide 37](slide37.png)
+![Kernel Trick Math Slide](slide37.png)
+
+*   The kernel function $K(x, x')$ computes the similarity between two inputs.
+*   Common Kernels:
+    *   **Linear**: $K(x, x') = x^T x'$
+    *   **Polynomial**: $K(x, x') = (x^T x' + c)^d$
+    *   **RBF (Radial Basis Function)**: $K(x, x') = \exp(-\frac{||x-x'||^2}{2\sigma^2})$
+*   This allows linear algorithms (like linear regression) to learn non-linear decision boundaries.
 
 ---
 
 ### 38. Representer Theorem
 
-![Slide 38](slide38.png)
+![Representer Theorem Slide](slide38.png)
+
+*   **Representer Theorem**: States that for a broad class of regularized risk minimization problems, the optimal solution $f^*(x)$ can be expressed as a linear expansion of the kernel functions evaluated at the training data points.
+    *   $f^*(x) = \sum_{m=1}^M \alpha_m K(x, x^m)$
+    *   This reduces the optimization problem from infinite dimensions (in feature space) to a finite number of parameters ($\alpha_m$, one for each data point).
 
 ---
 
 ### 39. Kernel Ridge Regression
 
-![Slide 39](slide39.png)
+![Kernel Ridge Regression Slide](slide39.png)
+
+*   **Kernel Ridge Regression**: Applies the kernel trick to Ridge Regression.
+*   Instead of finding a weight vector $w$, we find the coefficients $\alpha$.
+*   The solution involves the **Kernel Matrix** (or Gram Matrix) $K$, where $K_{ij} = K(x^i, x^j)$.
+    *   $\alpha = (K + \lambda I)^{-1} y$
+*   The prediction for a new point $x$ is $f(x) = \sum \alpha_m K(x, x^m)$.
 
 ---
 
-### 40. Support Vector Machines
+### 40. Support Vector Machines (SVM)
 
-![Slide 40](slide40.png)
+![Support Vector Machines Slide](slide40.png)
+
+*   **SVM**: A powerful supervised learning algorithm used for classification and regression.
+*   **Goal**: Find the optimal hyperplane that separates data points of different classes with the maximum margin.
+*   **Support Vectors**: The data points closest to the hyperplane. These are the most critical points; changing other points doesn't affect the model.
 
 ---
 
 ### 41. SVM Optimization
 
-![Slide 41](slide41.png)
+![SVM Optimization Slide](slide41.png)
+
+*   **Primal Problem**: Minimize $\frac{1}{2} ||w||^2$ subject to constraints $y_i(w^T x_i + b) \geq 1$.
+*   **Dual Problem**: Using Lagrange multipliers, we convert this into a maximization problem involving only inner products ($x_i^T x_j$).
+    *   Maximize $\sum \alpha_i - \frac{1}{2} \sum \alpha_i \alpha_j y_i y_j x_i^T x_j$
+    *   This formulation naturally allows the use of the **Kernel Trick**.
 
 ---
 
 ### 42. SVM Margin
 
-![Slide 42](slide42.png)
+![SVM Margin Slide](slide42.png)
+
+*   **Margin**: The distance between the hyperplane and the nearest data points (support vectors).
+*   **Hard Margin**: Assumes the data is perfectly separable. Sensitive to outliers.
+*   **Soft Margin**: Allows some misclassification (using slack variables $\xi$) to create a more robust model. The parameter $C$ controls the trade-off between maximizing the margin and minimizing classification errors.
 
 ---
 
 ### 43. Kernel SVM
 
-![Slide 43](slide43.png)
+![Kernel SVM Slide](slide43.png)
+
+*   Other linear algorithms can also be "kernelized".
+*   **Kernel SVM**: By replacing the dot product $x_i^T x_j$ with a kernel function $K(x_i, x_j)$, SVM can find a linear hyperplane in a high-dimensional feature space, which corresponds to a non-linear decision boundary in the original input space.
+*   This makes SVM highly effective for complex, non-linear datasets.
 
 ---
 
-### 44. Summary
+### 44. Summary of Chapter 2
 
-![Slide 44](slide44.png)
+![Summary Slide](slide44.png)
+
+*   Machine learning involves **data**, a **model**, and a **loss function**.
+*   We aim to minimize the expected risk (test error), often by minimizing the empirical risk (training error) plus a regularization term.
+*   **Supervised learning** builds models from labeled data (e.g., Linear Regression, SVM).
+*   **Unsupervised learning** finds structure in unlabeled data (e.g., Clustering).
+*   **Kernel methods** allow linear models to solve non-linear problems efficiently.
 
 ---
 
-### 45. Quantum Machine Learning
+### 45. Quantum Machine Learning (QML)
 
-![Slide 45](slide45.png)
+![Quantum Machine Learning Slide](slide45.png)
+
+*   **QML**: The intersection of Quantum Computing and Machine Learning.
+*   It investigates how quantum computers can help specific machine learning tasks and how machine learning methods can help analyze quantum systems.
+*   **Key Idea**: Quantum computers process information in a fundamentally different way (superposition, entanglement), potentially offering speedups or better models for certain problems.
 
 ---
 
 ### 46. QML Potential
 
-![Slide 46](slide46.png)
+![QML Potential Slide](slide46.png)
+
+*   **Speedup**: Potential for polynomial or exponential speedups in training or inference (e.g., using HHL algorithm for linear algebra).
+*   **Expressivity**: Quantum models (like Variational Quantum Circuits) might be able to capture complex correlations in data that are hard for classical neural networks to model.
+*   **Quantum Data**: QML is naturally suited for learning from quantum data (e.g., classifying states of matter).
 
 ---
 
 ### 47. QML Challenges
 
-![Slide 47](slide47.png)
+![QML Challenges Slide](slide47.png)
+
+*   **Data Loading**: Encoding classical data into a quantum state is often a bottleneck.
+*   **Noise (NISQ)**: Current quantum devices are noisy and have limited coherence times.
+*   **Barren Plateaus**: Training quantum neural networks can suffer from vanishing gradients, making optimization difficult.
 
 ---
 
 ### 48. Future of QML
 
-![Slide 48](slide48.png)
+![Future of QML Slide](slide48.png)
+
+*   **Hybrid Algorithms**: Combining classical and quantum processors (e.g., VQE, QAOA) is the most promising near-term approach.
+*   **Quantum Kernels**: Using quantum computers to estimate kernels that are hard to compute classically.
+*   **Discovery**: As hardware improves, we expect to discover new quantum algorithms for ML that we haven't even imagined yet.
 
 ---
 
 ### 49. Conclusion
 
-![Slide 49](slide49.png)
+![Conclusion Slide](slide49.png)
+
+*   Machine learning provides a robust framework for understanding data.
+*   Integrating these concepts with quantum mechanics opens up a new frontier in computation.
+*   Understanding the classical foundations (kernels, optimization, regularization) is essential for developing effective quantum machine learning algorithms.
 
 --- 
 
-### 50. Slide 50
+### 50. Appendix: QML Libraries
 
-![Slide 50](slide50.png)
+![QML Libraries Slide](slide50.png)
 
---- 
+*   **Key Libraries**:
+    *   **PennyLane (Xanadu)**: A cross-platform Python library for differentiable programming of quantum computers.
+    *   **Qiskit (IBM)**: An open-source framework for working with noisy quantum computers at the level of pulses, circuits, and application modules.
+    *   **TensorFlow Quantum (Google)**: A library for hybrid quantum-classical machine learning.
+    *   **TorchQuantum**: A PyTorch-based library for quantum machine learning.
 
-### 51. Slide 51
+---
 
-![Slide 51](slide51.png)
+### 51. Appendix: Quantum vs Classical NN
 
---- 
+![Classical vs Quantum NN Slide](slide51.png)
 
-### 52. Slide 52
+*   **Classical Neural Networks**:
+    *   Deterministic transformations (matrices).
+    *   Non-linear activation functions.
+    *   Parameters: Weights and Biases.
+*   **Quantum Neural Networks (QNN)**:
+    *   Unitary transformations (gates).
+    *   Linearity in state space, but measurement introduces non-linearity (or non-linear data encoding).
+    *   Parameters: Gate rotation angles.
 
-![Slide 52](slide52.png)
+---
 
---- 
+### 52. Appendix: Data Encoding
 
-### 53. Slide 53
+![Data Encoding Slide](slide52.png)
 
-![Slide 53](slide53.png)
+*   **Basis Encoding**: Encodes binary inputs directly into basis states (e.g., $101 \rightarrow |101\rangle$). Efficient for simple data but requires many qubits.
+*   **Amplitude Encoding**: Encodes $N$ continuous variables into the amplitudes of $\log_2 N$ qubits. High density but hard to prepare.
+*   **Angle Encoding**: Encodes variables into the rotation angles of qubits. Simple and widely used in Variational Quantum Circuits.
 
---- 
+---
 
-### 54. Slide 54
+### 53. Appendix: Variational Quantum Algorithms
 
-![Slide 54](slide54.png)
+![VQA Slide](slide53.png)
 
---- 
+*   **VQA**: A class of hybrid algorithms that use a classical optimizer to train a parameterized quantum circuit.
+*   **Components**:
+    *   **Ansatz**: A template circuit with tunable parameters.
+    *   **Cost Function**: Measured from the quantum output.
+    *   **Optimizer**: Classical algorithm (e.g., Adam, Cobyla) that updates the parameters.
 
-### 55. Slide 55
+---
 
-![Slide 55](slide55.png)
+### 54. Appendix: Quantum Kernels
 
---- 
+![Quantum Kernels Slide](slide54.png)
 
-### 56. Slide 56
+*   **Quantum Kernel Estimation**: We can use a quantum computer to estimate the kernel entry $K(x, x') = |\langle \Phi(x) | \Phi(x') \rangle|^2$.
+*   Since the feature map $\Phi(x)$ is performed by the quantum circuit, it can access a Hilbert space that is exponentially large and potentially hard to simulate classically.
 
-![Slide 56](slide56.png)
+---
 
---- 
+### 55. Appendix: References 1
 
-### 57. Slide 57
+![References 1 Slide](slide55.png)
 
-![Slide 57](slide57.png)
+*   **Foundational Papers**:
+    *   Schuld, M., & Petruccione, F. (2021). *Machine Learning with Quantum Computers*.
+    *   Biamonte, J., et al. (2017). *Quantum machine learning*. Nature.
+    *   Havlíček, V., et al. (2019). *Supervised learning with quantum-enhanced feature spaces*. Nature.
 
---- 
+---
 
-### 58. Slide 58
+### 56. Appendix: References 2
 
-![Slide 58](slide58.png)
+![References 2 Slide](slide56.png)
+
+*   **Further Reading**:
+    *   Mitarai, K., et al. (2018). *Quantum circuit learning*. Physical Review A.
+    *   Farhi, E., & Neven, H. (2018). *Classification with quantum neural networks on near term processors*.
+
+---
+
+### 57. Appendix: Q&A
+
+![Q&A Slide](slide57.png)
+
+*   **Discussion Points**:
+    *   What are the nearest-term applications?
+    *   How do we handle noise in real hardware?
+    *   Comparison of different QML frameworks.
+
+---
+
+### 58. Thank You
+
+![Thank You Slide](slide58.png)
+
+*   Thank you for your attention.
+*   **Contact**: [suawiu@gmail.com](mailto:suawiu@gmail.com)
+*   **Blog**: [suawiu.github.io](https://suawiu.github.io)
