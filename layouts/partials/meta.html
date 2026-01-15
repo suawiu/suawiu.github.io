@@ -1,0 +1,55 @@
+{{/* Open Graph */}}
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+
+{{/* Image Logic */}}
+{{ $imageLink := "" }}
+
+{{/* 1. Pick the best image string from params */}}
+{{ $imgParam := "" }}
+{{ if .Params.cardimage }}
+{{ $imgParam = .Params.cardimage }}
+{{ else if .Params.featureimage }}
+{{ $imgParam = .Params.featureimage }}
+{{ else if .Params.images }}
+{{ $imgParam = index .Params.images 0 }}
+{{ else if .Site.Params.images }}
+{{ $imgParam = index .Site.Params.images 0 }}
+{{ end }}
+
+{{/* 2. Resolve the image string to a URL */}}
+{{ if $imgParam }}
+{{/* A. Try Global Assets (like list.html) */}}
+{{ $res := resources.GetMatch (printf "**%s" $imgParam) }}
+{{ if $res }}
+{{ $imageLink = $res.Permalink }}
+{{ else }}
+{{/* B. Try Page Bundle Resources */}}
+{{ $res := .Resources.GetMatch $imgParam }}
+{{ if $res }}
+{{ $imageLink = $res.Permalink }}
+{{ else }}
+{{/* C. Fallback to static/absolute URL */}}
+{{ $imageLink = $imgParam | absURL }}
+{{ end }}
+{{ end }}
+{{ end }}
+
+{{ if $imageLink }}
+<meta property="og:image" content="{{ $imageLink }}" />
+<meta name="twitter:image" content="{{ $imageLink }}" />
+<meta name="twitter:card" content="summary_large_image" />
+{{ else }}
+<meta name="twitter:card" content="summary" />
+{{ end }}
+
+{{/* Twitter Metadata */}}
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}" />
+{{ with .Site.Params.Author.twitter }}
+<meta name="twitter:site" content="@{{ . }}" />
+{{ end }}
