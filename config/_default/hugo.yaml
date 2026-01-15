@@ -28,9 +28,13 @@ markup:
         enable: true
         delimiters:
           block:
-            - ['\[', '\]']
-            - ['$$', '$$']
+            - - \[
+              - \]
+            - - $$
+              - $$
           inline:
-            - ['\(', '\)']
-            - ['$', '$']
+            - - \(
+              - \)
+            - - $
+              - $
   _merge: deep

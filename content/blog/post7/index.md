@@ -130,8 +130,8 @@ Models can be categorized by how they handle uncertainty:
 ![Model Types Detailed Slide](slide11.jpg)
 
 While the previous slide introduced the concept, this slide formally contrasts two types of models:
-*   **Deterministic Model**: Assumes a precise relationship where  = X\beta$. It essentially states that if you know the input $ and the parameters $\beta$, you can determine $ exactly.
-*   **Statistical Model**: Acknowledges that the world is noisy. It models the relationship as  = X\beta + \epsilon$, where $\epsilon$ represents the error term (often assumed to be normally distributed, $\epsilon \sim N(0, \sigma^2)$). This accounts for the variability we see in real-world data.
+*   **Deterministic Model**: Assumes a precise relationship where $Y = X\beta$ . It essentially states that if you know the input $X$ and the parameters $\beta$, you can determine $Y$ exactly.
+*   **Statistical Model**: Acknowledges that the world is noisy. It models the relationship as $Y = X\beta + \epsilon$ , where $\epsilon$ represents the error term (often assumed to be normally distributed, $\epsilon \sim N(0, \sigma^2)$ ). This accounts for the variability we see in real-world data.
 
 ---
 
@@ -181,5 +181,5 @@ The core goal of supervised learning is **Risk Minimization**. This involves two
     *   Choosing a less flexible model.
     *   Stopping training early.
     *   Pruning parameters (setting them to zero).
-    *   Adding a **regularization term** to the cost function.
-*   **Final Cost Function**: (\theta) = \hat{R}_{f_\theta} + g(f_\theta)$, where $\hat{R}$ is the risk (error) and $ is the regularization term.
+    *   Adding a **regularization term** to the **cost function**.
+*   **Final Cost Function**: $C(\theta) = \hat{R}_{f_\theta} + g(f_\theta)$ , where $\hat{R}$ is the risk (error) and $g$ is the regularization term.
