@@ -245,3 +245,57 @@ The **VC Dimension** measures the capacity (complexity) of a statistical classif
 *   **Risk Bound**: It provides a theoretical upper bound on the test error (risk).
     *   $\mathcal{R}_{f_\theta} \leq \hat{\mathcal{R}}_{f_\theta} + \sqrt{\frac{1}{M} \left( d_{VC} \left( \log \left( \frac{2M}{d} \right) + 1 \right) + \log \left( \frac{4}{\delta} \right) \right)}$
     *   This formula shows that as the VC dimension ($d_{VC}$) increases (model becomes more complex), the gap between training error ($\hat{\mathcal{R}}$) and true risk ($\mathcal{R}$) can widen, increasing the chance of overfitting.
+
+---
+
+### 21. Training in Unsupervised Learning
+
+![Training in Unsupervised Learning Slide](slide21.jpg)
+
+*   **Maximum Likelihood Estimation (MLE)**: A common method used in training unsupervised learning models.
+
+---
+
+### 22. Maximum Likelihood Estimation (Math)
+
+![Maximum Likelihood Estimation Math Slide](slide22.jpg)
+
+**Likelihood** refers to the probability of observing a given set of data under a specific model.
+*   **Likelihood Function**: (\Theta|x_1, ..., x_n)$
+*   **Joint Probability Density**: (x_1, ..., x_n|\Theta) = f(x_1|\Theta)...f(x_n|\Theta)$ (assuming independence)
+*   **MLE Goal**: Find the parameter values $\hat{\Theta}$ that maximize this likelihood function, making the observed data most probable.
+    *   $\hat{\Theta} = argmax_\Theta L(\Theta)$
+    *   In practice, we often maximize the **log-likelihood** because it turns products into sums, making derivatives easier to compute:
+    *   ^*(\Theta) = \log(L(\Theta)) = \sum \log f(x_i)$
+
+---
+
+### 23. Maximum Likelihood Estimation (Visual)
+
+![Maximum Likelihood Estimation Graph Slide](slide23.jpg)
+
+This graph visualizes MLE. We try to fit a distribution (like a Gaussian) to the data points (orange dots).
+*   The blue curve represents a model with parameters that don't fit well (low likelihood).
+*   The orange curve fits the data better (higher likelihood). MLE searches for the curve that fits the data "best".
+
+---
+
+### 24. Methods in Machine Learning
+
+![Methods in Machine Learning Slide](slide24.jpg)
+
+Common methods include:
+*   **Linear Models**: Simple, interpretable models (e.g., Linear Regression, Logistic Regression).
+*   **Neural Networks**: Powerful models inspired by biological neurons, capable of learning complex patterns.
+*   **Graphical Models**: Models that express the conditional dependence structure between random variables (e.g., Bayesian Networks).
+*   **Kernel Methods**: Algorithms that use kernel functions to operate in a high-dimensional feature space (e.g., SVM).
+
+---
+
+### 25. Linear Models
+
+![Linear Models Slide](slide25.jpg)
+
+*   **Sigmoid Function**: A key component in linear classification (like Logistic Regression) and neural networks.
+    *   $\sigma(x) = \frac{1}{1 + e^{-x}}$
+    *   It maps any real-valued input number into a value between 0 and 1, essentially converting a continuous value into a probability (binary output).
