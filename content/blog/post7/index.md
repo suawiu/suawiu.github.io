@@ -186,46 +186,23 @@ The core goal of supervised learning is **Risk Minimization**. This involves two
 
 ---
 
-### 16. Overfitting vs. Underfitting
+### 16. Cost Function Examples: Regularization
 
-![Overfitting and Underfitting Visuals Slide](slide16.jpg)
-
-This slide visualizes the concepts of underfitting and overfitting using a regression example and a decision tree:
-*   **Model A (Underfitting)**: The model is too simple (a straight line) to capture the underlying pattern of the data. It has high correlation bias.
-*   **Model B**: The model fits the data well, capturing the trend without chasing every noise point.
-*   **Model C (Overfitting)**: The model is too complex and fits the noise in the training data, leading to poor generalization.
-
----
-
-### 17. Cost Function Examples: Regularization
-
-![Cost Function Examples Slide](slide17.jpg)
+![Cost Function Examples Slide](slide16.jpg)
 
 Common regularization techniques involve adding a penalty term to the cost function:
 *   **Ridge Regression ($\ell_2$)**: Adds the sum of squared coefficients.
-    *   {\ell_2}(\theta) = \sum \theta_i^2$
+    *   $g_{\ell_2}(\theta) = \sum \theta_i^2$
 *   **Lasso Regression ($\ell_1$)**: Adds the sum of the absolute values of coefficients. This can drive some coefficients to exactly zero, performing feature selection.
-    *   {\ell_1}(\theta) = \sum |\theta_i|$
+    *   $g_{\ell_1}(\theta) = \sum |\theta_i|$
 *   **Elastic-Net**: Combines both $\ell_1$ and $\ell_2$ penalties.
     *   Adds $\lambda_1 \sum |\theta_i| + \lambda_2 \sum \theta_i^2$
 
 ---
 
-### 18. VC (Vapnik-Chervonenkis) Dimension
+### 17. Optimization: Gradient Descent
 
-![VC Dimension Slide](slide18.jpg)
-
-The **VC Dimension** measures the capacity (complexity) of a statistical classification algorithm.
-*   **Concept**: It answers "How complex a dataset can this model classify?"
-*   **Risk Bound**: It provides a theoretical upper bound on the test error (risk).
-    *   $\mathcal{R}_{f_\theta} \leq \hat{\mathcal{R}}_{f_\theta} + \sqrt{\frac{1}{M} \left( d_{VC} \left( \log \left( \frac{2M}{d} \right) + 1 \right) + \log \left( \frac{4}{\delta} \right) \right)}$
-    *   This formula shows that as the VC dimension ({VC}$) increases (model becomes more complex), the gap between training error ($\hat{\mathcal{R}}$) and true risk ($\mathcal{R}$) can widen, increasing the chance of overfitting.
-
----
-
-### 19. Optimization: Gradient Descent
-
-![Gradient Descent Optimization Slide](slide19.jpg)
+![Gradient Descent Optimization Slide](slide17.jpg)
 
 Optimization algorithms are used to find the parameters that minimize the cost function.
 *   **Gradient Descent (GD)**: Uses the entire dataset to calculate the gradient and update parameters.
@@ -238,10 +215,33 @@ Optimization algorithms are used to find the parameters that minimize the cost f
 
 ---
 
-### 20. Mini-batch Gradient Descent
+### 18. Mini-batch Gradient Descent
 
-![Mini-batch Gradient Descent Slide](slide20.jpg)
+![Mini-batch Gradient Descent Slide](slide18.jpg)
 
 *   **Mini-batch Gradient Descent**: A compromise between Batch GD and SGD.
-    *   It processes data in small groups (batches) of size $.
+    *   It processes data in small groups (batches) of size $n$ .
     *   It offers more stable convergence than SGD and is more computationally efficient than Batch GD, effectively utilizing matrix operations.
+
+---
+
+### 19. Overfitting vs. Underfitting
+
+![Overfitting and Underfitting Visuals Slide](slide19.jpg)
+
+This slide visualizes the concepts of underfitting and overfitting using a regression example and a decision tree:
+*   **Model A (Underfitting)**: The model is too simple (a straight line) to capture the underlying pattern of the data. It has high correlation bias.
+*   **Model B**: The model fits the data well, capturing the trend without chasing every noise point.
+*   **Model C (Overfitting)**: The model is too complex and fits the noise in the training data, leading to poor generalization.
+
+---
+
+### 20. VC (Vapnik-Chervonenkis) Dimension
+
+![VC Dimension Slide](slide20.jpg)
+
+The **VC Dimension** measures the capacity (complexity) of a statistical classification algorithm.
+*   **Concept**: It answers "How complex a dataset can this model classify?"
+*   **Risk Bound**: It provides a theoretical upper bound on the test error (risk).
+    *   $\mathcal{R}_{f_\theta} \leq \hat{\mathcal{R}}_{f_\theta} + \sqrt{\frac{1}{M} \left( d_{VC} \left( \log \left( \frac{2M}{d} \right) + 1 \right) + \log \left( \frac{4}{\delta} \right) \right)}$
+    *   This formula shows that as the VC dimension ($d_{VC}$) increases (model becomes more complex), the gap between training error ($\hat{\mathcal{R}}$) and true risk ($\mathcal{R}$) can widen, increasing the chance of overfitting.
