@@ -186,9 +186,20 @@ The core goal of supervised learning is **Risk Minimization**. This involves two
 
 ---
 
-### 16. Cost Function Examples: Regularization
+### 16. Overfitting vs. Underfitting
 
-![Cost Function Examples Slide](slide16.png)
+![Overfitting and Underfitting Visuals Slide](slide16.png)
+
+This slide visualizes the concepts of underfitting and overfitting using a regression example and a decision tree:
+*   **Model A (Underfitting)**: The model is too simple (a straight line) to capture the underlying pattern of the data. It has high correlation bias.
+*   **Model B**: The model fits the data well, capturing the trend without chasing every noise point.
+*   **Model C (Overfitting)**: The model is too complex and fits the noise in the training data, leading to poor generalization.
+
+---
+
+### 17. Cost Function Examples: Regularization
+
+![Cost Function Examples Slide](slide17.png)
 
 Common regularization techniques involve adding a penalty term to the cost function:
 *   **Ridge Regression ($\ell_2$)**: Adds the sum of squared coefficients.
@@ -200,9 +211,21 @@ Common regularization techniques involve adding a penalty term to the cost funct
 
 ---
 
-### 17. Optimization: Gradient Descent
+### 18. VC (Vapnik-Chervonenkis) Dimension
 
-![Gradient Descent Optimization Slide](slide17.png)
+![VC Dimension Slide](slide18.png)
+
+The **VC Dimension** measures the capacity (complexity) of a statistical classification algorithm.
+*   **Concept**: It answers "How complex a dataset can this model classify?"
+*   **Risk Bound**: It provides a theoretical upper bound on the test error (risk).
+    *   $\mathcal{R}_{f_\theta} \leq \hat{\mathcal{R}}_{f_\theta} + \sqrt{\frac{1}{M} \left( d_{VC} \left( \log \left( \frac{2M}{d} \right) + 1 \right) + \log \left( \frac{4}{\delta} \right) \right)}$
+    *   This formula shows that as the VC dimension ($d_{VC}$) increases (model becomes more complex), the gap between training error ($\hat{\mathcal{R}}$) and true risk ($\mathcal{R}$) can widen, increasing the chance of overfitting.
+
+---
+
+### 19. Optimization: Gradient Descent
+
+![Gradient Descent Optimization Slide](slide19.png)
 
 Optimization algorithms are used to find the parameters that minimize the cost function.
 *   **Gradient Descent (GD)**: Uses the entire dataset to calculate the gradient and update parameters.
@@ -215,36 +238,13 @@ Optimization algorithms are used to find the parameters that minimize the cost f
 
 ---
 
-### 18. Mini-batch Gradient Descent
+### 20. Mini-batch Gradient Descent
 
-![Mini-batch Gradient Descent Slide](slide18.png)
+![Mini-batch Gradient Descent Slide](slide20.png)
 
 *   **Mini-batch Gradient Descent**: A compromise between Batch GD and SGD.
-    *   It processes data in small groups (batches) of size $n$ .
+    *   It processes data in small groups (batches) of size $n$.
     *   It offers more stable convergence than SGD and is more computationally efficient than Batch GD, effectively utilizing matrix operations.
-
----
-
-### 19. Overfitting vs. Underfitting
-
-![Overfitting and Underfitting Visuals Slide](slide19.png)
-
-This slide visualizes the concepts of underfitting and overfitting using a regression example and a decision tree:
-*   **Model A (Underfitting)**: The model is too simple (a straight line) to capture the underlying pattern of the data. It has high correlation bias.
-*   **Model B**: The model fits the data well, capturing the trend without chasing every noise point.
-*   **Model C (Overfitting)**: The model is too complex and fits the noise in the training data, leading to poor generalization.
-
----
-
-### 20. VC (Vapnik-Chervonenkis) Dimension
-
-![VC Dimension Slide](slide20.png)
-
-The **VC Dimension** measures the capacity (complexity) of a statistical classification algorithm.
-*   **Concept**: It answers "How complex a dataset can this model classify?"
-*   **Risk Bound**: It provides a theoretical upper bound on the test error (risk).
-    *   $\mathcal{R}_{f_\theta} \leq \hat{\mathcal{R}}_{f_\theta} + \sqrt{\frac{1}{M} \left( d_{VC} \left( \log \left( \frac{2M}{d} \right) + 1 \right) + \log \left( \frac{4}{\delta} \right) \right)}$
-    *   This formula shows that as the VC dimension ($d_{VC}$) increases (model becomes more complex), the gap between training error ($\hat{\mathcal{R}}$) and true risk ($\mathcal{R}$) can widen, increasing the chance of overfitting.
 
 ---
 
@@ -356,305 +356,322 @@ Activation functions introduce non-linearity into the network, allowing it to le
     *   $\frac{\partial E}{\partial w} = \frac{\partial E}{\partial y} \cdot \frac{\partial y}{\partial h} \cdot \frac{\partial h}{\partial w}$
     *   Weights are updated to minimize the error: $w^{new} = w - \eta \frac{\partial E}{\partial w}$
 
-### 31. Graphical Models: Bayesian Networks
+### 31. Recurrent Neural Networks (RNN)
 
-![Graphical Models: Bayesian Networks Slide](slide31.png)
+![Recurrent Neural Networks Slide](slide31.png)
 
-*   **Bayesian Networks (Directed Graphical Models)**: Represent causal relationships between variables using a directed acyclic graph (DAG).
-    *   Nodes represent random variables.
-    *   Edges represent conditional dependencies ($A \rightarrow B$ implies $B$ depends on $A$).
-    *   The joint probability distribution factorizes as: $p(x_1, ..., x_N) = \prod_{i=1}^N p(x_i | parent(x_i))$
-
----
-
-### 32. Undirected Graphical Models
-
-![Undirected Graphical Models Slide](slide32.png)
-
-*   **Markov Random Fields (Undirected Graphical Models)**: Represent dependencies where the direction is not specified (e.g., spatial correlation in pixels).
-    *   Based on the concept of **cliques** (fully connected subgraphs).
-    *   The joint probability is defined by potential functions $\psi_C$ over maximal cliques $C$:
-    *   $p(x) = \frac{1}{Z} \prod_{C} \psi_C(x_C)$
-    *   $Z$ is the partition function (normalization constant), which is often hard to compute.
+*   **RNN**: Combining the advantages of Perceptron and Logic Gates.
+    *   Useful for processing processing time series (sequence) data.
+*   **First Order System**:
+    *   Assume that the state of the current time is related to the state of the previous time and the current input.
+    *   $s^{(t)} = (x^{(t)}_1, ..., x^{(t)}_N, y^{(t)}_1, ..., y^{(t)}_D, h^{(t)}_1, ..., h^{(t)}_J)^T$
+    *   $s^{(t+1)} = \varphi(Ws^{(t)})$
+*   **Limitations**:
+    *   Exploding or vanishing gradients.
+    *   Solutions include Gradient Clipping and **Long Short-Term Memory (LSTM)**.
 
 ---
 
-### 33. Sampling Inference
+### 32. RNN Applications
 
-![Sampling Inference Slide](slide33.png)
+![RNN Applications Slide](slide32.png)
 
-Inference involves estimating parts of the probability distribution (e.g., $p(x_i | x_j)$). Exact inference can be computationally expensive.
-*   **Sampling (Monte Carlo Methods)**: Approximates the distribution by generating many random samples.
-*   **Gibbs Sampling**: A Markov Chain Monte Carlo (MCMC) algorithm where we iteratively sample each variable from its conditional distribution given the current integration of other variables.
-*   It is rigorous but slow to converge.
-
----
-
-### 34. Variational Inference
-
-![Variational Inference Slide](slide34.png)
-
-*   **Variational Inference**: An alternative to sampling that frames inference as an optimization problem.
-    *   It approximates the complex true distribution $p(x)$ with a simpler, tractable distribution $q(x)$ (e.g., a set of independent Gaussians).
-    *   **Goal**: Minimize the difference (KL Divergence) between $q(x)$ and $p(x)$, or equivalently, maximize the Evidence Lower Bound (ELBO).
-    *   It is faster than sampling but may be biased due to the approximation.
+RNNs are versatile and used in various "many-to-many" or "many-to-one" tasks:
+*   **One-to-Many**: Image Captioning.
+*   **Many-to-One**: Sentiment Analysis (e.g., Spam Classification).
+*   **Many-to-Many**: Machine Translation (e.g., English to Korean), Named Entity Recognition (NER), DNA sequence analysis, Chatbots.
 
 ---
 
-### 35. Kernel Methods
+### 33. Hopfield Networks
 
-![Kernel Methods Slide](slide35.png)
+![Hopfield Networks Slide](slide33.png)
 
-*   **Kernel Methods**: A class of algorithms for pattern analysis, with the **Support Vector Machine (SVM)** being the most famous.
-*   They work by mapping data into a high-dimensional features space where the problem (e.g., classification) becomes linearly separable.
-*   They rely on **linear models** in this new space.
-
----
-
-### 36. Kernel Trick
-
-![Kernel Trick Slide](slide36.png)
-
-*   **Feature Map ($\Phi$)**: Maps the input data $x$ from the original space ($\mathcal{X}$) to a high-dimensional feature space ($\mathcal{F}$).
-    *   $x \rightarrow \Phi(x)$
-*   **The Kernel Trick**: We can compute the inner product in the high-dimensional space *without* explicitly calculating the coordinates in that space.
-    *   $K(x, x') = \langle \Phi(x), \Phi(x') \rangle_{\mathcal{F}}$
-    *   This saves immense computational cost.
+*   **Hopfield Networks**: A simple class of Recurrent Neural Networks with feedback loops.
+    *   **Associative Memory**: Can memorize patterns from just one sample (One-shot learning).
+    *   **Structure**: Symmetric all-to-all connections ($w_{ij} = w_{ji}$) with no self-connections ($w_{ii} = 0$).
+*   **Capacity**: A network with $N$ nodes can store approximately $0.15N$ patterns. (e.g., 100 neurons $\approx$ 15 patterns).
+*   **Math**:
+    *   Bipolarization: $X_i = 2a_i - 1$
+    *   Weight update: $w_{ij} = \sum_m x_i^m x_j^m$
+    *   Update rule: $z = \sum_{j \neq i} w_{ij} x_j$, $x_i = \text{sign}(z)$
+    *   **Energy Function**: $E_W(\mathbf{x}) = -\frac{1}{2}\mathbf{x}^T \mathbf{W} \mathbf{x} = -\frac{1}{2} \sum_{i,j=1} w_{ij}x_i x_j$
 
 ---
 
-### 37. Kernel Trick Math
+### 34. Hopfield Networks: Recovery
 
-![Kernel Trick Math Slide](slide37.png)
+![Hopfield Networks Recovery Slide](slide34.png)
 
-*   The kernel function $K(x, x')$ computes the similarity between two inputs.
-*   Common Kernels:
-    *   **Linear**: $K(x, x') = x^T x'$
-    *   **Polynomial**: $K(x, x') = (x^T x' + c)^d$
-    *   **RBF (Radial Basis Function)**: $K(x, x') = \exp(-\frac{||x-x'||^2}{2\sigma^2})$
-*   This allows linear algorithms (like linear regression) to learn non-linear decision boundaries.
+This slide demonstrates the recovery process:
+*   **Original**: A stable state learned by the network.
+*   **Sample**: A corrupted or partial version of the pattern.
+*   **Recovery**: The network iterates using the update rule $x_i = \text{sign}(\sum w_{ij}x_j)$ to minimize the energy, eventually settling back into the original stable state (attractor).
 
 ---
 
-### 38. Representer Theorem
+### 35. Hopfield Networks: Example
 
-![Representer Theorem Slide](slide38.png)
+![Hopfield Networks Example Slide](slide35.png)
 
-*   **Representer Theorem**: States that for a broad class of regularized risk minimization problems, the optimal solution $f^*(x)$ can be expressed as a linear expansion of the kernel functions evaluated at the training data points.
-    *   $f^*(x) = \sum_{m=1}^M \alpha_m K(x, x^m)$
-    *   This reduces the optimization problem from infinite dimensions (in feature space) to a finite number of parameters ($\alpha_m$, one for each data point).
-
----
-
-### 39. Kernel Ridge Regression
-
-![Kernel Ridge Regression Slide](slide39.png)
-
-*   **Kernel Ridge Regression**: Applies the kernel trick to Ridge Regression.
-*   Instead of finding a weight vector $w$, we find the coefficients $\alpha$.
-*   The solution involves the **Kernel Matrix** (or Gram Matrix) $K$, where $K_{ij} = K(x^i, x^j)$.
-    *   $\alpha = (K + \lambda I)^{-1} y$
-*   The prediction for a new point $x$ is $f(x) = \sum \alpha_m K(x, x^m)$.
+*   An visual example showing how a Hopfield network can recover a complete image (e.g., Homer Simpson or a Hangul character '가') from a partially obscured or noisy input.
+*   It functions as a content-addressable memory system.
 
 ---
 
-### 40. Support Vector Machines (SVM)
+### 36. Boltzmann Machines
 
-![Support Vector Machines Slide](slide40.png)
+![Boltzmann Machines Slide](slide36.png)
 
-*   **SVM**: A powerful supervised learning algorithm used for classification and regression.
-*   **Goal**: Find the optimal hyperplane that separates data points of different classes with the maximum margin.
-*   **Support Vectors**: The data points closest to the hyperplane. These are the most critical points; changing other points doesn't affect the model.
-
----
-
-### 41. SVM Optimization
-
-![SVM Optimization Slide](slide41.png)
-
-*   **Primal Problem**: Minimize $\frac{1}{2} ||w||^2$ subject to constraints $y_i(w^T x_i + b) \geq 1$.
-*   **Dual Problem**: Using Lagrange multipliers, we convert this into a maximization problem involving only inner products ($x_i^T x_j$).
-    *   Maximize $\sum \alpha_i - \frac{1}{2} \sum \alpha_i \alpha_j y_i y_j x_i^T x_j$
-    *   This formulation naturally allows the use of the **Kernel Trick**.
+*   **Generative Model**: Unlike deterministic models that predict a target $y$, generative models aim to model the probability density function of the data.
+*   **Structure**: A stochastic recurrent neural network that defines a probability distribution over the states of the system.
+*   Example: Modeling the probability distribution of nose shapes to generate new, realistic nose images.
 
 ---
 
-### 42. SVM Margin
+### 37. Restricted Boltzmann Machines (RBM)
 
-![SVM Margin Slide](slide42.png)
+![Restricted Boltzmann Machines Slide](slide37.png)
 
-*   **Margin**: The distance between the hyperplane and the nearest data points (support vectors).
-*   **Hard Margin**: Assumes the data is perfectly separable. Sensitive to outliers.
-*   **Soft Margin**: Allows some misclassification (using slack variables $\xi$) to create a more robust model. The parameter $C$ controls the trade-off between maximizing the margin and minimizing classification errors.
-
----
-
-### 43. Kernel SVM
-
-![Kernel SVM Slide](slide43.png)
-
-*   Other linear algorithms can also be "kernelized".
-*   **Kernel SVM**: By replacing the dot product $x_i^T x_j$ with a kernel function $K(x_i, x_j)$, SVM can find a linear hyperplane in a high-dimensional feature space, which corresponds to a non-linear decision boundary in the original input space.
-*   This makes SVM highly effective for complex, non-linear datasets.
+*   **RBM**: A variant of Boltzmann Machines designed to be easier to train.
+*   **Restriction**: There are no intra-layer connections (no visible-visible or hidden-hidden connections). Connections exist only between the visible layer ($v$) and hidden layer ($h$).
+*   **Independence**: This structure implies that given the visible nodes, the hidden nodes are independent (and vice versa), simplifying the calculation of conditional probabilities $p(h|v)$ and $p(v|h)$.
 
 ---
 
-### 44. Summary of Chapter 2
+### 38. RBM: Math
 
-![Summary Slide](slide44.png)
+![RBM Math Slide](slide38.png)
 
-*   Machine learning involves **data**, a **model**, and a **loss function**.
-*   We aim to minimize the expected risk (test error), often by minimizing the empirical risk (training error) plus a regularization term.
-*   **Supervised learning** builds models from labeled data (e.g., Linear Regression, SVM).
-*   **Unsupervised learning** finds structure in unlabeled data (e.g., Clustering).
-*   **Kernel methods** allow linear models to solve non-linear problems efficiently.
-
----
-
-### 45. Quantum Machine Learning (QML)
-
-![Quantum Machine Learning Slide](slide45.png)
-
-*   **QML**: The intersection of Quantum Computing and Machine Learning.
-*   It investigates how quantum computers can help specific machine learning tasks and how machine learning methods can help analyze quantum systems.
-*   **Key Idea**: Quantum computers process information in a fundamentally different way (superposition, entanglement), potentially offering speedups or better models for certain problems.
+*   **Energy Function**: $E_W(\mathbf{s}) = -\frac{1}{2}\mathbf{s}^T \mathbf{W} \mathbf{s}$ (simplified form).
+*   **Probability**: $p_W(\mathbf{s}) = \frac{1}{Z} e^{-E_W(\mathbf{s})}$, where $Z = \sum_s e^{-E_W(\mathbf{s})}$ is the partition function.
+*   **Gradient Calculation**:
+    *   The gradient of the log-likelihood involves two terms:
+    *   $\frac{\partial C(\mathbf{W})}{\partial w_{ij}} = \langle x_i h_j \rangle_{\text{data}} - \langle x_i h_j \rangle_{\text{model}}$
+    *   The first term is easy to compute from data (positive phase), but the second term (negative phase) requires samples from the model, which is hard.
 
 ---
 
-### 46. QML Potential
+### 39. Gibbs Sampling
 
-![QML Potential Slide](slide46.png)
+![Gibbs Sampling Slide](slide39.png)
 
-*   **Speedup**: Potential for polynomial or exponential speedups in training or inference (e.g., using HHL algorithm for linear algebra).
-*   **Expressivity**: Quantum models (like Variational Quantum Circuits) might be able to capture complex correlations in data that are hard for classical neural networks to model.
-*   **Quantum Data**: QML is naturally suited for learning from quantum data (e.g., classifying states of matter).
-
----
-
-### 47. QML Challenges
-
-![QML Challenges Slide](slide47.png)
-
-*   **Data Loading**: Encoding classical data into a quantum state is often a bottleneck.
-*   **Noise (NISQ)**: Current quantum devices are noisy and have limited coherence times.
-*   **Barren Plateaus**: Training quantum neural networks can suffer from vanishing gradients, making optimization difficult.
+*   **Sampling**: Since calculating the model expectation $\langle x_i h_j \rangle_{\text{model}}$ is hard, we approximate it using **Gibbs Sampling**.
+*   **Process**: Iteratively update variables by drawing samples from their conditional distribution.
+*   **Thermalization**: It takes a long time (many steps) for the chain to reach equilibrium (the true distribution).
+*   To speed this up, **Contrastive Divergence (CD)** was proposed.
 
 ---
 
-### 48. Future of QML
+### 40. Contrastive Divergence (CD)
 
-![Future of QML Slide](slide48.png)
+![Contrastive Divergence Slide](slide40.png)
 
-*   **Hybrid Algorithms**: Combining classical and quantum processors (e.g., VQE, QAOA) is the most promising near-term approach.
-*   **Quantum Kernels**: Using quantum computers to estimate kernels that are hard to compute classically.
-*   **Discovery**: As hardware improves, we expect to discover new quantum algorithms for ML that we haven't even imagined yet.
-
----
-
-### 49. Conclusion
-
-![Conclusion Slide](slide49.png)
-
-*   Machine learning provides a robust framework for understanding data.
-*   Integrating these concepts with quantum mechanics opens up a new frontier in computation.
-*   Understanding the classical foundations (kernels, optimization, regularization) is essential for developing effective quantum machine learning algorithms.
-
---- 
-
-### 50. Appendix: QML Libraries
-
-![QML Libraries Slide](slide50.png)
-
-*   **Key Libraries**:
-    *   **PennyLane (Xanadu)**: A cross-platform Python library for differentiable programming of quantum computers.
-    *   **Qiskit (IBM)**: An open-source framework for working with noisy quantum computers at the level of pulses, circuits, and application modules.
-    *   **TensorFlow Quantum (Google)**: A library for hybrid quantum-classical machine learning.
-    *   **TorchQuantum**: A PyTorch-based library for quantum machine learning.
+*   **Contrastive Divergence**: An efficient approximation algorithm for training RBMs.
+*   **Idea**: Instead of waiting for the chain to converge, run the Gibbs chain for only $k$ steps (often $k=1$, denoted CD-1).
+*   **Update Rule**: $\text{Loss} \approx \mathbf{x}^{(0)}\mathbf{h}^{(0)} - \mathbf{x}^{(k)}\mathbf{h}^{(k)}$
+*   Experimentally, even a single step ($T=1$) is often sufficient to learn good features.
 
 ---
 
-### 51. Appendix: Quantum vs Classical NN
+### 41. Graphical Models
 
-![Classical vs Quantum NN Slide](slide51.png)
+![Graphical Models Slide](slide41.png)
 
-*   **Classical Neural Networks**:
-    *   Deterministic transformations (matrices).
-    *   Non-linear activation functions.
-    *   Parameters: Weights and Biases.
-*   **Quantum Neural Networks (QNN)**:
-    *   Unitary transformations (gates).
-    *   Linearity in state space, but measurement introduces non-linearity (or non-linear data encoding).
-    *   Parameters: Gate rotation angles.
+*   **Graphical Models**: Probabilistic models that use graphs to represent and simplify probability distributions over data.
+*   **Types**:
+    1.  **Bayesian Networks**: Directed Acyclic Graphs (DAGs).
+    2.  **Markov Models**: Undirected graphs (Markov Random Fields).
+*   **Bayesian Network Example**: The "Rain-Sprinkler-Grass Wet" model demonstrates causal relationships and conditional probabilities.
 
 ---
 
-### 52. Appendix: Data Encoding
+### 42. Bayesian Networks
 
-![Data Encoding Slide](slide52.png)
+![Bayesian Networks Slide](slide42.png)
 
-*   **Basis Encoding**: Encodes binary inputs directly into basis states (e.g., $101 \rightarrow |101\rangle$). Efficient for simple data but requires many qubits.
-*   **Amplitude Encoding**: Encodes $N$ continuous variables into the amplitudes of $\log_2 N$ qubits. High density but hard to prepare.
-*   **Angle Encoding**: Encodes variables into the rotation angles of qubits. Simple and widely used in Variational Quantum Circuits.
-
----
-
-### 53. Appendix: Variational Quantum Algorithms
-
-![VQA Slide](slide53.png)
-
-*   **VQA**: A class of hybrid algorithms that use a classical optimizer to train a parameterized quantum circuit.
-*   **Components**:
-    *   **Ansatz**: A template circuit with tunable parameters.
-    *   **Cost Function**: Measured from the quantum output.
-    *   **Optimizer**: Classical algorithm (e.g., Adam, Cobyla) that updates the parameters.
+*   **Factorization**: The joint probability distribution factorizes into the product of conditional probabilities based on the graph structure.
+    *   $P(X_1, ..., X_n) = \prod_{i} P(X_i | \text{parents}(X_i))$
+*   **Bayes' Theorem**: The foundation for inference (updating probabilities based on evidence).
+    *   $P(Y|X) = \frac{P(X|Y) P(Y)}{P(X)}$
+    *   **Posterior** = (Likelihood $\times$ Prior) / Evidence
 
 ---
 
-### 54. Appendix: Quantum Kernels
+### 43. Hidden Markov Models (HMM)
 
-![Quantum Kernels Slide](slide54.png)
+![Hidden Markov Models Slide](slide43.png)
 
-*   **Quantum Kernel Estimation**: We can use a quantum computer to estimate the kernel entry $K(x, x') = |\langle \Phi(x) | \Phi(x') \rangle|^2$.
-*   Since the feature map $\Phi(x)$ is performed by the quantum circuit, it can access a Hilbert space that is exponentially large and potentially hard to simulate classically.
-
----
-
-### 55. Appendix: References 1
-
-![References 1 Slide](slide55.png)
-
-*   **Foundational Papers**:
-    *   Schuld, M., & Petruccione, F. (2021). *Machine Learning with Quantum Computers*.
-    *   Biamonte, J., et al. (2017). *Quantum machine learning*. Nature.
-    *   Havlíček, V., et al. (2019). *Supervised learning with quantum-enhanced feature spaces*. Nature.
+*   **Markov Assumption**: The current state depends *only* on the previous state, not the entire history.
+    *   $P(X_{t+1} | X_t, ..., X_1) = P(X_{t+1} | X_t)$
+*   **Structure**: A sequence of unobserved (hidden) states that generate observed events.
+*   Example: Predicting tomorrow's weather (Hidden) based on today's weather, or inferring the weather from observed activities (like carrying an umbrella).
 
 ---
 
-### 56. Appendix: References 2
+### 44. HMM: Transition & Emission
 
-![References 2 Slide](slide56.png)
+![HMM Detail Slide](slide44.png)
 
-*   **Further Reading**:
-    *   Mitarai, K., et al. (2018). *Quantum circuit learning*. Physical Review A.
-    *   Farhi, E., & Neven, H. (2018). *Classification with quantum neural networks on near term processors*.
-
----
-
-### 57. Appendix: Q&A
-
-![Q&A Slide](slide57.png)
-
-*   **Discussion Points**:
-    *   What are the nearest-term applications?
-    *   How do we handle noise in real hardware?
-    *   Comparison of different QML frameworks.
+HMMs are characterized by two probability tables:
+*   **State Transition Probability**: The probability of moving from one hidden state to another (e.g., Sunny $\rightarrow$ Rainy).
+*   **Emission Probability**: The probability of observing an output given a hidden state (e.g., Observing "Umbrella" given "Rainy").
+*   **Joint Probability**:
+    *   $p(H, O) = \prod_{t=1}^T p(h^{(t)} | h^{(t-1)}) \prod_{t=1}^T p(o^{(t)} | h^{(t)})$
 
 ---
 
-### 58. Thank You
+### 45. Kernel Methods
 
-![Thank You Slide](slide58.png)
+![Kernel Methods Slide](slide45.png)
 
-*   Thank you for your attention.
-*   **Contact**: [suawiu@gmail.com](mailto:suawiu@gmail.com)
-*   **Blog**: [suawiu.github.io](https://suawiu.github.io)
+*   **Goal**: To transform non-linear problems into linear ones by mapping data into a higher-dimensional feature space.
+*   **Feature Map**: $\phi: \mathcal{X} \rightarrow \mathcal{F}$ ($R^d \rightarrow R^D$).
+*   **Kernel Function**: $\kappa(x, x') = \langle \phi(x), \phi(x') \rangle_{\mathcal{F}}$
+    *   It computes the similarity (inner product) directly without explicitly calculating the high-dimensional coordinates.
+*   **Common Kernels**:
+    *   **Linear**: $x^T x'$
+    *   **Polynomial**: $(x^T x' + c)^P$
+    *   **Gaussian (RBF)**: $e^{-\gamma ||x - x'||^2}$
+    *   **Sigmoid**: $\tanh(x^T x' + c)$
+
+---
+
+### 46. Kernel Methods: Visuals
+
+![Kernel Methods Visuals Slide](slide46.png)
+
+*   **2D to 2D**: A coordinate transformation (e.g., polar coordinates) can separate concentric circles linearly.
+*   **2D to 3D**: Mapping 2D data ($X_1, X_2$) to 3D ($X_1^2, X_2^2, \sqrt{2}X_1X_2$) creates a parabolic surface where data can be separated by a plane.
+
+---
+
+### 47. Kernel Density Estimation (KDE)
+
+![Kernel Density Estimation Slide](slide47.png)
+
+*   **KDE**: A non-parametric way to estimate the probability density function (PDF) of a random variable.
+*   **Method**: Place a kernel (e.g., a Gaussian distribution) centered at each data point and sum them up.
+    *   $p(\mathbf{x}) = \frac{1}{M} \sum_{m=1}^M \kappa(\mathbf{x} - \mathbf{x}^m)$
+*   **Smoothing**: A wider kernel (larger variance) leads to a smoother density estimate.
+
+---
+
+### 48. K-Nearest Neighbor (KNN)
+
+![K-Nearest Neighbor Slide](slide48.png)
+
+*   **KNN**: A simple, instance-based learning algorithm.
+*   **Logic**: Classify a new point based on the majority class of its $k$ nearest neighbors.
+*   **Distance Metrics**:
+    *   **Euclidean**: $\sqrt{\sum (x_i - x_i')^2}$
+    *   **Squared**: $\sum (x_i - x_i')^2$
+    *   **Cosine**: $\frac{\mathbf{x}^T \mathbf{x}'}{||\mathbf{x}|| ||\mathbf{x}'||}$ (Angle-based similarity)
+    *   **Hamming**: Number of differing bits (for binary data).
+
+---
+
+### 49. Support Vector Machines (SVM)
+
+![Support Vector Machines Slide](slide49.png)
+
+*   **SVM**: Focuses on finding the optimal boundary between classes.
+*   **Support Vectors**: The data points that lie closest to the decision boundary. They essentially "support" or define the boundary.
+*   **Margin**: The distance between the decision boundary and the support vectors. SVM aims to maximize this margin ($d_1 + d_2$).
+
+---
+
+### 50. SVM: Margin
+
+![SVM Margin Slide](slide50.png)
+
+*   Visual explanation of the margin components ($d_1$ and $d_2$).
+*   Maximizing the margin leads to better generalization. A larger margin implies the model is more confident and robust to noise.
+
+---
+
+### 51. SVM: Constraints
+
+![SVM Constraints Slide](slide51.png)
+
+*   **Hyperplane**: $w^T x + b = 0$
+*   **Canonical Hyperplanes**: We scale $w$ and $b$ such that the value at the support vectors is $+1$ or $-1$.
+    *   $w_0 + w_1 X_{i1} + w_2 X_{i2} \geq +M/2$ for $y_i = +1$
+    *   $w_0 + w_1 X_{i1} + w_2 X_{i2} \leq -M/2$ for $y_i = -1$
+*   **Combined Constraint**: $y_i (\mathbf{w} \cdot \mathbf{x}_i + w_0) \geq M/2 - \xi_i$ (where $\xi_i$ allows for some error, i.e., Soft Margin).
+
+---
+
+### 52. SVM: Optimization Goal
+
+![SVM Optimization Goal Slide](slide52.png)
+
+*   The margin width is given by $\frac{2}{||w||}$.
+*   **Optimization**: To maximize the margin ($M$), we need to **minimize** the norm of the weight vector $||w||$ (or equivalently, minimize $\frac{1}{2}||w||^2$).
+    *   $\text{Max } M = \text{Min } \frac{1}{2} ||w||^2$
+
+---
+
+### 53. SVM: Hinge Loss
+
+![SVM Hinge Loss Slide](slide53.png)
+
+*   **Hinge Loss**: The loss function used for SVM training.
+    *   $\text{loss} = \max\{0, 1 - (y' \times y)\}$
+*   **Zero Loss Condition**: If samples are correctly classified and outside the margin ($y' \times y \geq 1$), the loss is zero.
+*   **Penalty**: If samples are inside the margin or misclassified ($y' \times y < 1$), the loss increases linearly.
+
+---
+
+### 54. SVM: Lagrangian & Dual Problem
+
+![SVM Lagrangian Slide](slide54.png)
+
+*   We solve the constrained optimization problem using **Lagrange Multipliers** ($\alpha$).
+    *   $\mathcal{L}(\mathbf{w}, b, \mathbf{\alpha}) = \frac{1}{2}||\mathbf{w}||^2 - \sum_{m=1}^M \alpha_m (y^m (\mathbf{w}^T \mathbf{x}^m + b) - 1)$
+*   **Dual Formulation**:
+    *   $\mathcal{L}_{\text{dual}}(\mathbf{\alpha}) = \sum \alpha_m - \frac{1}{2} \sum \alpha_m \alpha_{m'} y^m y^{m'} (\mathbf{x}^m)^T \mathbf{x}^{m'}$
+*   **Decision Function**: $f(\mathbf{x}) = \sum \alpha_m y^m (\mathbf{x}^m)^T \mathbf{x} + b$
+    *   Notice the solution depends only on the dot product $(\mathbf{x}^m)^T \mathbf{x}$, enabling the Kernel Trick.
+
+---
+
+### 55. Kernel Methods Limitations
+
+![Kernel Methods Limitations Slide](slide55.png)
+
+*   The slide illustrates projections into higher dimensions (e.g., $R^2 \rightarrow R^3$).
+*   It poses the question "Shortcoming..?" (단점..?), possibly hinting at the computational cost of high-dimensional mapping or the risk of overfitting if the kernel is too complex.
+
+---
+
+### 56. Kernel Trick Summary
+
+![Kernel Trick Summary Slide](slide56.png)
+
+*   **Representer Theorem form**: $f(\mathbf{x}) = \sum \alpha_m y^m \kappa(\mathbf{x}^m, \mathbf{x}) + b$
+*   **Kernel Trick**: A computationally efficient way to achieve the results of high-dimensional mapping without actually computing the feature vectors.
+*   Table of kernels again: Linear, Polynomial, Gaussian, Exponential, Sigmoid.
+
+---
+
+### 57. Gaussian Processes (GP)
+
+![Gaussian Processes Slide](slide57.png)
+
+*   **Gaussian Process**: A non-parametric model where any finite set of variables has a joint Gaussian distribution.
+    *   $f(\mathbf{x}) \sim GP(m(\mathbf{x}), \kappa(\mathbf{x}, \mathbf{x}'))$
+    *   Defined by a mean function $m$ and a covariance function (kernel) $\kappa$.
+*   **Inference**: Uses Bayesian inference to update the posterior distribution $p(y|\mathbf{x})$ given new data.
+    *   The result is a Gaussian distribution with updated mean and covariance.
+
+---
+
+### 58. Gaussian Processes: Visualization
+
+![Gaussian Processes Visualization Slide](slide58.png)
+
+*   Visualizes the GP regression.
+*   **Dotted line**: The mean prediction.
+*   **Shaded region**: The confidence interval (uncertainty) which typically narrows near observed data points and widens where there is no data.
+*   This ability to quantify uncertainty is a key advantage of Gaussian Processes.
