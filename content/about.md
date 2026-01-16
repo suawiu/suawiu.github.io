@@ -57,18 +57,18 @@ Education
 Research Interests
 </h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
+<a href="/categories/quantum-computing/" class="block p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Quantum Computing</h3>
 <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Superconducting Qubits, Circuit QED, Quantum Error Correction, Quantum Machine Learning</p>
-</div>
-<div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
+</a>
+<a href="/coming-soon/" class="block p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Condensed Matter</h3>
 <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Low-temperature Systems, Quantum Materials</p>
-</div>
-<div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
+</a>
+<a href="/categories/data-analysis/" class="block p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Data Analysis</h3>
 <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Financial Time Series Analysis, Statistical Modeling</p>
-</div>
+</a>
 </div>
 </section>
 
