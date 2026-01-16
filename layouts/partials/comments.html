@@ -1,7 +1,49 @@
 <div class="mt-20">
     <script src="https://giscus.app/client.js" data-repo="suawiu/suawiu.github.io" data-repo-id="R_kgDOQfOGBA"
         data-category="Announcements" data-category-id="DIC_kwDOQfOGBM4C1ArJ" data-mapping="pathname" data-strict="0"
-        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom"
-        data-theme="preferred_color_scheme" data-lang="ko" data-loading="lazy" crossorigin="anonymous" async>
+        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="ko"
+        data-loading="lazy" crossorigin="anonymous" async>
         </script>
+
+    <script>
+        // Giscus 테마 동기화 스크립트
+        (function () {
+            const giscusScript = document.querySelector('script[src="https://giscus.app/client.js"]');
+
+            function getGiscusTheme() {
+                // HTML 태그의 class="dark" 여부로 판단
+                return document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+            }
+
+            function setGiscusTheme() {
+                const theme = getGiscusTheme();
+
+                // 1. 스크립트 태그 속성 업데이트 (초기 로드용)
+                giscusScript.setAttribute('data-theme', theme);
+
+                // 2. 이미 로드된 iframe에 메시지 전송 (동적 변경용)
+                const iframe = document.querySelector('iframe.giscus-frame');
+                if (iframe) {
+                    iframe.contentWindow.postMessage({
+                        giscus: { setConfig: { theme: theme } }
+                    }, 'https://giscus.app');
+                }
+            }
+
+            // 초기 테마 설정
+            setGiscusTheme();
+
+            // 테마 변경 감지 (MutationObserver 사용)
+            // html 태그의 class 속성이 변경되는지 감시
+            const observer = new MutationObserver(function (mutations) {
+                mutations.forEach(function (mutation) {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                        setGiscusTheme();
+                    }
+                });
+            });
+
+            observer.observe(document.documentElement, { attributes: true });
+        })();
+    </script>
 </div>
