@@ -72,6 +72,9 @@
             class="prose prose-slate max-w-none break-words text-lg text-slate-700 dark:prose-invert dark:text-slate-200 prose-headings:font-bold prose-headings:text-slate-800 dark:prose-headings:text-slate-100 prose-a:text-cyan-600 dark:prose-a:text-cyan-400 hover:prose-a:text-cyan-500">
             {{ .Content }}
         </div>
+
+        {{/* Comments */}}
+        {{ partial "comments.html" . }}
     </article>
 </div>
 {{ end }}
