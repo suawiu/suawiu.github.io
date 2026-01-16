@@ -3,7 +3,7 @@ title: "ML with QC - Ch2 (한글)"
 subtitle: "'Machine Learning with Quantum Computers' 2장 정리"
 summary: "'Machine Learning with Quantum Computers' 2장 머신러닝 기초 내용 정리"
 date: 2026-01-15
-categories: ["Physics"]
+categories: ["Physics", "Quantum Computing"]
 cardimage: "post5/cover_new.png"
 featureimage: "post5/cover_new.png"
 caption: "Quantum Science and Technology"

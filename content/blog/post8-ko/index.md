@@ -3,7 +3,7 @@ title: "ML with QC - Ch3 (한글)"
 subtitle: "'Machine Learning with Quantum Computers' 3장 정리"
 summary: "양자 컴퓨팅 기초: 큐비트, 게이트, 그리고 알고리즘"
 date: 2026-01-15
-categories: ["Physics"]
+categories: ["Physics", "Quantum Computing"]
 cardimage: "post5/cover_new.png"
 featureimage: "post5/cover_new.png"
 caption: "Quantum Science and Technology"

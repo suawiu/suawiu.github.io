@@ -66,6 +66,12 @@ Blog List Partial (우측 하단 절대 고정 버전)
             {{ $colorClass = "!border-violet-600/50 !bg-violet-600/20 !text-violet-700 dark:!text-violet-400" }}
             {{ else if eq $catLower "perspective" }}
             {{ $colorClass = "!border-emerald-600/50 !bg-emerald-600/20 !text-emerald-700 dark:!text-emerald-400" }}
+            {{ else if eq $catLower "quantum computing" }}
+            {{ $colorClass = "!border-indigo-600/50 !bg-indigo-600/20 !text-indigo-700 dark:!text-indigo-400" }}
+            {{ else if eq $catLower "data analysis" }}
+            {{ $colorClass = "!border-blue-600/50 !bg-blue-600/20 !text-blue-700 dark:!text-blue-400" }}
+            {{ else if eq $catLower "readings" }}
+            {{ $colorClass = "!border-rose-600/50 !bg-rose-600/20 !text-rose-700 dark:!text-rose-400" }}
             {{ end }}
             <span
               class="flex items-center justify-center rounded-full border px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider {{ $colorClass }}">

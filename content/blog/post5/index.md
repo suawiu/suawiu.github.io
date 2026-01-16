@@ -3,7 +3,7 @@ title: "ML with QC - Ch1 (English)"
 subtitle: "A breakdown of Chapter 1 from 'Machine Learning with Quantum Computers'"
 summary: "breakdown of Chapter 1 from 'Machine Learning with Quantum Computers"
 date: 2026-01-12
-categories: ["Physics"]
+categories: ["Physics", "Quantum Computing"]
 cardimage: "post5/cover_new.png"
 featureimage: "post5/cover_new.png"
 caption: "Quantum Science and Technology"

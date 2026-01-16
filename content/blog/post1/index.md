@@ -3,7 +3,7 @@ title: 1984 - George Orwell
 subtitle: "자유는 예속, 무지는 힘"
 summary: “자유는 예속, 무지는 힘"
 date: 2025-12-31
-categories: ["Perspective"]
+categories: ["Perspective", "Readings"]
 cardimage: 1984.jpeg
 featureimage: 1984(2).jpeg
 caption: 1984

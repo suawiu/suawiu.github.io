@@ -3,7 +3,7 @@ title: "ML with QC - Ch3 (English)"
 subtitle: "A breakdown of Chapter 3 from 'Machine Learning with Quantum Computers'"
 summary: "Fundamentals of Quantum Computing: Qubits, Gates, and Algorithms"
 date: 2026-01-15
-categories: ["Physics"]
+categories: ["Physics", "Quantum Computing"]
 cardimage: "post5/cover_new.png"
 featureimage: "post5/cover_new.png"
 caption: "Quantum Science and Technology"
