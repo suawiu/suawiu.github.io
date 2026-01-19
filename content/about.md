@@ -13,7 +13,7 @@ icon: ""
 
 <!-- Download PDF Button -->
 <div class="flex justify-start mb-8">
-  <a href="/files/cv.pdf" target="_blank" class="pdf-download-btn-link inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group text-slate-900 dark:text-slate-100 hover:text-cyan-600 dark:hover:text-cyan-400">
+  <a href="/files/cv.pdf?v=2" target="_blank" class="pdf-download-btn-link inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group text-slate-900 dark:text-slate-100 hover:text-cyan-600 dark:hover:text-cyan-400">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-300 group-hover:text-white transition-colors pdf-btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
     </svg>
