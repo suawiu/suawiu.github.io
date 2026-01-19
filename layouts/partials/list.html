@@ -36,7 +36,7 @@ Blog List Partial (우측 하단 절대 고정 버전)
 
 {{/* 3. Post Grid (겹침 방지 + 우측 밀착 버전) */}}
 <div class="mx-auto max-w-(--breakpoint-xl)" style="margin-top: 20px !important;">
-  <div class="grid grid-cols-1 justify-items-center gap-8 px-4 lg:grid-cols-2">
+  <div class="grid grid-cols-2 justify-items-center gap-4 px-2 lg:gap-8 lg:px-4 lg:grid-cols-2">
 
     {{ range .Pages.ByDate.Reverse }}
     {{ $cardimage := resources.GetMatch (print "**" .Params.cardimage) }}
