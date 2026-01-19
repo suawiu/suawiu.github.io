@@ -38,17 +38,19 @@ Blog List Partial (우측 하단 절대 고정 버전)
 <div class="mx-auto max-w-(--breakpoint-xl)" style="margin-top: 20px !important;">
   <div class="grid grid-cols-1 justify-items-center gap-8 px-4 lg:grid-cols-2">
 
-    {{ range .Pages.ByDate.Reverse }}
+    {{ range $index, $element := .Pages.ByDate.Reverse }}
     {{ $cardimage := resources.GetMatch (print "**" .Params.cardimage) }}
 
-    <a href="{{ .RelPermalink }}" class="w-full max-w-2xl block group" style="text-decoration: none !important;">
+    <a href="{{ .RelPermalink }}" class="w-full max-w-2xl block group opacity-0 animate-fade-in-up"
+      style="text-decoration: none !important; animation-delay: {{ mul $index 150 }}ms;">
       <div
         class="flex h-full max-h-80 rounded-xl bg-neutral-300 dark:bg-neutral-700 shadow-md overflow-hidden card-item">
 
         {{ with $cardimage }}
         {{ $cardimage = $cardimage.Filter (images.Process "fit 400x600 Lanczos q80 webp") }}
         <div class="w-2/5 shrink-0 overflow-hidden">
-          <img src="{{ $cardimage.RelPermalink }}" alt="{{ $.Title }}" class="h-full w-full object-cover card-image" />
+          <img src="{{ $cardimage.RelPermalink }}" alt="{{ $.Title }}" loading="lazy" decoding="async"
+            class="h-full w-full object-cover card-image" />
         </div>
         {{ end }}
 

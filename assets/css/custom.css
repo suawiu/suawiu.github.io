@@ -648,12 +648,16 @@ html.dark .group:hover .pdf-btn-icon {
 html:not(.dark) a.pdf-download-btn-link {
   color: #334155 !important;
   /* slate-700 */
+  background-color: #cffafe !important;
+  /* cyan-100 */
   text-decoration: none !important;
 }
 
 html:not(.dark) a.pdf-download-btn-link:hover {
   color: #0891b2 !important;
   /* cyan-600 */
+  background-color: #a5f3fc !important;
+  /* cyan-200 */
 }
 
 /* Dark Mode: Light Text */
