@@ -10,6 +10,8 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@splinetool/react-spline": "^4.1.0",
+        "@splinetool/runtime": "^1.12.37",
         "@tailwindcss/typography": "^0.5.10",
         "autoprefixer": "^10.4.17",
         "postcss": "^8.4.35",

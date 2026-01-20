@@ -667,7 +667,17 @@ html.dark a.pdf-download-btn-link {
   text-decoration: none !important;
 }
 
-html.dark a.pdf-download-btn-link:hover {
-  color: #22d3ee !important;
-  /* cyan-400 */
+
+/* =========================
+   9. Fix Bold Text (Strong)
+   ========================= */
+strong,
+b {
+  font-weight: 700 !important;
+  color: inherit !important;
+}
+
+.markdown strong,
+.markdown b {
+  font-weight: 700 !important;
 }
