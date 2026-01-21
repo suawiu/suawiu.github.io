@@ -40,6 +40,10 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/typography")],
   safelist: [
+    "group-hover:text-cyan-600",
+    "group-hover:text-cyan-400",
+    "group-hover:scale-125",
+    "hover:border-cyan-500",
     {
       pattern: /grid-cols-.+/,
     },

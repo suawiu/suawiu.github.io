@@ -2,73 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Transmissions on suawiu</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>https://suawiu.github.io/blog/</link>
     <description>Recent content in Transmissions on suawiu</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <copyright>Copyright © 2026 Seungmin Cha. All Rights Reserved.</copyright>
     <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://suawiu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ML with QC - Ch2 (English)</title>
-      <link>http://localhost:1313/blog/post7/</link>
+      <link>https://suawiu.github.io/blog/post7/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/post7/</guid>
+      <guid>https://suawiu.github.io/blog/post7/</guid>
       <description>breakdown of Chapter 2 from &amp;lsquo;Machine Learning with Quantum Computers</description>
     </item>
     <item>
       <title>ML with QC - Ch2 (한글)</title>
-      <link>http://localhost:1313/blog/post7-ko/</link>
+      <link>https://suawiu.github.io/blog/post7-ko/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/post7-ko/</guid>
+      <guid>https://suawiu.github.io/blog/post7-ko/</guid>
       <description>&amp;lsquo;Machine Learning with Quantum Computers&amp;rsquo; 2장 머신러닝 기초 내용 정리</description>
     </item>
     <item>
       <title>ML with QC - Ch3 (English)</title>
-      <link>http://localhost:1313/blog/post8/</link>
+      <link>https://suawiu.github.io/blog/post8/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/post8/</guid>
+      <guid>https://suawiu.github.io/blog/post8/</guid>
       <description>Fundamentals of Quantum Computing: Qubits, Gates, and Algorithms</description>
     </item>
     <item>
       <title>ML with QC - Ch3 (한글)</title>
-      <link>http://localhost:1313/blog/post8-ko/</link>
+      <link>https://suawiu.github.io/blog/post8-ko/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/post8-ko/</guid>
+      <guid>https://suawiu.github.io/blog/post8-ko/</guid>
       <description>양자 컴퓨팅 기초: 큐비트, 게이트, 그리고 알고리즘</description>
     </item>
     <item>
       <title>ML with QC - Ch1 (English)</title>
-      <link>http://localhost:1313/blog/post5/</link>
+      <link>https://suawiu.github.io/blog/post5/</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/post5/</guid>
+      <guid>https://suawiu.github.io/blog/post5/</guid>
       <description>breakdown of Chapter 1 from &amp;lsquo;Machine Learning with Quantum Computers</description>
     </item>
     <item>
       <title>ML with QC - Ch1 (한글)</title>
-      <link>http://localhost:1313/blog/post6/</link>
+      <link>https://suawiu.github.io/blog/post6/</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/post6/</guid>
+      <guid>https://suawiu.github.io/blog/post6/</guid>
       <description>&amp;lsquo;Machine Learning with Quantum Computers&amp;rsquo; 1장 정리</description>
     </item>
     <item>
       <title>S&amp;P500 3배 레버리지 장기투자</title>
-      <link>http://localhost:1313/blog/post2/</link>
+      <link>https://suawiu.github.io/blog/post2/</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/post2/</guid>
+      <guid>https://suawiu.github.io/blog/post2/</guid>
       <description>논문 리뷰로 보는 S&amp;amp;P500 3배 레버리지 장기투자에 대한 고찰</description>
     </item>
     <item>
       <title>[Review] George Orwell의 &#39;1984&#39; : 기대와는 달랐던, 지독하게 현실적인 패배의 기록</title>
-      <link>http://localhost:1313/blog/post1/</link>
+      <link>https://suawiu.github.io/blog/post1/</link>
       <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/post1/</guid>
+      <guid>https://suawiu.github.io/blog/post1/</guid>
       <description>“자유는 예속, 무지는 힘&amp;quot;</description>
     </item>
     <item>
       <title>[Review] 과학의 시대, 왜 불교인가? - 우찬툰의 ‘불교: 과학 시대의 종교’</title>
-      <link>http://localhost:1313/blog/post9/</link>
+      <link>https://suawiu.github.io/blog/post9/</link>
       <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/post9/</guid>
+      <guid>https://suawiu.github.io/blog/post9/</guid>
       <description>과학시대의 종교, 그 가운데 불교의 역할</description>
     </item>
   </channel>

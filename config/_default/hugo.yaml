@@ -6,7 +6,8 @@
 #title: 'Qubt Theme'
 baseURL: "https://suawiu.github.io/"
 title: "suawiu"
-theme: "qubt"
+copyright: "Copyright © 2026 Seungmin Cha. All Rights Reserved."
+
 
 ############################
 ## MISC
@@ -23,6 +24,8 @@ taxonomies:
 
 markup:
   goldmark:
+    renderer:
+      unsafe: true
     extensions:
       passthrough:
         enable: true

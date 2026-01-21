@@ -2,45 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on suawiu</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://suawiu.github.io/categories/</link>
     <description>Recent content in Categories on suawiu</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <copyright>Copyright © 2026 Seungmin Cha. All Rights Reserved.</copyright>
     <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://suawiu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Physics</title>
-      <link>http://localhost:1313/categories/physics/</link>
+      <link>https://suawiu.github.io/categories/physics/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/physics/</guid>
+      <guid>https://suawiu.github.io/categories/physics/</guid>
       <description></description>
     </item>
     <item>
       <title>Quantum Computing</title>
-      <link>http://localhost:1313/categories/quantum-computing/</link>
+      <link>https://suawiu.github.io/categories/quantum-computing/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/quantum-computing/</guid>
+      <guid>https://suawiu.github.io/categories/quantum-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Analysis</title>
-      <link>http://localhost:1313/categories/data-analysis/</link>
+      <link>https://suawiu.github.io/categories/data-analysis/</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/data-analysis/</guid>
+      <guid>https://suawiu.github.io/categories/data-analysis/</guid>
       <description></description>
     </item>
     <item>
       <title>Perspective</title>
-      <link>http://localhost:1313/categories/perspective/</link>
+      <link>https://suawiu.github.io/categories/perspective/</link>
       <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/perspective/</guid>
+      <guid>https://suawiu.github.io/categories/perspective/</guid>
       <description></description>
     </item>
     <item>
       <title>Readings</title>
-      <link>http://localhost:1313/categories/readings/</link>
+      <link>https://suawiu.github.io/categories/readings/</link>
       <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/readings/</guid>
+      <guid>https://suawiu.github.io/categories/readings/</guid>
       <description></description>
     </item>
   </channel>

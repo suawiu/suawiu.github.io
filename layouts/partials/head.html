@@ -2,10 +2,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="generator" content="Qubt theme for Hugo" />
+<meta name="generator" content="Hugo" />
 
 {{/* Site title */}}
-{{ $title := .Site.Title | default "Qubt Theme" }}
+{{ $title := .Site.Title | default "My Blog" }}
 <title>{{ $title }}</title>
 <meta name="title" content="{{ $title }}" />
 
@@ -21,7 +21,7 @@
 
 {{/* CSS bundle */}}
 {{ $assets := newScratch }}
-{{ $mainCSS := resources.Get "css/compiled/main.css" }}
+{{ $mainCSS := resources.Get "css/main.css" }}
 {{ $assets.Add "css" (slice $mainCSS) }}
 {{ $customCSS := resources.Get "css/custom.css" }}
 {{ if $customCSS }}
