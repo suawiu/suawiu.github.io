@@ -11,6 +11,7 @@ authors:
   - suawiu: author.jpeg
 params:
   math: true
+draft: true
 ---
 
 이 포스트는 Maria Schuld와 Francesco Petruccione의 저서 *"Machine Learning with Quantum Computers"* (2nd Edition)의 **Chapter 3. Quantum Computing** 내용을 요약한 것입니다.

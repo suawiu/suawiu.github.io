@@ -1,41 +1,43 @@
 <!doctype html>
-<html lang="{{ site.LanguageCode | default "en-us" }}">
-  <head>
-    {{ partial "head" . }}
-  </head>
+<html lang="{{ site.LanguageCode | default " en-us" }}">
 
-  <body class="flex flex-col min-h-screen overflow-x-hidden">
-    {{ if .IsHome }}
-      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.22/build/spline-viewer.js"></script>
-      <spline-viewer url="https://prod.spline.design/by2Kmf3IpsX6YwHB/scene.splinecode"></spline-viewer>
-    {{ end }}
+<head>
+  {{ partial "head" . }}
+</head>
 
-    <div class="relative z-10 flex flex-col min-h-screen">
-      <header id="main-header" class="sticky top-0 w-full z-[2000]">
-        {{ partial "navbar" . }}
-      </header>
+<body class="flex flex-col min-h-screen overflow-x-hidden">
+  {{ if .IsHome }}
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.22/build/spline-viewer.js"></script>
+  <spline-viewer url="https://prod.spline.design/by2Kmf3IpsX6YwHB/scene.splinecode"></spline-viewer>
+  {{ end }}
 
-      <div id="fullscreen-menu" class="fixed inset-0">
-        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+  <div class="relative z-10 flex flex-col min-h-screen">
+    <header id="main-header" class="sticky top-0 w-full z-[2000]">
+      {{ partial "navbar" . }}
+    </header>
 
-        <aside class="menu-panel absolute right-0 top-0 h-full w-[70vw] max-w-[480px] flex items-center justify-center">
-          <nav class="flex flex-col gap-10 text-white text-5xl font-extrabold">
-            {{ range site.Menus.main }}
-              <a href="{{ .URL }}" class="menu-item">
-                {{ .Name }}
-              </a>
-            {{ end }}
-          </nav>
-        </aside>
-      </div>
+    <div id="fullscreen-menu" class="fixed inset-0">
+      <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
 
-      <main class="flex-grow">
-        {{ block "main" . }}{{ end }}
-      </main>
-
-      <footer>
-        {{ partial "footer" . }}
-      </footer>
+      <aside class="menu-panel absolute right-0 top-0 h-full w-[70vw] max-w-[480px] flex items-center justify-center">
+        <nav class="flex flex-col gap-10 text-white text-5xl font-extrabold">
+          {{ range site.Menus.main }}
+          <a href="{{ .URL }}" class="menu-item">
+            {{ .Name }}
+          </a>
+          {{ end }}
+        </nav>
+      </aside>
     </div>
-  </body>
+
+    <main class="flex-grow">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer>
+      {{ partial "footer" . }}
+    </footer>
+  </div>
+</body>
+
 </html>

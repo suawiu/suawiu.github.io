@@ -11,6 +11,7 @@ authors:
   - suawiu: author.jpeg
 params:
   math: true
+draft: true
 ---
 
 이 글은 Maria Schuld와 Francesco Petruccione의 저서 *"Machine Learning with Quantum Computers"* (2nd Edition)의 **Chapter 1. Introduction** 을 요약한 것입니다.
