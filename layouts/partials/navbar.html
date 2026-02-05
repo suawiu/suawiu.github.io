@@ -16,9 +16,16 @@
       <img src="{{ $logo.RelPermalink }}" class="custom-logo-dark h-8 w-8" alt="Logo Dark" />
       {{ end }}
 
-      <span class="self-center whitespace-nowrap text-2xl font-semibold text-black dark:text-white">
-        {{ $title }}
-      </span>
+      <div class="logo-perspective self-center cursor-pointer">
+        <div class="logo-flipper text-2xl font-semibold text-black dark:text-white whitespace-nowrap">
+          <span class="logo-face logo-front block">
+            {{ $title }}
+          </span>
+          <span class="logo-face logo-back block text-black dark:text-white">
+            sngmin
+          </span>
+        </div>
+      </div>
     </a>
 
     <div class="flex items-center space-x-2">
