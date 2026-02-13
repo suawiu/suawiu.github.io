@@ -111,6 +111,7 @@ Experience
 <div class="text-slate-700 dark:text-slate-300">Quantum Information Theory Lab, Yonsei University</div>
 <div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Advisor: Prof. Kyungsun Moon</div>
 <div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Conducted research on Quantum Information Theory with a focus on Quantum Machine Learning (QML).</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Studied theoretical frameworks for quantum algorithms and their physical implementations in Circuit QED systems.</div>
 </div>
 </li>
 </ul>
