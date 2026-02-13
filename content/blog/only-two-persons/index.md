@@ -3,7 +3,7 @@ title: "[Review] 오직 두 사람 — 상실의 시대를 살아가는 우리�
 subtitle: "김영하 작가가 설계한 일곱 가지 세계, 그리고 상실이 지나간 자리"
 summary: "김영하 소설집 《오직 두 사람》 리뷰: 상실 이후의 삶을 견뎌내는 사람들의 이야기."
 date: 2025-06-26
-categories: ["Readings", "Perspective", "Literature"]
+categories: ["Readings", "Perspective"]
 cardimage: "only-two-persons/cover.jpg"
 featureimage: "only-two-persons/featured.jpg"
 params:
