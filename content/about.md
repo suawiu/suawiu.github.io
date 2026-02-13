@@ -183,7 +183,7 @@ Activities
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">RU:SH (Runners United : Sinchon)</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">Feb 2026 – Present</span>
 </div>
-<div class="text-slate-700 dark:text-slate-300">Running crew comprising students and alumni from Yonsei, Ewha, and Sogang Universities.</div>
+<div class="text-slate-700 dark:text-slate-300">Running crew comprising students and alumni from Yonsei, Ewha, and Sogang Universities</div>
 </div>
 </li>
 <li class="flex items-start group">
