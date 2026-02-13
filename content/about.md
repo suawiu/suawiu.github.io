@@ -83,7 +83,9 @@ Experience
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">Mar 2026 – Present</span>
 </div>
 <div class="text-slate-700 dark:text-slate-300">Quantum Optics Lab, Yonsei University</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Conducting research on quantum information and light-matter interactions using optical systems, Advised by Prof. Seongjin Hong</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Advisor: Prof. Seongjin Hong</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Conducting research on quantum information and light-matter interactions using optical systems.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Focused on single-photon sources, continuous variables, and quantum squeezing to enhance system precision.</div>
 </div>
 </li>
 <!-- Item 1 -->
@@ -104,10 +106,11 @@ Experience
 <div class="w-full">
 <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Undergraduate Researcher</strong>
-<span class="text-slate-500 font-mono text-sm whitespace-nowrap">Jan 2024 - Jun 2024</span>
+<span class="text-slate-500 font-mono text-sm whitespace-nowrap">Jan 2024 – Jun 2024</span>
 </div>
-<div class="text-slate-700 dark:text-slate-300">Quantum Information Lab, Yonsei University</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Quantum computing based on Circuit QED Lab, Advised by Prof. Kyungsun Moon</div>
+<div class="text-slate-700 dark:text-slate-300">Quantum Information Theory Lab, Yonsei University</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Advisor: Prof. Kyungsun Moon</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Conducted research on Quantum Information Theory with a focus on Quantum Machine Learning (QML).</div>
 </div>
 </li>
 </ul>
@@ -159,14 +162,16 @@ Awards and Scholarships
 <span class="mr-4 mt-2 h-2 rounded-full bg-cyan-500 w-2 shrink-0 group-hover:scale-125 transition-transform"></span>
 <div>
 <strong class="text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">KC Scholarship Foundation</strong>
-<span class="text-slate-500 text-sm block">Scholarship for Outstanding STEM Talent, 2024</span>
+<span class="text-slate-500 text-sm block">2024</span>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Scholarship for Outstanding STEM Talent</div>
 </div>
 </li>
 <li class="flex items-start group">
 <span class="mr-4 mt-2 h-2 rounded-full bg-cyan-500 w-2 shrink-0 group-hover:scale-125 transition-transform"></span>
 <div>
 <strong class="text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">5th Place</strong>
-<span class="text-slate-500 text-sm block">DB GAPS Investment Competition, 2023</span>
+<span class="text-slate-500 text-sm block">2023</span>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">DB GAPS Investment Competition</div>
 </div>
 </li>
 <li class="flex items-start group">
@@ -225,7 +230,7 @@ Activities
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Kwang</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">Mar 2023 - Present</span>
 </div>
-<div class="text-slate-700 dark:text-slate-300">Crossfit Club @ Yonsei</div>
+<div class="text-slate-700 dark:text-slate-300">Crossfit Club, Yonsei University</div>
 </div>
 </li>
 <li class="flex items-start group">
@@ -235,7 +240,7 @@ Activities
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Gongsarang</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">Mar 2022 - Dec 2022</span>
 </div>
-<div class="text-slate-700 dark:text-slate-300">Basketball Club @ Yonsei</div>
+<div class="text-slate-700 dark:text-slate-300">Basketball Club, Yonsei University</div>
 </div>
 </li>
 </ul>
