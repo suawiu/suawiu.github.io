@@ -56,7 +56,7 @@ Research Interests
 </a>
 <a href="/coming-soon-optics/" class="block p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Optics</h3>
-<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Quantum Optics, Laser Physics, Photonics, Spectroscopy</p>
+<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Quantum Optics, Light-Matter Interaction, Quantum Sensing</p>
 </a>
 <a href="/categories/data-analysis/" class="block p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Data Analysis</h3>
@@ -171,7 +171,7 @@ Awards and Scholarships
 <strong class="text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">KC Scholarship Foundation</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">2024</span>
 </div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Scholarship for Outstanding STEM Talent</div>
+<div class="text-slate-700 dark:text-slate-300">Scholarship for Outstanding STEM Talent</div>
 </div>
 </li>
 <li class="flex items-start group">
@@ -181,7 +181,7 @@ Awards and Scholarships
 <strong class="text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">5th Place</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">2023</span>
 </div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">DB GAPS Investment Competition</div>
+<div class="text-slate-700 dark:text-slate-300">DB GAPS Investment Competition</div>
 </div>
 </li>
 <li class="flex items-start group">
