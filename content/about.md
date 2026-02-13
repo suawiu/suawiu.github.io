@@ -74,6 +74,18 @@ Research Interests
 Experience
 </h2>
 <ul class="space-y-8">
+<!-- Item New -->
+<li class="flex items-start group">
+<span class="mr-4 mt-2 h-2.5 w-2.5 rounded-full bg-cyan-500 shrink-0 group-hover:scale-125 transition-transform"></span>
+<div class="w-full">
+<div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+<strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Undergraduate Researcher</strong>
+<span class="text-slate-500 font-mono text-sm whitespace-nowrap">Mar 2026 – Present</span>
+</div>
+<div class="text-slate-700 dark:text-slate-300">Quantum Optics Lab, Yonsei University</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Conducting research on quantum information and light-matter interactions using optical systems, Advised by Prof. Seongjin Hong</div>
+</div>
+</li>
 <!-- Item 1 -->
 <li class="flex items-start group">
 <span class="mr-4 mt-2 h-2.5 w-2.5 rounded-full bg-cyan-500 shrink-0 group-hover:scale-125 transition-transform"></span>
@@ -94,7 +106,7 @@ Experience
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Undergraduate Researcher</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">Jan 2024 - Jun 2024</span>
 </div>
-<div class="text-slate-700 dark:text-slate-300">Quantum Information Lab @ Yonsei</div>
+<div class="text-slate-700 dark:text-slate-300">Quantum Information Lab, Yonsei University</div>
 <div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Quantum computing based on Circuit QED Lab, Advised by Prof. Kyungsun Moon</div>
 </div>
 </li>
