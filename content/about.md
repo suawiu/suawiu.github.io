@@ -169,6 +169,16 @@ Awards and Scholarships
 <span class="mr-4 mt-2 h-2 rounded-full bg-cyan-500 w-2 shrink-0 group-hover:scale-125 transition-transform"></span>
 <div class="w-full">
 <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+<strong class="text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Military Honor Family Designation (병역명문가)</strong>
+<span class="text-slate-500 font-mono text-sm whitespace-nowrap">2026</span>
+</div>
+<div class="text-slate-700 dark:text-slate-300">Recognized as a distinguished military family for three consecutive generations of honorable active-duty service.</div>
+</div>
+</li>
+<li class="flex items-start group">
+<span class="mr-4 mt-2 h-2 rounded-full bg-cyan-500 w-2 shrink-0 group-hover:scale-125 transition-transform"></span>
+<div class="w-full">
+<div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
 <strong class="text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">KC Scholarship Foundation</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">2024</span>
 </div>
