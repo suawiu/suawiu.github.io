@@ -29,8 +29,7 @@ Education
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Yonsei University</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">Mar 2022 - Present</span>
 </div>
-<div class="text-slate-700 dark:text-slate-300">B.S. in Physics (in progress)</div>
-<div class="text-slate-700 dark:text-slate-300">Interdisciplinary Major in Intelligent Semiconductor Engineering</div>
+<div class="text-slate-700 dark:text-slate-300">B.S. in Physics & Intelligent Semiconductor Engineering (Double Major)</div>
 <div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Seoul, South Korea</div>
 </div>
 </li>
