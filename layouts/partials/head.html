@@ -64,6 +64,13 @@ resources.Fingerprint "sha256" }}
 {{ partial "math.html" . }}
 {{ end }}
 
+{{ with .Site.Params.analytics.goatcounter.site }}
+<script
+  data-goatcounter="{{ . }}/count"
+  async
+  src="//gc.zgo.at/count.js"></script>
+{{ end }}
+
 <script>
   // 테마 초기 설정 (깜빡임 방지)
   if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {

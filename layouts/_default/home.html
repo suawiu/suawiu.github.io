@@ -43,5 +43,70 @@
     </div>
 
   </div>
+
+  <div class="home-visitor-badge">
+    <div class="home-visitor-kicker">Traffic</div>
+    {{ if .Site.Params.analytics.goatcounter.site }}
+    <div class="home-visitor-panel">
+      <div class="home-visitor-stat">
+        <div class="home-visitor-stat-label">Today</div>
+        <div id="home-visitor-today" class="home-visitor-stat-value">...</div>
+      </div>
+      <div class="home-visitor-divider"></div>
+      <div class="home-visitor-stat">
+        <div class="home-visitor-stat-label">Total</div>
+        <div id="home-visitor-total" class="home-visitor-stat-value">...</div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var root = {{ printf "%q" .Site.Params.analytics.goatcounter.site }};
+        var totalEl = document.getElementById('home-visitor-total');
+        var todayEl = document.getElementById('home-visitor-today');
+
+        function setFallback() {
+          if (totalEl) totalEl.textContent = '—';
+          if (todayEl) todayEl.textContent = '—';
+        }
+
+        function todayString() {
+          var now = new Date();
+          var y = now.getFullYear();
+          var m = String(now.getMonth() + 1).padStart(2, '0');
+          var d = String(now.getDate()).padStart(2, '0');
+          return y + '-' + m + '-' + d;
+        }
+
+        function loadCount(url, el) {
+          return fetch(url)
+            .then(function (res) {
+              if (!res.ok) throw new Error('Failed to load count');
+              return res.json();
+            })
+            .then(function (data) {
+              if (el) el.textContent = data.count || '0';
+            });
+        }
+
+        Promise.all([
+          loadCount(root + '/counter/TOTAL.json', totalEl),
+          loadCount(root + '/counter/TOTAL.json?start=' + encodeURIComponent(todayString()), todayEl)
+        ]).catch(setFallback);
+      })();
+    </script>
+    {{ else }}
+    <div class="home-visitor-panel home-visitor-panel-placeholder">
+      <div class="home-visitor-stat">
+        <div class="home-visitor-stat-label">Today</div>
+        <div class="home-visitor-stat-value">—</div>
+      </div>
+      <div class="home-visitor-divider"></div>
+      <div class="home-visitor-stat">
+        <div class="home-visitor-stat-label">Total</div>
+        <div class="home-visitor-stat-value">—</div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
 </section>
 {{ end }}
