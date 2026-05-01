@@ -27,10 +27,13 @@ Education
 <div class="w-full">
 <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Yonsei University</strong>
-<span class="text-slate-500 font-mono text-sm whitespace-nowrap">Mar 2022 - Present</span>
+<span class="text-slate-500 font-mono text-sm whitespace-nowrap md:text-right">Seoul, South Korea</span>
 </div>
-<div class="text-slate-700 dark:text-slate-300">B.S. in Physics & Devices and Processes for Intelligent Semiconductor Technology (Double Major)</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Seoul, South Korea</div>
+<div class="mt-1 flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
+<div class="text-slate-700 dark:text-slate-300 md:pr-6">B.S. in Physics and Intelligent Semiconductor Technology (Double Major)</div>
+<span class="text-slate-500 font-mono text-sm whitespace-nowrap md:text-right">Mar 2022 – Present</span>
+</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-2">Relevant coursework: Quantum Mechanics, Electromagnetics, Materials Science, Intelligent Semiconductor Systems, Machine Learning, Deep Learning, Quantum Machine Learning, Statistical Mechanics, Thermodynamics, and Linear Algebra</div>
 </div>
 </li>
 </ul>
@@ -49,10 +52,6 @@ Research Interests
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Quantum Computing</h3>
 <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Superconducting Qubits, Circuit QED, Quantum Error Correction, Quantum Machine Learning</p>
 </a>
-<a href="/coming-soon/" class="block p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
-<h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Condensed Matter</h3>
-<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Low-temperature Systems, Quantum Materials</p>
-</a>
 <a href="/coming-soon-optics/" class="block p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Optics</h3>
 <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Quantum Optics, Light-Matter Interaction, Quantum Sensing</p>
@@ -60,6 +59,10 @@ Research Interests
 <a href="/categories/data-analysis/" class="block p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Data Analysis</h3>
 <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Financial Time Series Analysis, Statistical Modeling</p>
+</a>
+<a href="/coming-soon/" class="block p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group">
+<h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Semiconductor Devices and Processes</h3>
+<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Semiconductor Fabrication, Device Physics, Process Integration</p>
 </a>
 </div>
 </section>
@@ -78,13 +81,28 @@ Experience
 <span class="mr-4 mt-2 h-2.5 w-2.5 rounded-full bg-cyan-500 shrink-0 group-hover:scale-125 transition-transform"></span>
 <div class="w-full">
 <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+<strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">SK hynix Ambassador</strong>
+<span class="text-slate-500 font-mono text-sm whitespace-nowrap">Mar 2026 – Present</span>
+</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Create multiple semiconductor-focused social media contents communicating SK hynix’s technologies, corporate vision, and industry insights from a student perspective.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Appear in ambassador content for the SK hynix YouTube channel, including an AI semiconductor masterclass featuring Prof. Changhwan Shin of Korea University.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Film job-introduction and on-site content by visiting SK hynix campuses with fabrication facilities, observing workplace environments, and introducing semiconductor roles through field-based experiences.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Participate in a monthly ambassador program featuring semiconductor and AI trend lectures, networking with industry professionals, and other professional development sessions.</div>
+</div>
+</li>
+<!-- Item New -->
+<li class="flex items-start group">
+<span class="mr-4 mt-2 h-2.5 w-2.5 rounded-full bg-cyan-500 shrink-0 group-hover:scale-125 transition-transform"></span>
+<div class="w-full">
+<div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Undergraduate Researcher</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">Mar 2026 – Present</span>
 </div>
 <div class="text-slate-700 dark:text-slate-300">Quantum Optics Lab, Yonsei University</div>
 <div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Advisor: Prof. Seongjin Hong</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Conducting research on quantum information and light-matter interactions using optical systems.</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Focused on single-photon sources, continuous variables, and quantum squeezing to enhance system precision.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Study and implement the active optical intensity interferometry framework presented in <em>Active Optical Intensity Interferometry</em> (Phys. Rev. Lett., 2025).</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Develop simulation code and perform data processing and analysis for correlation-based image reconstruction in optical interferometry.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Participate in optical experiments to test and reproduce interferometric imaging schemes for long-baseline, high-resolution sensing.</div>
 </div>
 </li>
 <!-- Item 1 -->
@@ -109,8 +127,9 @@ Experience
 </div>
 <div class="text-slate-700 dark:text-slate-300">Quantum Information Theory Lab, Yonsei University</div>
 <div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Advisor: Prof. Kyungsun Moon</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Conducted research on Quantum Information Theory with a focus on Quantum Machine Learning (QML).</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Studied theoretical frameworks for quantum algorithms and their physical implementations in Circuit QED systems.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Studied the theoretical foundations of quantum machine learning through the textbook <em>Machine Learning with Quantum Computers</em> and prepared presentation slides for lab seminars.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Read and reviewed <em>Supervised Learning with Quantum-Enhanced Feature Spaces</em> (Nature, 2019), with a focus on quantum feature maps, kernel estimation, and classification with support vector machines.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Presented and discussed core concepts in quantum-enhanced supervised learning during lab meetings.</div>
 </div>
 </li>
 </ul>
@@ -215,17 +234,6 @@ Awards and Scholarships
 Activities
 </h2>
 <ul class="space-y-6">
-<li class="flex items-start group">
-<span class="mr-4 mt-2 h-2.5 w-2.5 rounded-full bg-cyan-500 shrink-0 group-hover:scale-125 transition-transform"></span>
-<div class="w-full">
-<div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
-<strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">SK hynix Ambassador</strong>
-<span class="text-slate-500 font-mono text-sm whitespace-nowrap">Mar 2026 – Present</span>
-</div>
-<div class="text-slate-700 dark:text-slate-300">Creating and featuring in original contents to deliver SK hynix's corporate vision and technology values from a university student's perspective.</div>
-</div>
-</li>
-
 <li class="flex items-start group">
 <span class="mr-4 mt-2 h-2.5 w-2.5 rounded-full bg-cyan-500 shrink-0 group-hover:scale-125 transition-transform"></span>
 <div class="w-full">

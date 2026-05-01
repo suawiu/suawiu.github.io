@@ -12,9 +12,9 @@ layout: single
     </h1>
     <p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg mb-8">
         This section is currently being researched and written. <br/>
-        Please check back later for updates on <strong>Condensed Matter Physics</strong>.
+        Please check back later for updates on <strong>Semiconductor Devices and Processes</strong>.
     </p>
-    <a href="/" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-white font-bold transition-colors shadow-lg shadow-cyan-500/30">
-        Go Back Home
+    <a href="/about/" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-white font-bold transition-colors shadow-lg shadow-cyan-500/30">
+        Back to About
     </a>
 </div>
