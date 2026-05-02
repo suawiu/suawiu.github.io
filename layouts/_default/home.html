@@ -50,17 +50,16 @@
     <div class="home-visitor-panel">
       <div class="home-visitor-stat">
         <div class="home-visitor-stat-label">Today</div>
-        <div id="home-visitor-today" class="home-visitor-stat-value">...</div>
+        <div id="home-visitor-today" class="home-visitor-stat-value home-visitor-stat-content"></div>
       </div>
       <div class="home-visitor-divider"></div>
       <div class="home-visitor-stat">
         <div class="home-visitor-stat-label">Total</div>
-        <div id="home-visitor-total" class="home-visitor-stat-value">...</div>
+        <div id="home-visitor-total" class="home-visitor-stat-value home-visitor-stat-content"></div>
       </div>
     </div>
     <script>
       (function () {
-        var root = {{ printf "%q" .Site.Params.analytics.goatcounter.site }};
         var totalEl = document.getElementById('home-visitor-total');
         var todayEl = document.getElementById('home-visitor-today');
 
@@ -77,21 +76,34 @@
           return y + '-' + m + '-' + d;
         }
 
-        function loadCount(url, el) {
-          return fetch(url)
-            .then(function (res) {
-              if (!res.ok) throw new Error('Failed to load count');
-              return res.json();
-            })
-            .then(function (data) {
-              if (el) el.textContent = data.count || '0';
-            });
-        }
-
-        Promise.all([
-          loadCount(root + '/counter/TOTAL.json', totalEl),
-          loadCount(root + '/counter/TOTAL.json?start=' + encodeURIComponent(todayString()), todayEl)
-        ]).catch(setFallback);
+        var attempts = 0;
+        var timer = setInterval(function () {
+          attempts += 1;
+          if (window.goatcounter && window.goatcounter.visit_count) {
+            clearInterval(timer);
+            try {
+              window.goatcounter.visit_count({
+                append: '#home-visitor-total',
+                path: 'TOTAL',
+                no_branding: true,
+                type: 'html'
+              });
+              window.goatcounter.visit_count({
+                append: '#home-visitor-today',
+                path: 'TOTAL',
+                start: todayString(),
+                end: todayString(),
+                no_branding: true,
+                type: 'html'
+              });
+            } catch (e) {
+              setFallback();
+            }
+          } else if (attempts > 40) {
+            clearInterval(timer);
+            setFallback();
+          }
+        }, 150);
       })();
     </script>
     {{ else }}

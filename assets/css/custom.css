@@ -327,6 +327,23 @@ html:not(.dark) body.menu-open #theme-toggle {
   letter-spacing: -0.04em;
 }
 
+.home-visitor-stat-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+}
+
+.home-visitor-stat-content #gcvc-for,
+.home-visitor-stat-content #gcvc-by {
+  display: none;
+}
+
+.home-visitor-stat-content #gcvc-views {
+  font: inherit;
+  color: inherit;
+}
+
 .home-visitor-divider {
   width: 1px;
   margin: 0.8rem 0;
