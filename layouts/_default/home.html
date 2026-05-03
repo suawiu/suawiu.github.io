@@ -47,29 +47,35 @@
   <div class="home-visitor-badge">
     <div class="home-visitor-kicker">Traffic</div>
     {{ if .Site.Params.analytics.goatcounter.site }}
+    {{ $counterSvgStyle := "#gcvc-border{fill:transparent;stroke:none}#gcvc-for,#gcvc-by{display:none}#gcvc-views{fill:#000000;font-weight:900;font-size:46px;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}" }}
     <div class="home-visitor-panel">
       <div class="home-visitor-stat">
         <div class="home-visitor-stat-label">Today</div>
-        <div id="home-visitor-today" class="home-visitor-stat-value home-visitor-stat-content"></div>
+        <img
+          id="home-visitor-today-image"
+          title="Today's visits"
+          loading="lazy"
+          alt="Today's visits"
+          class="home-visitor-counter-image"
+          data-base="{{ .Site.Params.analytics.goatcounter.site }}/counter/TOTAL.svg?no_branding=1&style={{ $counterSvgStyle | urlquery }}" />
       </div>
       <div class="home-visitor-divider"></div>
       <div class="home-visitor-stat">
         <div class="home-visitor-stat-label">Total</div>
-        <div id="home-visitor-total" class="home-visitor-stat-value home-visitor-stat-content"></div>
+        <img
+          title="Total visits"
+          loading="lazy"
+          alt="Total visits"
+          class="home-visitor-counter-image"
+          src="{{ .Site.Params.analytics.goatcounter.site }}/counter/TOTAL.svg?no_branding=1&style={{ $counterSvgStyle | urlquery }}" />
       </div>
     </div>
     <script>
       (function () {
-        var root = {{ printf "%q" .Site.Params.analytics.goatcounter.site }};
-        var totalEl = document.getElementById('home-visitor-total');
-        var todayEl = document.getElementById('home-visitor-today');
+        var todayImage = document.getElementById('home-visitor-today-image');
+        if (!todayImage) return;
 
-        function setFallback() {
-          if (totalEl) totalEl.textContent = '—';
-          if (todayEl) todayEl.textContent = '—';
-        }
-
-        function todayString() {
+        function localDateString() {
           var now = new Date();
           var y = now.getFullYear();
           var m = String(now.getMonth() + 1).padStart(2, '0');
@@ -77,40 +83,9 @@
           return y + '-' + m + '-' + d;
         }
 
-        function countUrl(params) {
-          var url = root + '/counter/' + encodeURIComponent('TOTAL') + '.json';
-          var search = new URLSearchParams(params || {});
-          search.set('t', String(Date.now()));
-          return url + '?' + search.toString();
-        }
-
-        function loadCount(el, params) {
-          return fetch(countUrl(params), {
-            method: 'GET',
-            mode: 'cors',
-            cache: 'no-store'
-          }).then(function (res) {
-            if (!res.ok) throw new Error('Failed to load count');
-            return res.json();
-          }).then(function (data) {
-            if (!el) return;
-            el.textContent = (data && data.count) ? String(data.count) : '0';
-          });
-        }
-
-        Promise.all([
-          loadCount(totalEl, {}),
-          loadCount(todayEl, {
-            start: todayString(),
-            end: todayString()
-          })
-        ]).catch(function () {
-          if (window.goatcounter && window.goatcounter.filter && window.goatcounter.filter()) {
-            setFallback();
-          } else {
-            setFallback();
-          }
-        });
+        var today = localDateString();
+        var base = todayImage.dataset.base;
+        todayImage.src = base + '&start=' + encodeURIComponent(today) + '&end=' + encodeURIComponent(today);
       })();
     </script>
     {{ else }}

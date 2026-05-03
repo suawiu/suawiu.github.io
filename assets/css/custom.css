@@ -303,7 +303,7 @@ html:not(.dark) body.menu-open #theme-toggle {
 .home-visitor-stat {
   display: flex;
   min-height: 84px;
-  padding: 0.95rem 1rem 1rem;
+  padding: 0.95rem 1rem 1.05rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -327,44 +327,21 @@ html:not(.dark) body.menu-open #theme-toggle {
   letter-spacing: -0.04em;
 }
 
-.home-visitor-stat-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2rem;
-  width: 100%;
+.home-visitor-counter-value {
+  margin-top: 0.62rem;
+  color: #000000;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.05em;
 }
 
-.home-visitor-stat-content * {
-  all: unset;
-}
-
-.home-visitor-stat-content,
-.home-visitor-stat-content * {
-  color: inherit !important;
-  font: inherit !important;
-  text-align: center !important;
-}
-
-.home-visitor-stat-content a,
-.home-visitor-stat-content span,
-.home-visitor-stat-content div {
-  display: inline !important;
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.home-visitor-stat-content #gcvc-for,
-.home-visitor-stat-content #gcvc-by,
-.home-visitor-stat-content #gcvc-name {
-  display: none !important;
-}
-
-.home-visitor-stat-content #gcvc-views {
-  display: inline !important;
+.home-visitor-counter-image {
+  width: 132px;
+  height: 56px;
+  margin-top: 0.5rem;
+  display: block;
+  object-fit: contain;
 }
 
 .home-visitor-divider {
@@ -392,6 +369,14 @@ html.dark .home-visitor-stat-value {
   color: #f8fafc;
 }
 
+html.dark .home-visitor-counter-value {
+  color: #ffffff;
+}
+
+html.dark .home-visitor-counter-image {
+  filter: brightness(1.6) contrast(1.1) saturate(0.8);
+}
+
 html.dark .home-visitor-divider {
   background: linear-gradient(to bottom, transparent, rgba(103, 232, 249, 0.24), transparent);
 }
@@ -411,8 +396,15 @@ html.dark .home-visitor-divider {
     padding: 0.8rem 0.85rem 0.85rem;
   }
 
-  .home-visitor-stat-value {
-    font-size: 1.5rem;
+  .home-visitor-counter-value {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .home-visitor-counter-image {
+    width: 110px;
+    height: 48px;
+    margin-top: 0.42rem;
   }
 }
 
