@@ -60,6 +60,7 @@
     </div>
     <script>
       (function () {
+        var root = {{ printf "%q" .Site.Params.analytics.goatcounter.site }};
         var totalEl = document.getElementById('home-visitor-total');
         var todayEl = document.getElementById('home-visitor-today');
 
@@ -76,45 +77,40 @@
           return y + '-' + m + '-' + d;
         }
 
-        function normalizeCounter(container) {
-          if (!container) return;
-          var views = container.querySelector('#gcvc-views');
-          var count = views ? views.textContent.trim() : container.textContent.trim();
-          container.textContent = count || '0';
+        function countUrl(params) {
+          var url = root + '/counter/' + encodeURIComponent('TOTAL') + '.json';
+          var search = new URLSearchParams(params || {});
+          search.set('t', String(Date.now()));
+          return url + '?' + search.toString();
         }
 
-        var attempts = 0;
-        var timer = setInterval(function () {
-          attempts += 1;
-          if (window.goatcounter && window.goatcounter.visit_count) {
-            clearInterval(timer);
-            try {
-              window.goatcounter.visit_count({
-                append: '#home-visitor-total',
-                path: 'TOTAL',
-                no_branding: true,
-                type: 'html'
-              });
-              window.goatcounter.visit_count({
-                append: '#home-visitor-today',
-                path: 'TOTAL',
-                start: todayString(),
-                end: todayString(),
-                no_branding: true,
-                type: 'html'
-              });
-              setTimeout(function () {
-                normalizeCounter(totalEl);
-                normalizeCounter(todayEl);
-              }, 500);
-            } catch (e) {
-              setFallback();
-            }
-          } else if (attempts > 40) {
-            clearInterval(timer);
+        function loadCount(el, params) {
+          return fetch(countUrl(params), {
+            method: 'GET',
+            mode: 'cors',
+            cache: 'no-store'
+          }).then(function (res) {
+            if (!res.ok) throw new Error('Failed to load count');
+            return res.json();
+          }).then(function (data) {
+            if (!el) return;
+            el.textContent = (data && data.count) ? String(data.count) : '0';
+          });
+        }
+
+        Promise.all([
+          loadCount(totalEl, {}),
+          loadCount(todayEl, {
+            start: todayString(),
+            end: todayString()
+          })
+        ]).catch(function () {
+          if (window.goatcounter && window.goatcounter.filter && window.goatcounter.filter()) {
+            setFallback();
+          } else {
             setFallback();
           }
-        }, 150);
+        });
       })();
     </script>
     {{ else }}
