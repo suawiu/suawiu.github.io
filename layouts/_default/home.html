@@ -76,6 +76,13 @@
           return y + '-' + m + '-' + d;
         }
 
+        function normalizeCounter(container) {
+          if (!container) return;
+          var views = container.querySelector('#gcvc-views');
+          var count = views ? views.textContent.trim() : container.textContent.trim();
+          container.textContent = count || '0';
+        }
+
         var attempts = 0;
         var timer = setInterval(function () {
           attempts += 1;
@@ -96,6 +103,10 @@
                 no_branding: true,
                 type: 'html'
               });
+              setTimeout(function () {
+                normalizeCounter(totalEl);
+                normalizeCounter(todayEl);
+              }, 500);
             } catch (e) {
               setFallback();
             }
