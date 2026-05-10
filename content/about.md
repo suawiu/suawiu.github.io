@@ -84,7 +84,7 @@ Experience
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">SK hynix Ambassador</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">Mar 2026 – Present</span>
 </div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Create multiple semiconductor-focused social media contents communicating SK hynix’s technologies, corporate vision, and industry insights from a student perspective.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Create multiple semiconductor-focused social media contents communicating SK hynix’s technologies, corporate vision, and industry insights from a student perspective. <a href="https://youtu.be/lPN7DqJzz0w?si=4g8Fv5ZrlPIWrWFv" target="_blank" rel="noopener noreferrer" aria-label="SK hynix ambassador YouTube video" class="inline-flex items-center align-middle text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8ZM9.6 15.7V8.3L16 12l-6.4 3.7Z"/></svg></a></div>
 <div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Appear in ambassador content for the SK hynix YouTube channel, including an AI semiconductor masterclass featuring Prof. Changhwan Shin of Korea University.</div>
 <div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Film job-introduction and on-site content by visiting SK hynix campuses with fabrication facilities, observing workplace environments, and introducing semiconductor roles through field-based experiences.</div>
 <div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Participate in a monthly ambassador program featuring semiconductor and AI trend lectures, networking with industry professionals, and other professional development sessions.</div>
@@ -241,7 +241,7 @@ Activities
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">RU:SH (Runners United : Sinchon)</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">Feb 2026 – Present</span>
 </div>
-<div class="text-slate-700 dark:text-slate-300">Running crew comprising students and alumni from Yonsei, Ewha, and Sogang Universities</div>
+<div class="text-slate-700 dark:text-slate-300">Running crew comprising students and alumni from Yonsei, Ewha, and Sogang Universities (<a href="https://www.gqkorea.co.kr/2026/04/27/%EB%8D%B0%EC%83%81%ED%8A%B8-%EC%97%90%ED%82%A4%EB%8D%B4-%EB%A0%88%EC%9D%B4%EC%8A%A4/" target="_blank" rel="noopener noreferrer" class="underline decoration-cyan-500 underline-offset-2 hover:text-cyan-600 dark:hover:text-cyan-400">article</a>).</div>
 </div>
 </li>
 <li class="flex items-start group">
