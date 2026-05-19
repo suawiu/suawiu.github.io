@@ -11,7 +11,7 @@ authors:
   - suawiu: author.jpeg
 params:
   math: true
-draft: true
+draft: false
 ---
 
 이 글은 2026년 5월 연세대학교 홍성진 교수님 연구실 lab meeting에서 발표한 **Active Optical Intensity Interferometry** 연구를 정리한 것입니다.
