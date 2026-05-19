@@ -60,6 +60,21 @@ html.dark article a.yt-link:hover {
 }
 
 /* =========================
+   KaTeX 모바일 overflow 처리
+   ========================= */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  padding-bottom: 4px;
+}
+
+.katex {
+  white-space: nowrap;
+}
+
+/* =========================
    2. Spline 배경 (강제 레이어 고정)
    ========================= */
 spline-viewer {
