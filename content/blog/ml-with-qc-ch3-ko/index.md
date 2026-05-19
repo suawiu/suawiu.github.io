@@ -1,5 +1,5 @@
 ---
-title: "ML with QC - Ch3 (한글)"
+title: "ML with QC - Ch3"
 subtitle: "'Machine Learning with Quantum Computers' 3장 정리"
 summary: "양자 컴퓨팅 기초: 큐비트, 게이트, 그리고 알고리즘"
 date: 2026-01-15
@@ -11,7 +11,7 @@ authors:
   - suawiu: author.jpeg
 params:
   math: true
-draft: true
+draft: false
 ---
 
 이 포스트는 Maria Schuld와 Francesco Petruccione의 저서 *"Machine Learning with Quantum Computers"* (2nd Edition)의 **Chapter 3. Quantum Computing** 내용을 요약한 것입니다.

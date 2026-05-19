@@ -1,5 +1,5 @@
 ---
-title: "ML with QC - Ch2 (한글)"
+title: "ML with QC - Ch2"
 subtitle: "'Machine Learning with Quantum Computers' 2장 정리"
 summary: "'Machine Learning with Quantum Computers' 2장 머신러닝 기초 내용 정리"
 date: 2026-01-15
@@ -11,7 +11,7 @@ authors:
   - suawiu: author.jpeg
 params:
   math: true
-draft: true
+draft: false
 ---
 
 이 포스트는 Maria Schuld와 Francesco Petruccione의 저서 *"Machine Learning with Quantum Computers"* (2nd Edition)의 **Chapter 2. Machine Learning** 내용을 요약한 것입니다.
