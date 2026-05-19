@@ -40,13 +40,23 @@ html.dark article a:hover {
   /* Blue-300 */
 }
 
+a.yt-link {
+  color: #dc2626 !important;
+  transition: transform 0.2s ease, opacity 0.2s;
+}
+a.yt-link:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
 html.dark a.yt-link,
 html.dark article a.yt-link {
   color: #dc2626 !important;
 }
 html.dark a.yt-link:hover,
 html.dark article a.yt-link:hover {
-  color: #b91c1c !important;
+  color: #dc2626 !important;
+  transform: translateY(-3px);
+  opacity: 0.8;
 }
 
 /* =========================
