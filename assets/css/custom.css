@@ -40,6 +40,15 @@ html.dark article a:hover {
   /* Blue-300 */
 }
 
+html.dark a.yt-link,
+html.dark article a.yt-link {
+  color: #dc2626 !important;
+}
+html.dark a.yt-link:hover,
+html.dark article a.yt-link:hover {
+  color: #b91c1c !important;
+}
+
 /* =========================
    2. Spline 배경 (강제 레이어 고정)
    ========================= */
