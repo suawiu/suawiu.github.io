@@ -5,7 +5,7 @@ summary: "'Machine Learning with Quantum Computers' 1장 정리"
 date: 2026-01-12
 categories: ["Physics", "Quantum Computing"]
 cardimage: "post5/cover_new.png"
-featureimage: "post6/cover_new.png"
+featureimage: "post5/cover_new.png"
 caption: "Quantum Science and Technology"
 authors:
   - suawiu: author.jpeg
@@ -15,6 +15,8 @@ draft: true
 ---
 
 이 글은 Maria Schuld와 Francesco Petruccione의 저서 *"Machine Learning with Quantum Computers"* (2nd Edition)의 **Chapter 1. Introduction** 을 요약한 것입니다.
+
+양자 기계 학습(Quantum Machine Learning, QML)은 양자 컴퓨팅과 기계 학습이라는 두 분야가 만나는 교차점입니다. 양자 컴퓨터가 특정 계산에서 고전 컴퓨터를 압도할 수 있다는 가능성이 알려지면서, 이를 머신러닝에 접목하려는 시도가 활발해졌습니다. 1장은 이 책 전체의 출발점으로, QML이 무엇인지, 왜 필요한지, 그리고 어떤 방식으로 작동할 수 있는지를 넓은 시각에서 소개합니다.
 
 ---
 
@@ -105,12 +107,15 @@ QML 연구는 NISQ 시대에 특히 활발하며, 노이즈에 강하고 오늘�
 ![Toy Example Introduction](slide8.jpg)
 
 양자 알고리즘이 어떻게 작동하는지 이해하기 위해 동전을 사용한 간단한 비유를 고려해 봅시다.
+
 *   **고전 동전** : 동전 던지기는 확률적인 결과(앞면 또는 뒷면)로 이어집니다.
 *   **실험** :
-    1.  앞면으로 시작합니다.
-    2.  동전 1을 던집니다.
-    3.  동전 1을 다시 던집니다.
-*   **결과** : 고전 세계에서는 확률이 상태를 정의합니다. 확률을 더하기만 하면 됩니다.
+    1.  앞면($H$)으로 시작합니다.
+    2.  공정한 동전을 한 번 던집니다 → 앞면 또는 뒷면이 각각 $\frac{1}{2}$ 확률로 나옵니다.
+    3.  결과에 상관없이 동전을 한 번 더 던집니다.
+*   **결과** : 고전 세계에서는 동전을 두 번 던지면 앞면($H$)과 뒷면($T$)이 각각 $\frac{1}{2}$ 확률로 나옵니다. 무작위화가 한 번 일어난 후 추가적인 무작위화를 해도 "확실한" 상태로 돌아올 수 없습니다.
+
+**왜 이게 중요한가?** 양자 세계에서는 이와 근본적으로 다른 일이 일어납니다. 바로 이 점이 양자 알고리즘이 고전 알고리즘과 다른 이유입니다.
 
 ---
 
@@ -118,7 +123,14 @@ QML 연구는 NISQ 시대에 특히 활발하며, 노이즈에 강하고 오늘�
 
 ![Classical Matrix Representation](slide9.jpg)
 
-*   **고전** : 확률 행렬로 표현할 수 있습니다. 전체 확률의 법칙이 적용됩니다. 상태를 무작위화하면 일반적으로 불확실성(엔트로피)이 증가합니다. 무작위로 다시 던진다고 해서 "불확실"에서 "확실"로 쉽게 돌아갈 수는 없습니다.
+**고전 동전의 수학적 표현:**
+
+공정한 동전 던지기를 행렬로 표현하면 다음과 같습니다:
+$$C_{classical} = \begin{pmatrix} 1/2 & 1/2 \\ 1/2 & 1/2 \end{pmatrix}$$
+
+앞면($H$) 상태에서 시작하면: $\begin{pmatrix} 1 \\ 0 \end{pmatrix} \xrightarrow{C} \begin{pmatrix} 1/2 \\ 1/2 \end{pmatrix} \xrightarrow{C} \begin{pmatrix} 1/2 \\ 1/2 \end{pmatrix}$
+
+한 번 던진 후 두 번 던져도 확률 분포는 변하지 않습니다. **엔트로피(불확실성)가 증가하면, 다시 결정론적 상태로 돌아올 수 없습니다.** 이것이 고전 확률론의 근본적 특성입니다.
 
 ---
 
@@ -126,7 +138,21 @@ QML 연구는 NISQ 시대에 특히 활발하며, 노이즈에 강하고 오늘�
 
 ![Quantum Hadamard Transformation](slide10.jpg)
 
-*   **양자** : 여기서는 **하다마드 변환(Hadamard Transform)** 을 사용합니다.
-*   **진폭 vs. 확률** : 양자 상태는 단순한 양수 확률이 아니라 복소수 진폭으로 설명됩니다.
-*   **간섭** : 하다마드 행렬에는 음수($-1$)가 포함되어 있습니다. 두 번 적용하면 양수와 음수 진폭이 서로 상쇄될 수 있습니다(**간섭**).
-*   **결과** : 이를 통해 양자 시스템은 개별적으로 불확실성을 생성하는 연산 후에도 "확실한" 상태(예: 초기 상태로 되돌아감)로 돌아갈 수 있습니다. 이 현상인 간섭은 양자 알고리즘이 속도 향상을 달성하는 기본 원리입니다.
+**양자 동전의 수학적 표현:**
+
+양자 세계에서는 **하다마드 변환(Hadamard Transform)** 이 동전 던지기에 해당합니다:
+
+$$H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}$$
+
+$|0\rangle$ 상태(앞면)에서 시작하면:
+
+$$|0\rangle \xrightarrow{H} \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle) \xrightarrow{H} |0\rangle$$
+
+두 번 적용하면 **원래 상태로 정확히 돌아옵니다!** 이것이 간섭(interference)의 핵심입니다.
+
+*   **진폭 vs. 확률** : 양자 상태는 단순한 양수 확률이 아니라 음수도 될 수 있는 진폭(amplitude)으로 설명됩니다. 확률은 진폭의 **제곱**($|\alpha|^2$)입니다.
+*   **보강 간섭과 상쇄 간섭** : 하다마드 행렬에 $-1$ 항이 포함되어 있어, 두 번 적용하면:
+    - $|0\rangle$ 방향의 진폭: $\frac{1}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} = 1$ (보강 간섭)
+    - $|1\rangle$ 방향의 진폭: $\frac{1}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \cdot (-\frac{1}{\sqrt{2}}) = 0$ (상쇄 간섭)
+
+*   **결론** : 양자 알고리즘은 이 간섭 원리를 활용하여 원하는 답의 확률 진폭은 **보강**하고, 틀린 답의 확률 진폭은 **상쇄**합니다. 이것이 바로 양자 컴퓨터가 특정 문제에서 고전 컴퓨터보다 빠른 근본적인 이유입니다.

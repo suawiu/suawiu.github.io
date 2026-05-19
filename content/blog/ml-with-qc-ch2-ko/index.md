@@ -20,7 +20,7 @@ draft: true
 
 ### 1. 개요 (Introduction)
 
-![Chapter 2 Machine Learning Title Slide](../post7/slide01.png)
+![Chapter 2 Machine Learning Title Slide](slide01.png)
 
 2장에서는 양자 머신러닝을 이해하기 위한 기초로서 머신러닝의 전반적인 개념을 다룹니다. 학습 문제의 유형, 학습의 필수 요소, 그리고 다양한 머신러닝 기법들을 소개합니다.
 
@@ -28,7 +28,7 @@ draft: true
 
 ### 2. 목차 (Contents)
 
-![Table of Contents Slide](../post7/slide02.png)
+![Table of Contents Slide](slide02.png)
 
 이 장은 다음과 같은 주요 섹션으로 구성됩니다:
 1.  **머신러닝 문제의 예 (Examples of Typical Machine Learning Problems)**: 다양한 문제 유형 이해.
@@ -41,15 +41,24 @@ draft: true
 
 ### 3. 머신러닝 문제의 예
 
-![Examples of Typical Machine Learning Problems Slide](../post7/slide03.png)
+![Examples of Typical Machine Learning Problems Slide](slide03.png)
 
-머신러닝 분야는 데이터의 특성과 학습 목표에 따라 크게 분류할 수 있습니다.
+머신러닝 분야는 데이터의 특성과 학습 목표에 따라 크게 분류할 수 있습니다. 대표적인 문제 유형과 실제 예시를 살펴봅니다:
+
+*   **이미지 분류 (Image Classification)**: 고양이 사진인지 개 사진인지 구분하기. 픽셀 값(입력 $X$)을 받아 레이블(출력 $Y$)을 예측합니다. → **지도 학습**
+*   **스팸 필터링 (Spam Detection)**: 이메일 텍스트를 보고 스팸인지 아닌지 판별합니다. 레이블된 훈련 데이터가 필요합니다. → **지도 학습 (분류)**
+*   **주가 예측 (Stock Price Prediction)**: 과거 주가 데이터를 이용해 미래 주가를 예측합니다. → **지도 학습 (회귀)**
+*   **고객 세분화 (Customer Segmentation)**: 레이블 없이 고객들의 구매 패턴을 분석해 유사한 그룹으로 묶습니다. → **비지도 학습 (군집 분석)**
+*   **의료 진단 보조**: 환자의 증상 데이터에서 질병 패턴을 찾습니다. 레이블이 있으면 지도 학습, 없으면 비지도 학습.
+*   **게임 AI (AlphaGo 등)**: 규칙은 알지만 최적 전략은 시행착오를 통해 스스로 학습합니다. → **강화 학습**
+
+**핵심**: 같은 데이터라도 목표와 레이블 여부에 따라 사용하는 학습 방식이 달라집니다.
 
 ---
 
 ### 4. 머신러닝의 종류
 
-![Machine Learning Types Slide](../post7/slide04.png)
+![Machine Learning Types Slide](slide04.png)
 
 *   **지도 학습 (Supervised Learning, X-Y)**: 레이블이 지정된 데이터(입력 X, 출력 Y)로부터 학습합니다. (예: 회귀, 분류)
 *   **비지도 학습 (Unsupervised Learning, X-X)**: 레이블이 없는 데이터에서 패턴을 찾습니다. (예: 군집 분석, 주성분 분석(PCA), 연관 규칙 학습)
@@ -59,7 +68,7 @@ draft: true
 
 ### 5. 학습 문제의 3요소
 
-![The Three Ingredients of a Learning Problem Slide](../post7/slide05.png)
+![The Three Ingredients of a Learning Problem Slide](slide05.png)
 
 모든 머신러닝 문제는 다음의 핵심 요소들로 설명할 수 있습니다:
 *   **프로세스 (Process)**: 데이터를 생성하는 과정 또는 모델링하려는 현상.
@@ -71,7 +80,7 @@ draft: true
 
 ### 6. 프로세스 (Process)
 
-![Process Slide](../post7/slide06.png)
+![Process Slide](slide06.png)
 
 머신러닝 프로세스는 일련의 단계로 이루어집니다:
 1.  **데이터 수집 (Data Collection)**: 원시 데이터 확보.
@@ -86,7 +95,7 @@ draft: true
 
 ### 7. 데이터: 전처리 - 특성 스케일링
 
-![Data Preprocessing - Feature Scaling Slide](../post7/slide07.png)
+![Data Preprocessing - Feature Scaling Slide](slide07.png)
 
 스케일링은 모든 특성이 결과에 동등하게 기여하도록 보장합니다.
 *   **Z-Score 스케일링 (표준화)**: 데이터의 평균이 0, 분산이 1이 되도록 변환합니다.
@@ -98,7 +107,7 @@ draft: true
 
 ### 8. 데이터: 전처리 - 차원 축소
 
-![Data Preprocessing - Dimensionality Reduction Slide](../post7/slide08.png)
+![Data Preprocessing - Dimensionality Reduction Slide](slide08.png)
 
 입력 변수의 수를 줄이면 모델 성능을 높이고 계산량을 줄일 수 있습니다.
 *   **특성 선택 (Feature Selection)**: 관련 있는 특성의 부분 집합을 선택 (예: mRMR, SVM-RFE).
@@ -109,7 +118,7 @@ draft: true
 
 ### 9. 데이터: 전처리 - 원-핫 인코딩
 
-![Data Preprocessing - One-Hot Encoding Slide](../post7/slide09.png)
+![Data Preprocessing - One-Hot Encoding Slide](slide09.png)
 
 *   **원-핫 인코딩 (One-Hot Encoding)**: 범주형(categorical) 변수를 0과 1로 이루어진 이진 행렬로 변환하여 머신러닝 알고리즘이 처리할 수 있게 합니다.
 *   그 외 Target Encoding, Ordered Target Encoding 등의 방법이 있습니다.
@@ -118,7 +127,7 @@ draft: true
 
 ### 10. 모델: 결정론적 vs 확률론적
 
-![Model Types Slide](../post7/slide10.png)
+![Model Types Slide](slide10.png)
 
 불확실성을 다루는 방식에 따라 모델을 분류할 수 있습니다:
 *   **결정론적 모델 (Deterministic Model)**: 초기 조건과 파라미터에 의해 출력이 완전히 결정됩니다. 무작위성이 없습니다 (예: $F=ma$와 같은 물리 법칙).
@@ -128,7 +137,7 @@ draft: true
 
 ### 11. 모델: 결정론적 vs 통계적
 
-![Model Types Detailed Slide](../post7/slide11.png)
+![Model Types Detailed Slide](slide11.png)
 
 *   **결정론적 모델**: $Y = X\beta$ 와 같은 정확한 관계를 가정합니다. 입력 $X$와 파라미터 $\beta$를 알면 $Y$를 정확히 알 수 있다고 봅니다.
 *   **통계적 모델**: 세상이 노이즈로 차 있음을 인정합니다. 관계를 $Y = X\beta + \epsilon$ 로 모델링하며, 여기서 $\epsilon$은 오차항(보통 정규분포 $\epsilon \sim N(0, \sigma^2)$ 가정)입니다. 실제 데이터의 변동성을 고려합니다.
@@ -137,7 +146,7 @@ draft: true
 
 ### 12. 손실 (Loss): 분류 (Classification)
 
-![Loss Classification Slide](../post7/slide12.png)
+![Loss Classification Slide](slide12.png)
 
 분류 문제(출력이 범주인 경우)의 성능 평가:
 *   **오차 행렬 (Confusion Matrix)**: 모델의 성능(True Positives, False Positives 등)을 나타내는 표.
@@ -151,7 +160,7 @@ draft: true
 
 ### 13. 손실 (Loss): 회귀 (Regression)
 
-![Loss Regression Slide](../post7/slide13.png)
+![Loss Regression Slide](slide13.png)
 
 회귀 문제(연속적인 값을 예측)의 일반적인 손실 함수:
 *   **MAE (Mean Absolute Error)**: 예측값과 실제값 차이의 절대값 평균.
@@ -163,7 +172,7 @@ draft: true
 
 ### 14. 지도 학습의 위험 최소화
 
-![Risk Minimization Title Slide](../post7/slide14.png)
+![Risk Minimization Title Slide](slide14.png)
 
 지도 학습의 핵심 목표는 **위험 최소화(Risk Minimization)**입니다. 두 가지 주요 개념이 있습니다:
 *   **비용 함수 (Cost Function)**: 예측값과 실제값 사이의 오차를 수치화하는 수학 공식.
@@ -173,7 +182,7 @@ draft: true
 
 ### 15. 비용 함수와 정규화
 
-![Cost Function Slide](../post7/slide15.png)
+![Cost Function Slide](slide15.png)
 
 *   **위험 최소화 문제**: 경험적 위험(Empirical Risk) $\hat{R}_{f_\theta}$를 최소화하는 최적의 파라미터 $\theta^*$를 찾는 것입니다.
 *   **과적합 (Overfitting)**: 모델이 훈련 데이터를 *너무* 잘 학습하여 노이즈나 이상치까지 반영하게 되어, 새로운 데이터에 대한 성능이 떨어지는 현상.
@@ -188,7 +197,7 @@ draft: true
 
 ### 16. 과적합(Overfitting) vs 과소적합(Underfitting)
 
-![Overfitting and Underfitting Visuals Slide](../post7/slide16.png)
+![Overfitting and Underfitting Visuals Slide](slide16.png)
 
 회귀와 결정 트리를 예로 들어 과소적합과 과적합을 시각화합니다:
 *   **모델 A (과소적합)**: 모델이 데이터의 패턴을 담기에 너무 단순함(직선). 편향(Bias)이 높음.
@@ -199,7 +208,7 @@ draft: true
 
 ### 17. 비용 함수 예시: 정규화
 
-![Cost Function Examples Slide](../post7/slide17.png)
+![Cost Function Examples Slide](slide17.png)
 
 일반적인 정규화 기법은 비용 함수에 페널티 항을 추가합니다:
 *   **릿지 회귀 (Ridge Regression, $\ell_2$)**: 계수의 제곱합을 추가.
@@ -213,7 +222,7 @@ draft: true
 
 ### 18. VC 차원 (Vapnik-Chervonenkis Dimension)
 
-![VC Dimension Slide](../post7/slide18.png)
+![VC Dimension Slide](slide18.png)
 
 **VC 차원**은 통계적 분류 알고리즘의 용량(복잡도)을 측정합니다.
 *   **개념**: "이 모델이 얼마나 복잡한 데이터셋을 분류할 수 있는가?"
@@ -225,7 +234,7 @@ draft: true
 
 ### 19. 최적화: 경사 하강법 (Gradient Descent)
 
-![Gradient Descent Optimization Slide](../post7/slide19.png)
+![Gradient Descent Optimization Slide](slide19.png)
 
 비용 함수를 최소화하는 파라미터를 찾기 위한 최적화 알고리즘입니다.
 *   **경사 하강법 (GD)**: 전체 데이터셋을 사용하여 기울기를 계산하고 파라미터를 업데이트합니다.
@@ -240,7 +249,7 @@ draft: true
 
 ### 20. 미니 배치 경사 하강법 (Mini-batch Gradient Descent)
 
-![Mini-batch Gradient Descent Slide](../post7/slide20.png)
+![Mini-batch Gradient Descent Slide](slide20.png)
 
 *   **미니 배치 경사 하강법**: Batch GD와 SGD의 절충안.
     *   데이터를 작은 그룹(배치, 크기 $n$)으로 나누어 처리합니다.
@@ -250,15 +259,21 @@ draft: true
 
 ### 21. 비지도 학습의 훈련
 
-![Training in Unsupervised Learning Slide](../post7/slide21.png)
+![Training in Unsupervised Learning Slide](slide21.png)
 
-*   **최대 우도 추정 (Maximum Likelihood Estimation, MLE)**: 비지도 학습 모델을 훈련하는 데 자주 사용되는 방법입니다.
+비지도 학습에서는 레이블이 없기 때문에 지도 학습처럼 "정답"과의 오차를 최소화하는 방식으로 훈련할 수 없습니다. 대신 데이터 자체의 확률적 구조를 모델링하는 방법을 사용합니다.
+
+*   **최대 우도 추정 (Maximum Likelihood Estimation, MLE)**: 비지도 학습 모델을 훈련하는 데 가장 널리 사용되는 방법입니다.
+    *   **핵심 아이디어**: "이 데이터를 관측했을 때, 어떤 모델 파라미터 $\Theta$였다면 가장 그럴 듯한가?"를 역으로 추론합니다.
+    *   예: 키 데이터가 주어졌을 때, 이 데이터를 가장 잘 설명하는 가우시안 분포의 평균($\mu$)과 분산($\sigma^2$)을 찾습니다.
+*   **지도 학습과의 차이**: 지도 학습에서는 경험적 위험(예측 오차)을 최소화하지만, 비지도 학습에서는 데이터의 우도(likelihood)를 최대화합니다.
+*   **활용 예시**: 군집 분석(GMM), 생성 모델(RBM, VAE) 훈련 등에 MLE를 사용합니다.
 
 ---
 
 ### 22. 최대 우도 추정 (수식)
 
-![Maximum Likelihood Estimation Math Slide](../post7/slide22.png)
+![Maximum Likelihood Estimation Math Slide](slide22.png)
 
 **우도(Likelihood)**는 특정 모델 하에서 주어진 데이터가 관측될 확률을 의미합니다.
 *   **우도 함수**: $L(\Theta|x_1, ..., x_n)$
@@ -272,7 +287,7 @@ draft: true
 
 ### 23. 최대 우도 추정 (시각화)
 
-![Maximum Likelihood Estimation Graph Slide](../post7/slide23.png)
+![Maximum Likelihood Estimation Graph Slide](slide23.png)
 
 MLE를 시각화한 그래프입니다. 데이터 포인트(주황색 점)에 가장 잘 맞는 분포(가우시안 등)를 찾으려 합니다.
 *   파란색 곡선은 데이터와 잘 맞지 않는(우도가 낮은) 파라미터를 가진 모델입니다.
@@ -282,7 +297,7 @@ MLE를 시각화한 그래프입니다. 데이터 포인트(주황색 점)에 �
 
 ### 24. 머신러닝 기법들
 
-![Methods in Machine Learning Slide](../post7/slide24.png)
+![Methods in Machine Learning Slide](slide24.png)
 
 일반적인 기법들:
 *   **선형 모델 (Linear Models)**: 단순하고 해석 가능한 모델 (예: 선형 회귀, 로지스틱 회귀).
@@ -294,7 +309,7 @@ MLE를 시각화한 그래프입니다. 데이터 포인트(주황색 점)에 �
 
 ### 25. 선형 모델 (Linear Models)
 
-![Linear Models Slide](../post7/slide25.png)
+![Linear Models Slide](slide25.png)
 
 *   **시그모이드 함수 (Sigmoid Function)**: 선형 분류(예: 로지스틱 회귀)와 신경망의 핵심 요소.
     *   $\sigma(x) = \frac{1}{1 + e^{-x}}$
@@ -304,7 +319,7 @@ MLE를 시각화한 그래프입니다. 데이터 포인트(주황색 점)에 �
 
 ### 26. 선형 모델: 최소 제곱법 & SVD
 
-![Linear Models Least Squares Slide](../post7/slide26.png)
+![Linear Models Least Squares Slide](slide26.png)
 
 *   **선형 회귀 모델**: $f_w(x) = w^Tx$
 *   **최소 제곱법 (Least-squares Estimation)**: 예측값과 실제값 차이의 제곱합을 최소화하여 최적의 가중치 $w$를 찾습니다.
@@ -316,7 +331,7 @@ MLE를 시각화한 그래프입니다. 데이터 포인트(주황색 점)에 �
 
 ### 27. 선형 모델: MSE
 
-![Linear Models MSE Slide](../post7/slide27.png)
+![Linear Models MSE Slide](slide27.png)
 
 *   **평균 제곱 오차 (MSE)**: 회귀 문제의 표준 비용 함수.
     *   $MSE = \frac{1}{n} \sum (y - \hat{y})^2$
@@ -326,7 +341,7 @@ MLE를 시각화한 그래프입니다. 데이터 포인트(주황색 점)에 �
 
 ### 28. 신경망: 퍼셉트론 & MLP
 
-![Neural Networks Perceptron Slide](../post7/slide28.png)
+![Neural Networks Perceptron Slide](slide28.png)
 
 *   **퍼셉트론 (Perceptron)**: 가장 단순한 인공 뉴런. 여러 입력($x$)에 가중치($w$)를 곱해 합산한 후, 활성화 함수를 통과시켜 출력을 만듭니다.
 *   **다층 퍼셉트론 (MLP)**: 여러 층의 퍼셉트론(입력, 은닉, 출력층)으로 구성된 비순환 피드포워드 신경망.
@@ -337,7 +352,7 @@ MLE를 시각화한 그래프입니다. 데이터 포인트(주황색 점)에 �
 
 ### 29. 신경망: 활성화 함수
 
-![Neural Networks Activation Function Slide](../post7/slide29.png)
+![Neural Networks Activation Function Slide](slide29.png)
 
 활성화 함수는 네트워크에 비선형성을 도입하여 복잡한 패턴을 학습하게 합니다.
 *   **Sigmoid**: $\sigma(x) = \frac{1}{1+e^{-x}}$. 출력 범위 (0, 1). 계단 함수를 부드럽게 만든 형태.
@@ -348,7 +363,7 @@ MLE를 시각화한 그래프입니다. 데이터 포인트(주황색 점)에 �
 
 ### 30. 신경망: 역전파 (Backpropagation)
 
-![Neural Networks Update Backpropagation Slide](../post7/slide30.png)
+![Neural Networks Update Backpropagation Slide](slide30.png)
 
 *   **역전파**: 신경망 훈련에 쓰이는 알고리즘.
     *   손실 함수의 기울기($E$)를 네트워크의 각 가중치($w$)에 대해 효율적으로 계산합니다.
@@ -360,7 +375,7 @@ MLE를 시각화한 그래프입니다. 데이터 포인트(주황색 점)에 �
 
 ### 31. 순환 신경망 (RNN)
 
-![Recurrent Neural Networks Slide](../post7/slide31.png)
+![Recurrent Neural Networks Slide](slide31.png)
 
 *   **RNN**: 퍼셉트론과 논리 게이트의 장점을 결합.
     *   시계열(Sequence) 데이터 처리에 유용.
@@ -376,7 +391,7 @@ MLE를 시각화한 그래프입니다. 데이터 포인트(주황색 점)에 �
 
 ### 32. RNN 응용
 
-![RNN Applications Slide](../post7/slide32.png)
+![RNN Applications Slide](slide32.png)
 
 RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 *   **One-to-Many**: 이미지 캡셔닝.
@@ -387,7 +402,7 @@ RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 
 ### 33. 홉필드 네트워크 (Hopfield Networks)
 
-![Hopfield Networks Slide](../post7/slide33.png)
+![Hopfield Networks Slide](slide33.png)
 
 *   **홉필드 네트워크**: 피드백 루프가 있는 단순한 형태의 순환 신경망.
     *   **연상 메모리 (Associative Memory)**: 단 하나의 샘플만으로 패턴을 기억할 수 있음 (One-shot learning).
@@ -403,7 +418,7 @@ RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 
 ### 34. 홉필드 네트워크: 복원 (Recovery)
 
-![Hopfield Networks Recovery Slide](../post7/slide34.png)
+![Hopfield Networks Recovery Slide](slide34.png)
 
 복원 과정을 보여주는 슬라이드:
 *   **Original**: 네트워크가 학습한 안정된 상태.
@@ -414,7 +429,7 @@ RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 
 ### 35. 홉필드 네트워크: 예시
 
-![Hopfield Networks Example Slide](../post7/slide35.png)
+![Hopfield Networks Example Slide](slide35.png)
 
 *   홉필드 네트워크가 부분적으로 가려지거나 노이즈가 섞인 입력으로부터 전체 이미지(예: 호머 심슨, 문자 '가')를 복원하는 시각적 예시.
 *   내용 기반 주소 지정 메모리(Content-Addressed Memory) 시스템으로 작동합니다.
@@ -423,7 +438,7 @@ RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 
 ### 36. 볼츠만 머신 (Boltzmann Machines)
 
-![Boltzmann Machines Slide](../post7/slide36.png)
+![Boltzmann Machines Slide](slide36.png)
 
 *   **생성 모델 (Generative Model)**: 타겟 $y$를 예측하는 결정론적 모델과 달리, 데이터의 확률 밀도 함수를 모델링합니다.
 *   **구조**: 시스템 상태에 대한 확률 분포를 정의하는 확률적 순환 신경망.
@@ -433,7 +448,7 @@ RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 
 ### 37. 제한된 볼츠만 머신 (RBM)
 
-![Restricted Boltzmann Machines Slide](../post7/slide37.png)
+![Restricted Boltzmann Machines Slide](slide37.png)
 
 *   **RBM**: 학습하기 쉽도록 설계된 볼츠만 머신의 변형.
 *   **제한 (Restriction)**: 같은 층 내의 연결이 없습니다 (가시-가시 또는 은닉-은닉 연결 없음). 연결은 가시층($v$)과 은닉층($h$) 사이에만 존재합니다.
@@ -443,7 +458,7 @@ RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 
 ### 38. RBM: 수식
 
-![RBM Math Slide](../post7/slide38.png)
+![RBM Math Slide](slide38.png)
 
 *   **에너지 함수**: $E_W(\mathbf{s}) = -\frac{1}{2}\mathbf{s}^T \mathbf{W} \mathbf{s}$ (단순화된 형태).
 *   **확률**: $p_W(\mathbf{s}) = \frac{1}{Z} e^{-E_W(\mathbf{s})}$, 여기서 $Z = \sum_s e^{-E_W(\mathbf{s})}$는 분배 함수(Partition Function).
@@ -456,7 +471,7 @@ RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 
 ### 39. 깁스 샘플링 (Gibbs Sampling)
 
-![Gibbs Sampling Slide](../post7/slide39.png)
+![Gibbs Sampling Slide](slide39.png)
 
 *   **샘플링**: 모델 기댓값 $\langle x_i h_j \rangle_{\text{model}}$ 계산이 어렵기 때문에 **깁스 샘플링**으로 근사합니다.
 *   **과정**: 변수들의 조건부 분포에서 샘플을 추출하여 반복적으로 값을 업데이트합니다.
@@ -467,7 +482,7 @@ RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 
 ### 40. Contrastive Divergence (CD)
 
-![Contrastive Divergence Slide](../post7/slide40.png)
+![Contrastive Divergence Slide](slide40.png)
 
 *   **Contrastive Divergence**: RBM 훈련을 위한 효율적인 근사 알고리즘.
 *   **아이디어**: 체인이 수렴할 때까지 기다리는 대신, 깁스 체인을 $k$ 단계만 실행합니다 (주로 $k=1$, CD-1이라 함).
@@ -478,7 +493,7 @@ RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 
 ### 41. 그래피컬 모델 (Graphical Models)
 
-![Graphical Models Slide](../post7/slide41.png)
+![Graphical Models Slide](slide41.png)
 
 *   **그래피컬 모델**: 데이터에 대한 확률 분포를 그래프로 표현하고 단순화하는 확률론적 모델.
 *   **종류**:
@@ -490,7 +505,7 @@ RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 
 ### 42. 베이지안 네트워크
 
-![Bayesian Networks Slide](../post7/slide42.png)
+![Bayesian Networks Slide](slide42.png)
 
 *   **분해 (Factorization)**: 결합 확률 분포는 그래프 구조에 따라 조건부 확률들의 곱으로 분해됩니다.
     *   $P(X_1, ..., X_n) = \prod_{i} P(X_i | \text{parents}(X_i))$
@@ -502,7 +517,7 @@ RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 
 ### 43. 은닉 마르코프 모델 (HMM)
 
-![Hidden Markov Models Slide](../post7/slide43.png)
+![Hidden Markov Models Slide](slide43.png)
 
 *   **마르코프 가정**: 현재 상태는 오직 바로 이전 상태에만 의존하며, 전체 과거와는 무관하다는 가정.
     *   $P(X_{t+1} | X_t, ..., X_1) = P(X_{t+1} | X_t)$
@@ -513,7 +528,7 @@ RNN은 다양한 "Many-to-Many" 또는 "Many-to-One" 작업에 활용됩니다:
 
 ### 44. HMM: 전이 & 방출
 
-![HMM Detail Slide](../post7/slide44.png)
+![HMM Detail Slide](slide44.png)
 
 HMM은 두 가지 확률 테이블로 특징지어집니다:
 *   **상태 전이 확률 (State Transition Probability)**: 한 은닉 상태에서 다른 상태로 이동할 확률 (예: 맑음 $\rightarrow$ 비).
@@ -525,7 +540,7 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 45. 커널 방법 (Kernel Methods)
 
-![Kernel Methods Slide](../post7/slide45.png)
+![Kernel Methods Slide](slide45.png)
 
 *   **목표**: 데이터를 고차원 특징 공간으로 매핑하여 비선형 문제를 선형 문제로 변환하는 것.
 *   **특징 맵 (Feature Map)**: $\phi: \mathcal{X} \rightarrow \mathcal{F}$ ($R^d \rightarrow R^D$).
@@ -541,7 +556,7 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 46. 커널 방법: 시각화
 
-![Kernel Methods Visuals Slide](../post7/slide46.png)
+![Kernel Methods Visuals Slide](slide46.png)
 
 *   **2D to 2D**: 좌표 변환(예: 극좌표)으로 동심원 데이터를 선형적으로 분리 가능.
 *   **2D to 3D**: 2D 데이터($X_1, X_2$)를 3D($X_1^2, X_2^2, \sqrt{2}X_1X_2$)로 매핑하면 포물면이 되어 평면으로 데이터 분리 가능.
@@ -550,7 +565,7 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 47. 커널 밀도 추정 (KDE)
 
-![Kernel Density Estimation Slide](../post7/slide47.png)
+![Kernel Density Estimation Slide](slide47.png)
 
 *   **KDE**: 확률 변수의 확률 밀도 함수(PDF)를 추정하는 비모수적 방법.
 *   **방법**: 각 데이터 포인트에 커널(예: 가우시안 분포)을 중심에 두고 모두 합산합니다.
@@ -561,7 +576,7 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 48. K-최근접 이웃 (KNN)
 
-![K-Nearest Neighbor Slide](../post7/slide48.png)
+![K-Nearest Neighbor Slide](slide48.png)
 
 *   **KNN**: 단순한 인스턴스 기반 학습 알고리즘.
 *   **논리**: 가장 가까운 $k$개의 이웃 중 다수결에 따라 새로운 포인트를 분류.
@@ -575,7 +590,7 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 49. 서포트 벡터 머신 (SVM)
 
-![Support Vector Machines Slide](../post7/slide49.png)
+![Support Vector Machines Slide](slide49.png)
 
 *   **SVM**: 클래스 간의 최적 경계선을 찾는 데 초점을 맞춥니다.
 *   **서포트 벡터 (Support Vectors)**: 결정 경계에 가장 가까이 있는 데이터 포인트들. 이들이 경계를 "지지"하거나 정의합니다.
@@ -585,7 +600,7 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 50. SVM: 마진
 
-![SVM Margin Slide](../post7/slide50.png)
+![SVM Margin Slide](slide50.png)
 
 *   마진 구성 요소($d_1$, $d_2$) 시각적 설명.
 *   마진을 최대화하면 일반화 성능이 좋아집니다. 마진이 클수록 모델이 더 확신을 가지며 노이즈에 강건하다는 뜻입니다.
@@ -594,7 +609,7 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 51. SVM: 제약 조건
 
-![SVM Constraints Slide](../post7/slide51.png)
+![SVM Constraints Slide](slide51.png)
 
 *   **초평면 (Hyperplane)**: $w^T x + b = 0$
 *   **표준 초평면 (Canonical Hyperplanes)**: 서포트 벡터에서의 값이 $+1$ 또는 $-1$이 되도록 $w$와 $b$의 스케일을 조정합니다.
@@ -606,7 +621,7 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 52. SVM: 최적화 목표
 
-![SVM Optimization Goal Slide](../post7/slide52.png)
+![SVM Optimization Goal Slide](slide52.png)
 
 *   마진의 폭은 $\frac{2}{||w||}$로 주어집니다.
 *   **최적화**: 마진($M$)을 최대화하려면 가중치 벡터의 크기 $||w||$를 **최소화**해야 합니다 (또는 $\frac{1}{2}||w||^2$ 최소화).
@@ -616,7 +631,7 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 53. SVM: 힌지 손실 (Hinge Loss)
 
-![SVM Hinge Loss Slide](../post7/slide53.png)
+![SVM Hinge Loss Slide](slide53.png)
 
 *   **Hinge Loss**: SVM 훈련에 사용되는 손실 함수.
     *   $\text{loss} = \max\{0, 1 - (y' \times y)\}$
@@ -627,7 +642,7 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 54. SVM: 라그랑주 및 쌍대 문제
 
-![SVM Lagrangian Slide](../post7/slide54.png)
+![SVM Lagrangian Slide](slide54.png)
 
 *   **라그랑주 승수**($\alpha$)를 사용하여 제약 조건이 있는 최적화 문제를 풉니다.
     *   $\mathcal{L}(\mathbf{w}, b, \mathbf{\alpha}) = \frac{1}{2}||\mathbf{w}||^2 - \sum_{m=1}^M \alpha_m (y^m (\mathbf{w}^T \mathbf{x}^m + b) - 1)$
@@ -640,16 +655,22 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 55. 커널 방법의 한계
 
-![Kernel Methods Limitations Slide](../post7/slide55.png)
+![Kernel Methods Limitations Slide](slide55.png)
 
-*   슬라이드는 고차원(예: $R^2 \rightarrow R^3$)으로의 투영을 보여줍니다.
-*   "Shortcoming..?" (단점..?)이라는 질문은 고차원 매핑의 계산 비용이나 커널이 너무 복잡할 경우의 과적합 위험을 암시할 수 있습니다.
+커널 방법은 강력하지만 실제 적용에 있어 몇 가지 중요한 한계가 있습니다:
+
+*   **계산 비용 (Computational Cost)**: 커널 행렬 $K$의 크기는 훈련 데이터 수 $M$에 대해 $M \times M$입니다. $M$이 클 경우 행렬을 저장하고 계산하는 비용이 $\mathcal{O}(M^2)$~$\mathcal{O}(M^3)$으로 급격히 증가합니다. 수백만 개의 데이터가 있다면 사실상 사용 불가능합니다.
+*   **커널 선택 문제 (Kernel Selection)**: 어떤 커널 함수가 주어진 데이터에 가장 적합한지 사전에 알기 어렵습니다. 잘못된 커널을 선택하면 성능이 크게 저하됩니다.
+*   **차원의 저주 (Curse of Dimensionality)**: 데이터 차원이 매우 높을 경우, 매핑된 특징 공간에서 "거리" 개념이 의미를 잃을 수 있습니다.
+*   **특징 공간의 해석 불가**: 암묵적으로 매핑된 고차원 특징 공간은 인간이 직접 해석하기 어렵습니다.
+
+**양자 컴퓨팅과의 연결**: 바로 이 계산 비용 문제가 양자 커널 방법(3장에서 다루는 QSVM 등)이 잠재적 이점을 가질 수 있는 이유입니다. 양자 컴퓨터는 고전적으로 계산하기 어려운 커널 함수를 효율적으로 추정할 수 있습니다.
 
 ---
 
 ### 56. 커널 트릭 요약
 
-![Kernel Trick Summary Slide](../post7/slide56.png)
+![Kernel Trick Summary Slide](slide56.png)
 
 *   **표현 정리 형태**: $f(\mathbf{x}) = \sum \alpha_m y^m \kappa(\mathbf{x}^m, \mathbf{x}) + b$
 *   **커널 트릭**: 실제로 특징 벡터를 계산하지 않고도 고차원 매핑의 결과를 얻는 계산 효율적인 방법.
@@ -659,7 +680,7 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 57. 가우시안 프로세스 (GP)
 
-![Gaussian Processes Slide](../post7/slide57.png)
+![Gaussian Processes Slide](slide57.png)
 
 *   **가우시안 프로세스**: 유한한 변수 집합이 결합 정규 분포를 따른다고 가정하는 비모수적 모델.
     *   $f(\mathbf{x}) \sim GP(m(\mathbf{x}), \kappa(\mathbf{x}, \mathbf{x}'))$
@@ -671,7 +692,7 @@ HMM은 두 가지 확률 테이블로 특징지어집니다:
 
 ### 58. 가우시안 프로세스: 시각화
 
-![Gaussian Processes Visualization Slide](../post7/slide58.png)
+![Gaussian Processes Visualization Slide](slide58.png)
 
 *   GP 회귀를 시각화했습니다.
 *   **점선**: 예측된 평균.

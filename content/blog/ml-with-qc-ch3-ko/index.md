@@ -20,7 +20,7 @@ draft: true
 
 ### 1. 개요 (Introduction)
 
-![Chapter 3 Title Slide](../post8/slide01.png)
+![Chapter 3 Title Slide](slide01.png)
 
 이 장은 양자 컴퓨팅을 이해하기 위한 기초를 다집니다. 필요한 선형대수학, 양자역학의 공리, 그리고 큐비트와 게이트 같은 기본 구성 요소를 다룹니다.
 
@@ -28,7 +28,7 @@ draft: true
 
 ### 2. 목차 (Table of Contents)
 
-![Table of Contents Slide](../post8/slide02.png)
+![Table of Contents Slide](slide02.png)
 
 이 장은 다음과 같이 구성됩니다:
 1.  **양자 이론 (Quantum Theory)**: 선형대수 기초 및 공리.
@@ -43,15 +43,22 @@ draft: true
 
 ### 3. 양자 이론 (Quantum Theory)
 
-![Quantum Theory Title Slide](../post8/slide03.png)
+![Quantum Theory Title Slide](slide03.png)
 
-양자역학의 수학적 프레임워크를 검토하며 시작합니다.
+양자역학의 수학적 프레임워크를 검토하며 시작합니다. 양자 컴퓨팅을 이해하기 위해서는 다음과 같은 수학적 토대가 필요합니다:
+
+*   **힐베르트 공간(Hilbert Space)**: 양자 상태가 존재하는 복소수 벡터 공간. 큐비트 하나는 2차원 힐베르트 공간의 벡터입니다.
+*   **디랙 표기법(Dirac Notation)**: $|\psi\rangle$ (ket)은 열벡터 상태를, $\langle\psi|$ (bra)는 그 켤레 전치를 나타냅니다. 내적은 $\langle\phi|\psi\rangle$으로 씁니다.
+*   **에르미트 연산자(Hermitian Operators)**: 관측량(에너지, 스핀 등)에 해당하는 연산자. 항상 실수 고유값을 가집니다. $H = H^\dagger$.
+*   **유니타리 연산자(Unitary Operators)**: 양자 상태의 시간 발전을 기술. 확률 보존($UU^\dagger = I$).
+
+이 절에서는 기댓값, 밀도 행렬, 순수/혼합 상태, 부분 대각합 등의 개념을 다룹니다.
 
 ---
 
 ### 4. 선형대수: 기댓값 & 밀도 행렬
 
-![Linear Algebra Expectation Slide](../post8/slide04.png)
+![Linear Algebra Expectation Slide](slide04.png)
 
 *   **기댓값 (Expectation Value)**: 측정의 평균값.
     *   $\langle M \rangle = \sum p_k \mu_k$
@@ -62,7 +69,7 @@ draft: true
 
 ### 5. 유니타리 발전 (Unitary Evolutions)
 
-![Unitary Evolutions Slide](../post8/slide05.png)
+![Unitary Evolutions Slide](slide05.png)
 
 *   **유니타리 행렬**: 역행렬이 켤레 전치 행렬과 같은 행렬 ($U^{-1} = U^\dagger$).
 *   고립된 양자 시스템의 시간 발전은 항상 유니타리이며, 이는 확률(진폭 제곱의 합)이 보존됨(합이 1)을 보장합니다.
@@ -71,7 +78,7 @@ draft: true
 
 ### 6. 순수 상태 vs 혼합 상태 & 부분 대각합
 
-![Pure vs Mixed States Slide](../post8/slide06.png)
+![Pure vs Mixed States Slide](slide06.png)
 
 *   **순수 상태 (Pure State)**: 시스템에 대해 완벽한 정보를 가진 상태 ($\alpha$).
     *   $\rho = \alpha \alpha^\dagger$
@@ -83,7 +90,7 @@ draft: true
 
 ### 7. 양자역학의 공리
 
-![Postulates Slide](../post8/slide07.png)
+![Postulates Slide](slide07.png)
 
 1.  **상태 공간 (State Space)**: 입자의 상태는 힐베르트 공간의 벡터 $|\psi\rangle$로 표현됩니다.
 2.  **발전 (Evolution)**: 시간 발전은 슈뢰딩거 방정식 ($i\hbar \frac{d}{dt}|\psi\rangle = H|\psi\rangle$)으로 기술됩니다.
@@ -93,15 +100,22 @@ draft: true
 
 ### 8. 양자 컴퓨팅 소개
 
-![Intro to QC Title Slide](../post8/slide08.png)
+![Intro to QC Title Slide](slide08.png)
 
-이론에서 계산으로: 큐비트와 게이트.
+이론에서 계산으로: 큐비트와 게이트. 양자 컴퓨팅의 핵심 구성 요소는 다음과 같습니다:
+
+*   **큐비트(Qubit)**: 고전 비트가 0 또는 1인 것과 달리, 큐비트는 $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$의 중첩 상태로 존재합니다. 측정 전까지는 두 상태가 동시에 존재합니다.
+*   **양자 게이트(Quantum Gates)**: 큐비트를 조작하는 유니타리 연산. 고전 논리 게이트와 달리 **가역적(reversible)**입니다.
+*   **양자 회로(Quantum Circuit)**: 여러 게이트를 순서대로 적용하는 계산 모델. 양자 알고리즘을 표현하는 표준 방식입니다.
+*   **측정(Measurement)**: 회로 실행 후 큐비트를 측정하면 0 또는 1의 고전적 결과를 얻습니다. 측정은 비가역적이며 상태를 "붕괴"시킵니다.
+
+이 절에서는 블로흐 구를 통한 큐비트 시각화, 다양한 단일/다중 큐비트 게이트의 동작, 그리고 얽힘(entanglement) 생성을 다룹니다.
 
 ---
 
 ### 9. 큐비트 (Qubits)
 
-![Qubits Slide](../post8/slide09.png)
+![Qubits Slide](slide09.png)
 
 *   **고전 비트**: 결정론적, 0 또는 1.
 *   **양자 비트 (Qubits)**: 상태들의 중첩 상태로 존재할 수 있음.
@@ -112,7 +126,7 @@ draft: true
 
 ### 10. 블로흐 구 (Bloch Sphere)
 
-![Bloch Sphere Slide](../post8/slide10.png)
+![Bloch Sphere Slide](slide10.png)
 
 *   **블로흐 구**: 단일 큐비트 상태를 기하학적으로 표현한 것.
 *   **중요 상태들**:
@@ -125,7 +139,7 @@ draft: true
 
 ### 11. 양자 게이트 개요
 
-![Quantum Gates Overview Slide](../post8/slide11.png)
+![Quantum Gates Overview Slide](slide11.png)
 
 *   **양자 게이트**: 비가역적인 고전 논리 게이트(AND, OR 등)와 달리, 양자 게이트는 유니타리 연산자이며 가역적(reversible)입니다.
 *   일반적인 게이트: 파울리(X, Y, Z), 하다마드(H), 위상(S, T), 제어 게이트(CNOT, CCNOT).
@@ -134,7 +148,7 @@ draft: true
 
 ### 12. 게이트의 분류
 
-![Gate Classification Slide](../post8/slide12.png)
+![Gate Classification Slide](slide12.png)
 
 *   **단일 큐비트 게이트**: 큐비트 하나에 작용 (예: Pauli, Hadamard, S, T, Rotation).
 *   **다중 큐비트 게이트**: 두 개 이상의 큐비트에 작용하며 얽힘을 생성 (예: CNOT, SWAP, Toffoli).
@@ -143,7 +157,7 @@ draft: true
 
 ### 13. 파울리 게이트 (Pauli Gates)
 
-![Pauli Gates Slide](../post8/slide13.png)
+![Pauli Gates Slide](slide13.png)
 
 *   **Pauli-X (비트 반전)**: X축 중심으로 $\pi$ 회전. 고전적인 NOT 게이트와 유사.
     *   $X = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$
@@ -156,7 +170,7 @@ draft: true
 
 ### 14. 하다마드 게이트 (Hadamard Gate)
 
-![Hadamard Gate Slide](../post8/slide14.png)
+![Hadamard Gate Slide](slide14.png)
 
 *   **Hadamard (H)**: 중첩을 생성합니다. 기저 상태를 중첩 상태로 매핑합니다.
     *   $H = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$
@@ -168,7 +182,7 @@ draft: true
 
 ### 15. S와 T 게이트
 
-![S and T Gates Slide](../post8/slide15.png)
+![S and T Gates Slide](slide15.png)
 
 *   **S Gate**: Z축 중심으로 $\pi/2$ 회전. ($S = \sqrt{Z}$)
     *   $S = \begin{bmatrix} 1 & 0 \\ 0 & i \end{bmatrix}$
@@ -179,7 +193,7 @@ draft: true
 
 ### 16. 회전 게이트 (Rotation Gates)
 
-![Rotation Gates Slide](../post8/slide16.png)
+![Rotation Gates Slide](slide16.png)
 
 *   **회전 연산자**: X, Y, Z 축을 중심으로 임의의 각도 $\theta$만큼 회전.
     *   $R_x(\theta) = e^{-i\theta X/2} = \cos(\frac{\theta}{2})I - i\sin(\frac{\theta}{2})X$
@@ -190,7 +204,7 @@ draft: true
 
 ### 17. CNOT 게이트
 
-![CNOT Gate Slide](../post8/slide17.png)
+![CNOT Gate Slide](slide17.png)
 
 *   **Controlled-NOT (CNOT)**: 2-큐비트 게이트.
 *   **논리**: **제어(Control)** 큐비트가 $|1\rangle$이면 타겟 큐비트를 반전(X 적용)시킵니다. 제어가 $|0\rangle$이면 아무것도 하지 않습니다.
@@ -200,7 +214,7 @@ draft: true
 
 ### 18. SWAP 게이트
 
-![SWAP Gate Slide](../post8/slide18.png)
+![SWAP Gate Slide](slide18.png)
 
 *   **SWAP**: 두 큐비트의 상태를 교환합니다.
     *   $|a, b\rangle \rightarrow |b, a\rangle$
@@ -210,7 +224,7 @@ draft: true
 
 ### 19. 토폴리 게이트 (Toffoli Gate)
 
-![Toffoli Gate Slide](../post8/slide19.png)
+![Toffoli Gate Slide](slide19.png)
 
 *   **Toffoli Gate**: 3-큐비트 게이트 (Controlled-Controlled-NOT).
 *   **논리**: 두 개의 제어 비트가 **모두** $|1\rangle$일 때만 타겟 비트를 반전시킵니다.
@@ -220,7 +234,7 @@ draft: true
 
 ### 20. 위상 킥백 (Phase Kickback)
 
-![Phase Kickback Slide](../post8/slide20.png)
+![Phase Kickback Slide](slide20.png)
 
 *   **위상 킥백**: 순수하게 양자적인 현상.
 *   제어 게이트가 타겟 연산의 고유 벡터(eigenvector)에 작용할 때, 고유값의 위상이 제어 큐비트로 "반동(kick back)"되어 돌아옵니다.
@@ -231,7 +245,7 @@ draft: true
 
 ### 21. 벨 상태와 얽힘
 
-![Bell States Slide](../post8/slide21.png)
+![Bell States Slide](slide21.png)
 
 *   **벨 상태 (Bell States)**: 최대 얽힘 상태인 4개의 2-큐비트 상태.
     *   $|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$
@@ -244,7 +258,7 @@ draft: true
 
 ### 22. 측정과 기댓값
 
-![Measurement Slide](../post8/slide22.png)
+![Measurement Slide](slide22.png)
 
 *   다중 큐비트를 측정하면 샘플 이진 문자열을 얻습니다.
 *   **기댓값 ($\langle \sigma_z \rangle$)**:
@@ -255,7 +269,7 @@ draft: true
 
 ### 23. 측정 불확실성 (Wald Interval)
 
-![Wald Interval Slide](../post8/slide23.png)
+![Wald Interval Slide](slide23.png)
 
 *   유한한 샘플로부터 확률을 추정하므로 불확실성이 존재합니다.
 *   **Wald Interval**: 확률 $p$에 대한 간단한 신뢰 구간.
@@ -265,7 +279,7 @@ draft: true
 
 ### 24. 정밀도를 위한 필요 샘플 수
 
-![Sample Size Slide](../post8/slide24.png)
+![Sample Size Slide](slide24.png)
 
 *   특정 정밀도 $\epsilon$를 높은 신뢰도로 얻기 위해 필요한 샷 수 $S$는 $1/\epsilon$의 제곱에 비례합니다.
     *   $\epsilon=0.01$을 위해 약 17,000번의 샘플링이 필요합니다.
@@ -274,7 +288,7 @@ draft: true
 
 ### 25. 윌슨 스코어 구간 (Wilson Score Interval)
 
-![Wilson Score Slide](../post8/slide25.png)
+![Wilson Score Slide](slide25.png)
 
 *   **Wilson Score Interval**: $p$가 0이나 1에 가까울 때(Wald interval이 실패하는 경우) 더 강건한 신뢰 구간입니다.
 
@@ -282,15 +296,19 @@ draft: true
 
 ### 26. 병렬성 & 도이치-조사
 
-![Parallelism Title Slide](../post8/slide26.png)
+![Parallelism Title Slide](slide26.png)
 
-양자 컴퓨터가 어떻게 정보를 병렬로 처리하는지에 대한 소개.
+양자 컴퓨터가 어떻게 정보를 병렬로 처리하는지에 대한 소개. 이 절은 양자 컴퓨팅의 핵심 능력인 **양자 병렬성(Quantum Parallelism)**을 구체적인 알고리즘으로 보여줍니다.
+
+**핵심 질문**: 중첩 덕분에 동시에 $2^n$개의 입력을 처리할 수 있다면, 실제로 얼마나 유용한가?
+
+고전 컴퓨터가 $f(0), f(1), f(2), ...$를 순차적으로 계산하는 반면, 양자 컴퓨터는 $n$개의 큐비트를 중첩 상태에 두면 $2^n$개의 입력에 대한 $f$를 동시에 평가할 수 있습니다. 하지만 측정하면 하나의 결과만 얻으므로, **전역적인 성질**을 추출하는 영리한 알고리즘이 필요합니다. 도이치-조사(Deutsch-Jozsa) 알고리즘은 이를 완벽하게 보여주는 첫 번째 예제입니다.
 
 ---
 
 ### 27. 양자 병렬성 (Quantum Parallelism)
 
-![Quantum Parallelism Slide](../post8/slide27.png)
+![Quantum Parallelism Slide](slide27.png)
 
 *   **개념**: 입력의 중첩 상태에 함수 $U_f$를 평가함으로써, 모든 가능한 출력의 중첩을 생성합니다.
     *   $|\psi\rangle = \frac{1}{\sqrt{2}}(|0\rangle|f(0)\rangle + |1\rangle|f(1)\rangle)$
@@ -300,7 +318,7 @@ draft: true
 
 ### 28. 도이치 알고리즘 (Deutsch Algorithm)
 
-![Deutsch Algorithm Slide](../post8/slide28.png)
+![Deutsch Algorithm Slide](slide28.png)
 
 *   **문제**: 함수 $f: \{0,1\} \rightarrow \{0,1\}$가 주어졌을 때, $f$가 **상수(Constant)** ($f(0)=f(1)$)인지 **균형(Balanced)** ($f(0) \neq f(1)$)인지 판별하라.
 *   **이점**: 고전 컴퓨터는 2번의 쿼리가 필요하지만, 도이치 알고리즘은 단 **1번의 쿼리**만 필요합니다.
@@ -309,7 +327,7 @@ draft: true
 
 ### 29. 도이치 알고리즘 단계 1
 
-![Deutsch Derivation 1 Slide](../post8/slide29.png)
+![Deutsch Derivation 1 Slide](slide29.png)
 
 *   $|0\rangle|1\rangle$에서 시작하여 하다마드 게이트를 적용해 $|+\rangle|-\rangle$ 상태를 만듭니다.
 *   오라클 $U_f$를 적용합니다. 위상 킥백 메커니즘(타겟이 $|-\rangle$이므로)에 의해 함수 값 $f(x)$가 첫 번째 큐비트의 위상으로 인코딩됩니다.
@@ -318,7 +336,7 @@ draft: true
 
 ### 30. 도이치 알고리즘 결론
 
-![Deutsch Derivation 2 Slide](../post8/slide30.png)
+![Deutsch Derivation 2 Slide](slide30.png)
 
 *   오라클 적용 후 첫 번째 큐비트에 다시 하다마드 게이트를 적용하면:
     *   $f$가 상수이면, $|0\rangle$이 측정됩니다.
@@ -329,7 +347,7 @@ draft: true
 
 ### 31. 도이치-조사 알고리즘
 
-![Deutsch-Jozsa Algorithm Slide](../post8/slide31.png)
+![Deutsch-Jozsa Algorithm Slide](slide31.png)
 
 *   **일반화**: 도이치 알고리즘을 $n$ 큐비트로 확장.
 *   **문제**: 함수 $f: \{0,1\}^n \rightarrow \{0,1\}$.
@@ -341,7 +359,7 @@ draft: true
 
 ### 32. 도이치-조사 알고리즘 유도 (1)
 
-![Deutsch-Jozsa Derivation 1 Slide](../post8/slide32.png)
+![Deutsch-Jozsa Derivation 1 Slide](slide32.png)
 
 *   **단계 I**: 초기 상태 $|\psi_0\rangle = |0\rangle^{\otimes n} \otimes |1\rangle$.
 *   **단계 II**: 모든 큐비트에 하다마드 게이트를 적용해 중첩 생성.
@@ -353,7 +371,7 @@ draft: true
 
 ### 33. 도이치-조사 알고리즘 유도 (2)
 
-![Deutsch-Jozsa Derivation 2 Slide](../post8/slide33.png)
+![Deutsch-Jozsa Derivation 2 Slide](slide33.png)
 
 *   **단계 IV**: 다시 입력 큐비트들에 하다마드 게이트 적용.
 *   **결론**:
@@ -364,15 +382,22 @@ draft: true
 
 ### 34. 인코딩 전략 (Encoding Strategies)
 
-![Encoding Title Slide](../post8/slide34.png)
+![Encoding Title Slide](slide34.png)
 
-고전 데이터를 양자 시스템에 어떻게 표현할 것인가.
+고전 데이터를 양자 시스템에 어떻게 표현할 것인가. 이것은 QML에서 가장 실용적이면서도 어려운 문제 중 하나입니다.
+
+**왜 인코딩이 중요한가?** 양자 컴퓨터는 고전 데이터를 직접 처리할 수 없습니다. 우리가 가진 고전 데이터(이미지, 텍스트, 숫자 등)를 양자 상태로 변환해야만 양자 알고리즘을 실행할 수 있습니다. 인코딩 방식에 따라:
+- 필요한 큐비트 수가 달라집니다.
+- 회로의 깊이(복잡도)가 달라집니다.
+- 양자 이점을 얻을 수 있는지 여부가 결정됩니다.
+
+이 절에서는 네 가지 주요 인코딩 전략(기저, 진폭, 시간 발전, 해밀토니안)을 각각의 장단점과 함께 살펴봅니다.
 
 ---
 
 ### 35. 기저 인코딩 (Basis Encoding)
 
-![Basis Encoding Slide](../post8/slide35.png)
+![Basis Encoding Slide](slide35.png)
 
 *   **기저 인코딩**: 고전 $n$-비트 문자열을 $n$ 큐비트의 계산 기저 상태로 직접 매핑.
     *   예: $x=0.1$ (이진수 $0.00...$) $\rightarrow |00...\rangle$.
@@ -383,7 +408,7 @@ draft: true
 
 ### 36. 진폭 인코딩 (Amplitude Encoding)
 
-![Amplitude Encoding Slide](../post8/slide36.png)
+![Amplitude Encoding Slide](slide36.png)
 
 *   **진폭 인코딩**: 고전 벡터 $x$를 양자 상태의 진폭으로 인코딩 $|\psi_x\rangle = \sum x_i |i\rangle$.
 *   **효율성**: $n$ 큐비트로 $2^n$개의 연속적인 값을 표현 가능 (로그 공간 복잡도).
@@ -393,7 +418,7 @@ draft: true
 
 ### 37. 시간 발전 인코딩 (Time-Evolution Encoding)
 
-![Time-Evolution Encoding Slide](../post8/slide37.png)
+![Time-Evolution Encoding Slide](slide37.png)
 
 *   **시간 발전 인코딩**: 실수 값 $x$를 유니타리 발전 연산자 $U(x) = e^{-ixH}$의 시간 파라미터 $t$로 인코딩.
 *   파울리 회전 게이트와 자주 사용됨 (예: $R_x(x) = e^{-ixX/2}$).
@@ -403,7 +428,7 @@ draft: true
 
 ### 38. 해밀토니안 인코딩 (Hamiltonian Encoding)
 
-![Hamiltonian Encoding Slide](../post8/slide38.png)
+![Hamiltonian Encoding Slide](slide38.png)
 
 *   **해밀토니안 인코딩**: 비-에르미트 행렬 $A$를 더 큰 에르미트 행렬 $H_A = \begin{pmatrix} 0 & A \\ A^\dagger & 0 \end{pmatrix}$로 인코딩.
 *   양자 시뮬레이션 기술($U = e^{-iH_At}$)을 사용하여 임의의 행렬을 처리할 수 있게 함.
@@ -412,7 +437,7 @@ draft: true
 
 ### 39. 인코딩 요약
 
-![Encoding Summary Slide](../post8/slide39.png)
+![Encoding Summary Slide](slide39.png)
 
 *   다양한 인코딩 전략 비교 시각화:
     *   **Basis**: 이진 문자열 $\rightarrow$ 기저 상태.
@@ -424,15 +449,20 @@ draft: true
 
 ### 40. 양자 가속 (Quantum Speedups)
 
-![Quantum Speedups Title Slide](../post8/slide40.png)
+![Quantum Speedups Title Slide](slide40.png)
 
-양자 이점의 종류와 기원을 이해하기.
+양자 이점의 종류와 기원을 이해하기. "양자 컴퓨터가 모든 문제를 더 빠르게 푸는가?"라는 질문에 대한 답은 **아니오**입니다. 특정 구조를 가진 문제에서만 이점이 있습니다.
+
+*   **지수적 가속 (Exponential Speedup)**: 고전 알고리즘 대비 지수적으로 빠른 경우. 예: 쇼어 알고리즘(소인수분해, $\mathcal{O}(e^{n^{1/3}}) \rightarrow \mathcal{O}(n^3)$), 도이치-조사 알고리즘.
+*   **이차적 가속 (Quadratic Speedup)**: 고전 알고리즘 대비 제곱근만큼 빠른 경우. 예: 그로버 검색($\mathcal{O}(N) \rightarrow \mathcal{O}(\sqrt{N})$).
+*   **가속의 원천**: 중첩(superposition), 간섭(interference), 얽힘(entanglement).
+*   **중요한 주의사항**: 양자 알고리즘이 빠르더라도 데이터를 양자 상태로 인코딩하는 비용, 측정에 의한 통계적 불확실성, NISQ 기기의 노이즈 등을 고려해야 합니다. "입출력 병목(I/O bottleneck)"이 실질적인 이점을 상쇄할 수 있습니다.
 
 ---
 
 ### 41. Big-O 표기법
 
-![Big-O Notation Slide](../post8/slide41.png)
+![Big-O Notation Slide](slide41.png)
 
 *   **$\mathcal{O}(g(x))$**: 상한(Upper bound). 알고리즘이 아무리 느려도 이 정도다.
 *   **$\Omega(g(x))$**: 하한(Lower bound). 알고리즘이 적어도 이만큼은 빠르다.
@@ -442,15 +472,20 @@ draft: true
 
 ### 42. 양자 알고리즘 구현
 
-![Quantum Algorithms Title Slide](../post8/slide42.png)
+![Quantum Algorithms Title Slide](slide42.png)
 
-QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니다.
+QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니다. 이 절에서는 실제 양자 머신러닝 알고리즘의 핵심이 되는 세 가지 카테고리를 다룹니다:
+
+*   **중첩(Overlap) 측정**: 두 양자 상태 간의 유사도 $|\langle a|b\rangle|^2$를 측정하는 방법. QML에서 커널 계산, 분류 등에 핵심적으로 활용됩니다. (스왑 테스트, 하다마드 테스트, 반전 테스트)
+*   **그로버 검색**: 이차적 가속을 달성하는 대표적 알고리즘. 데이터베이스 검색, 최적화 문제에 적용 가능합니다.
+*   **변분 양자 알고리즘(VQA)**: NISQ 기기에서 실행 가능한 하이브리드 양자-고전 알고리즘. 파라미터화된 양자 회로와 고전 최적화기를 결합합니다. VQE(에너지 계산), QAOA(조합 최적화)가 대표 예시입니다.
+*   **위상 추정(Phase Estimation)**: 유니타리 연산자의 고유값을 추정하는 중요한 서브루틴. 쇼어 알고리즘과 HHL 선형 방정식 풀이의 핵심입니다.
 
 ---
 
 ### 43. 중첩(Overlap) 측정
 
-![Measuring Overlap Title Slide](../post8/slide43.png)
+![Measuring Overlap Title Slide](slide43.png)
 
 *   **목표**: 두 양자 상태 간의 중첩(유사도) $|\langle a | b \rangle|^2$ 또는 $\langle a | b \rangle$를 측정.
 *   **방법**: 스왑 테스트(Swap Test), 하다마드 테스트, 반전 테스트.
@@ -459,7 +494,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 44. 스왑 테스트 (1부)
 
-![Swap Test 1 Slide](../post8/slide44.png)
+![Swap Test 1 Slide](slide44.png)
 
 *   **설정**: 두 상태 $|a\rangle, |b\rangle$와 상태 $|0\rangle$인 보조(ancilla) 큐비트.
 *   **회로**: 보조 큐비트에 하다마드 $\rightarrow$ 제어 스왑(Fredkin) $\rightarrow$ 보조 큐비트에 하다마드.
@@ -468,7 +503,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 45. 스왑 테스트 (2부)
 
-![Swap Test 2 Slide](../post8/slide45.png)
+![Swap Test 2 Slide](slide45.png)
 
 *   **결과**: 보조 큐비트가 $|0\rangle$ 상태로 측정될 확률:
     *   $P(0) = \frac{1}{2} + \frac{1}{2} |\langle a | b \rangle|^2$
@@ -479,7 +514,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 46. 하다마드 테스트 (실수부)
 
-![Hadamard Test Real Slide](../post8/slide46.png)
+![Hadamard Test Real Slide](slide46.png)
 
 *   **목표**: $\text{Re}(\langle a | b \rangle)$ 추정.
 *   **설정**: 보조 큐비트 $|+\rangle$. 제어 유니타리 연산.
@@ -489,7 +524,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 47. 하다마드 테스트 (허수부)
 
-![Hadamard Test Imaginary Slide](../post8/slide47.png)
+![Hadamard Test Imaginary Slide](slide47.png)
 
 *   **목표**: $\text{Im}(\langle a | b \rangle)$ 추정.
 *   **설정**: 보조 큐비트를 $|-\rangle = \frac{|0\rangle - i|1\rangle}{\sqrt{2}}$로 초기화.
@@ -499,7 +534,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 48. 반전 테스트 (Inversion Test)
 
-![Inversion Test Slide](../post8/slide48.png)
+![Inversion Test Slide](slide48.png)
 
 *   **방법**: $|a\rangle = A|0\rangle, |b\rangle = B|0\rangle$ 준비.
 *   회로 $B^\dagger A |0\rangle$를 실행하고 $|0\rangle$ 확률 측정.
@@ -509,7 +544,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 49. 그로버 검색 (Grover Search)
 
-![Grover Search Slide](../post8/slide49.png)
+![Grover Search Slide](slide49.png)
 
 *   **목표**: 크기 $N$의 정렬되지 않은 데이터베이스에서 표시된 항목 $\omega$ 찾기.
 *   **가속**: 이차(Quadratic) 가속. $\mathcal{O}(\sqrt{N})$ vs 고전 $\mathcal{O}(N)$.
@@ -519,7 +554,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 50. 그로버 검색 단계
 
-![Grover Steps Slide](../post8/slide50.png)
+![Grover Steps Slide](slide50.png)
 
 1.  **초기화**: 균등 중첩 $|s\rangle$.
 2.  **오라클**: 타겟 $|w\rangle$의 위상 반전.
@@ -531,7 +566,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 51. 그로버 검색 시각화
 
-![Grover Visualization Slide](../post8/slide51.png)
+![Grover Visualization Slide](slide51.png)
 
 *   **과정**:
     1.  **균등 중첩**: 모든 진폭이 동일.
@@ -543,7 +578,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 52. 위상 추정 (QFT)
 
-![Phase Estimation QFT Slide](../post8/slide52.png)
+![Phase Estimation QFT Slide](slide52.png)
 
 *   **양자 푸리에 변환 (QFT)**: 이산 푸리에 변환(DFT)의 양자 유사체.
 *   계산 기저 상태를 푸리에 기저 상태로 매핑합니다.
@@ -552,7 +587,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 53. 위상 추정 (위상 추정하기)
 
-![Phase Estimation 1 Slide](../post8/slide53.png)
+![Phase Estimation 1 Slide](slide53.png)
 
 *   **목표**: 유니타리 $U$와 고유벡터 $|\psi\rangle$ ($U|\psi\rangle = e^{2\pi i \theta}|\psi\rangle$)가 주어졌을 때, 위상 $\theta$를 추정.
 *   **회로**:
@@ -564,7 +599,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 54. 위상 추정 (역 QFT)
 
-![Phase Estimation 2 Slide](../post8/slide54.png)
+![Phase Estimation 2 Slide](slide54.png)
 
 *   **단계 IV**: 첫 번째 레지스터에 역 QFT ($QFT^{-1}$) 적용.
 *   **측정**: 이를 통해 계산 기저에서 위상 $\theta$를 알아냅니다.
@@ -574,7 +609,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 55. 변분 양자 알고리즘 (VQA)
 
-![VQA Slide](../post8/slide55.png)
+![VQA Slide](slide55.png)
 
 *   **VQA**: NISQ(노이즈가 있는 중간 규모 양자) 장치에 적합한 하이브리드 양자-고전 알고리즘.
 *   **메커니즘**:
@@ -586,7 +621,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 56. 변분 양자 고유솔버 (VQE)
 
-![VQE Slide](../post8/slide56.png)
+![VQE Slide](slide56.png)
 
 *   **VQE**: 해밀토니안 $H$의 바닥 상태 에너지(최소 고유값)를 찾습니다.
 *   **목표**: $C(\theta) = \langle \psi(\theta) | H | \psi(\theta) \rangle$ 최소화.
@@ -596,7 +631,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 57. VQE 에너지 계산
 
-![VQE Energy Slide](../post8/slide57.png)
+![VQE Energy Slide](slide57.png)
 
 *   기댓값은 시스템의 에너지에 해당합니다.
 *   **양자 화학**에서 분자 에너지(전자 구조)를 시뮬레이션하는 데 널리 사용됩니다.
@@ -605,7 +640,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 58. QAOA
 
-![QAOA Slide](../post8/slide58.png)
+![QAOA Slide](slide58.png)
 
 *   **양자 근사 최적화 알고리즘 (QAOA)**:
 *   조합 최적화 문제(예: MaxCut)를 해결하기 위해 설계된 VQA.
@@ -615,7 +650,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 59. 양자 어닐링 (Quantum Annealing)
 
-![Quantum Annealing Title Slide](../post8/slide59.png)
+![Quantum Annealing Title Slide](slide59.png)
 
 양자 요동(fluctuation)을 이용한 최적화 기법.
 
@@ -623,7 +658,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 60. 양자 어닐링 vs 열 어닐링
 
-![Quantum Annealing Slide](../post8/slide60.png)
+![Quantum Annealing Slide](slide60.png)
 
 *   **열 어닐링 (Thermal Annealing)**: 열적 요동을 이용해 에너지 장벽을 넘습니다 (지역 최솟값에 갇힐 수 있음).
 *   **양자 어닐링 (Quantum Annealing)**: **양자 터널링**을 이용해 에너지 장벽을 *통과*합니다. 전역 최적해를 더 효율적으로 찾을 가능성이 있습니다.
@@ -632,7 +667,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 61. 향후 주제 (Future Topics)
 
-![Future Topics Slide](../post8/slide61.png)
+![Future Topics Slide](slide61.png)
 
 *   **알고리즘**: 양자 전송(Teleportation), HHL (선형 시스템), 쇼어 알고리즘 (소인수분해).
 *   **머신러닝**: 커널 방법 (QSVM), 양자 PCA, 양자 경사 하강법.
@@ -641,7 +676,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 62. 커널 방법 (Kernel Methods)
 
-![Kernel Methods Slide](../post8/slide62.png)
+![Kernel Methods Slide](slide62.png)
 
 *   **커널 트릭**: 데이터를 선형 분리가 가능할 수 있는 고차원 특징 공간으로 매핑.
 *   $K(x, x') = \langle \phi(x), \phi(x') \rangle$.
@@ -650,7 +685,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 63. 양자 커널 추정
 
-![Quantum Kernel Slide](../post8/slide63.png)
+![Quantum Kernel Slide](slide63.png)
 
 *   양자 컴퓨터는 고전적으로 계산하기 어려운 커널을 추정할 수 있습니다.
 *   **방법**:
@@ -663,7 +698,7 @@ QML에서 사용되는 구체적인 서브루틴과 알고리즘을 살펴봅니
 
 ### 64. 참고문헌 (Reference)
 
-![Reference Slide](../post8/slide64.png)
+![Reference Slide](slide64.png)
 
 *   **논문**: *Supervised learning with quantum enhanced feature spaces* (Havlicek et al., Nature 2019).
 *   양자 커널 방법의 기초 논문.
