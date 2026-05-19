@@ -21,13 +21,13 @@ Blog List Partial (우측 하단 절대 고정 버전)
   <div class="flex flex-wrap" style="gap: 16px !important;">
     {{ $isAllActive := ne .Kind "term" }}
     <a href="/blog/"
-      class="inline-flex items-center justify-center h-11 rounded-lg font-bold border glass-button {{ if $isAllActive }}active{{ end }}">
+      class="inline-flex items-center justify-center h-8 rounded-lg font-bold border glass-button {{ if $isAllActive }}active{{ end }}">
       All
     </a>
     {{ range .Site.Taxonomies.categories }}
     {{ $isCurrent := eq $.Title .Page.Title }}
     <a href="{{ .Page.RelPermalink }}"
-      class="inline-flex items-center justify-center h-11 rounded-lg font-bold border glass-button {{ if $isCurrent }}active{{ end }}">
+      class="inline-flex items-center justify-center h-8 rounded-lg font-bold border glass-button {{ if $isCurrent }}active{{ end }}">
       {{ .Page.Title }}
     </a>
     {{ end }}
@@ -74,6 +74,8 @@ Blog List Partial (우측 하단 절대 고정 버전)
             {{ $colorClass = "!border-blue-600/50 !bg-blue-600/20 !text-blue-700 dark:!text-blue-400" }}
             {{ else if eq $catLower "readings" }}
             {{ $colorClass = "!border-rose-600/50 !bg-rose-600/20 !text-rose-700 dark:!text-rose-400" }}
+            {{ else if eq $catLower "optics" }}
+            {{ $colorClass = "!border-yellow-500/50 !bg-yellow-500/20 !text-yellow-700 dark:!text-yellow-400" }}
             {{ end }}
             <span
               class="flex items-center justify-center rounded-full border px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider {{ $colorClass }}">
