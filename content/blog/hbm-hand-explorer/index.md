@@ -4,8 +4,8 @@ subtitle: "웹캠과 손 제스처만으로 HBM 3D 구조를 분해·조립하�
 summary: "Three.js와 MediaPipe를 활용해 HBM(High Bandwidth Memory)의 적층 구조를 손 제스처로 분해하고 회전할 수 있는 웹 인터랙티브 뷰어를 만들었습니다."
 date: 2026-05-31
 categories: ["Physics", "Semiconductor"]
-cardimage: "hbm-hand-explorer/cover.jpg"
-featureimage: "hbm-hand-explorer/cover2.jpg"
+cardimage: "hbm-post/cover.jpg"
+featureimage: "hbm-post/cover2.jpg"
 caption: "HBM Hand Explorer — 손 제스처로 HBM 구조를 탐험해보세요"
 authors:
   - suawiu: author.jpeg
