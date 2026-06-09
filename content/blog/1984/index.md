@@ -1,5 +1,5 @@
 ---
-title: "[Review] George Orwell의 '1984' : 기대와는 달랐던, 지독하게 현실적인 패배의 기록"
+title: "[Review] George Orwell의 '1984' - 기대와는 달랐던, 지독하게 현실적인 패배의 기록"
 subtitle: "자유는 예속, 무지는 힘"
 summary: “자유는 예속, 무지는 힘"
 date: 2025-11-22
