@@ -47,7 +47,7 @@ Education
 </svg>
 Research Interests
 </h2>
-<div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
 <a href="/categories/quantum-computing/" class="flex flex-col justify-between p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-[120px] no-underline">
 <div>
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Quantum Computing</h3>
