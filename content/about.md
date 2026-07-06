@@ -48,33 +48,33 @@ Education
 Research Interests
 </h2>
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-<a href="/categories/quantum-computing/" class="flex flex-col justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
+<a href="/categories/quantum-computing/" class="flex flex-col justify-between px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
 <div>
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Quantum Computing</h3>
 <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Superconducting Qubits, Circuit QED, Quantum Error Correction, Quantum Machine Learning</p>
 </div>
-<span class="mt-1 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
+<span class="mt-0 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
 View posts
 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
 </span>
 </a>
-<a href="/categories/optics/" class="flex flex-col justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
+<a href="/categories/optics/" class="flex flex-col justify-between px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
 <div>
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Optics</h3>
 <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Quantum Optics, Light-Matter Interaction, Quantum Sensing</p>
 </div>
-<span class="mt-1 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
+<span class="mt-0 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
 View posts
 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
 </span>
 </a>
 
-<a href="/categories/semiconductor/" class="flex flex-col justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
+<a href="/categories/semiconductor/" class="flex flex-col justify-between px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
 <div>
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Semiconductor</h3>
 <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Semiconductor Fabrication, Device Physics, Process Integration</p>
 </div>
-<span class="mt-1 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
+<span class="mt-0 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
 View posts
 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
 </span>
@@ -111,13 +111,13 @@ Experience
 <div class="w-full">
 <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Undergraduate Researcher</strong>
-<span class="text-slate-500 font-mono text-sm whitespace-nowrap">Mar 2026 – Present</span>
+<span class="text-slate-500 font-mono text-sm whitespace-nowrap">Mar 2026 – Jul 2026</span>
 </div>
 <div class="text-slate-700 dark:text-slate-300">Quantum Optics Lab, Yonsei University</div>
 <div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Advisor: Prof. Seongjin Hong</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Study and implement the active optical intensity interferometry framework presented in <em>Active Optical Intensity Interferometry</em> (Phys. Rev. Lett., 2025).</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Develop simulation code and perform data processing and analysis for correlation-based image reconstruction in optical interferometry.</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Participate in optical experiments to test and reproduce interferometric imaging schemes for long-baseline, high-resolution sensing.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Studied and implemented the active optical intensity interferometry framework presented in <em>Active Optical Intensity Interferometry</em> (Phys. Rev. Lett., 2025).</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Developed simulation code and performed data processing and analysis for correlation-based image reconstruction in optical interferometry.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Participated in optical experiments to test and reproduce interferometric imaging schemes for long-baseline, high-resolution sensing.</div>
 </div>
 </li>
 <!-- Item 1 -->
