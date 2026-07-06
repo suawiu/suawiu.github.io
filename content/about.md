@@ -68,16 +68,7 @@ View posts
 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
 </span>
 </a>
-<a href="/categories/data-analysis/" class="flex flex-col justify-between p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-[120px] no-underline">
-<div>
-<h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Data Analysis</h3>
-<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Financial Time Series Analysis, Statistical Modeling</p>
-</div>
-<span class="mt-3 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
-View posts
-<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-</span>
-</a>
+
 <a href="/categories/semiconductor/" class="flex flex-col justify-between p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-[120px] no-underline">
 <div>
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Semiconductor</h3>
