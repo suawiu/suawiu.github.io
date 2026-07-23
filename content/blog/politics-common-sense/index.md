@@ -3,7 +3,7 @@ title: "[Review] 이 정도는 알아야 할 정치의 상식 - 이념의 소음
 subtitle: "보수와 진보, 그리고 상식의 정치를 향하여"
 summary: "신동기 작가의 《이 정도는 알아야 할 정치의 상식》 리뷰: 이념의 소음 속에서 균형 잡힌 시각 갖기."
 date: 2025-02-24
-categories: ["Readings", "Perspective"]
+categories: ["Insights"]
 cardimage: "politics-common-sense/cover.jpg"
 featureimage: "politics-common-sense/featured.jpg"
 params:

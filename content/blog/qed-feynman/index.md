@@ -3,7 +3,7 @@ title: "[Review] 일반인을 위한 파인만의 QED 강의 - 물리학자의 �
 subtitle: "상식을 파괴하는 파인만 식 관점과, 거대한 산 앞에서 느끼는 겸손"
 summary: "리처드 파인만의 《QED 강의》 리뷰: 물리학자의 물리학자가 가르쳐준 지식과 태도."
 date: 2025-08-01
-categories: ["Readings", "Perspective", "Physics"]
+categories: ["Insights", "Physics"]
 cardimage: "qed-feynman/cover.jpg"
 featureimage: "qed-feynman/featured.jpg"
 params:

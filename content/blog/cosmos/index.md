@@ -3,7 +3,7 @@ title: "[Review] 코스모스 - 별에서 온 우리가 별을 향해 돛을 올
 subtitle: "별에서 온 우리가 별을 향해 돛을 올리기까지"
 summary: "칼 세이건의 불멸의 고전 '코스모스' 리뷰입니다."
 date: 2024-12-27
-categories: ["Readings", "Perspective", "Physics"]
+categories: ["Insights", "Physics"]
 cardimage: "cosmos/cover.jpg"
 featureimage: "cosmos/featured.jpeg"
 params:

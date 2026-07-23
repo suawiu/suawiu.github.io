@@ -3,7 +3,7 @@ title: "[Review] George Orwell의 '1984' - 기대와는 달랐던, 지독하게 
 subtitle: "자유는 예속, 무지는 힘"
 summary: “자유는 예속, 무지는 힘"
 date: 2025-11-22
-categories: ["Perspective", "Readings"]
+categories: ["Insights"]
 cardimage: 1984.jpeg
 featureimage: 1984(2).jpeg
 caption: 1984

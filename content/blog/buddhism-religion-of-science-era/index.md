@@ -1,8 +1,8 @@
 ---
-title: "[Review] 과학의 시대, 왜 불교인가? - 우찬툰의 ‘불교: 과학 시대의 종교’"
+title: "[Review] 불교-과학 시대의 종교 - 과학의 시대, 왜 불교인가?"
 date: 2025-01-22
 summary: "과학시대의 종교, 그 가운데 불교의 역할"
-categories: ["Perspective", "Readings"]
+categories: ["Insights"]
 cardimage: "post9/cover.png"
 featureimage: "post9/cover.png"
 tags: ["불교", "과학과종교", "우찬툰", "아인슈타인", "독후감", "책리뷰", "인생책", "철학공부"]

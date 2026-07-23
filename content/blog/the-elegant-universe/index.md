@@ -3,7 +3,7 @@ title: "[Review] 엘리건트 유니버스 - 그림자 너머 실체를 쫓는 �
 subtitle: "초끈이론과 숨겨진 차원, 그리고 궁극의 이론을 향한 탐구 여행"
 summary: '초끈이론에 대한 브라이언 그린의 명저 "엘리건트 유니버스" 리뷰'
 date: 2026-02-05
-categories: ["Readings", "Perspective", "Physics"]
+categories: ["Insights", "Physics"]
 cardimage: "the-elegant-universe/cover.webp"
 featureimage: "the-elegant-universe/featured.jpeg"
 params:

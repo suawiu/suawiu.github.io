@@ -3,7 +3,7 @@ title: "[Review] 살인자의 기억법 - 무너져 내리는 기억의 성벽 �
 subtitle: "기억이 사라지는 속도보다 더 빠르게 당신의 심장을 조여오는 지독한 추리극"
 summary: "김영하 작가의 《살인자의 기억법》 리뷰: 무너져 내리는 기억의 성벽 위에 세운 지독한 반전."
 date: 2025-10-14
-categories: ["Readings", "Perspective"]
+categories: ["Insights"]
 cardimage: "memoir-of-a-murderer/cover.jpg"
 featureimage: "memoir-of-a-murderer/featured.jpg"
 params:

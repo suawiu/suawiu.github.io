@@ -3,7 +3,7 @@ title: "[Review] 사피엔스 - 인류라는 종이 써 내려간 거대한 허�
 subtitle: "우리가 믿고 있는 모든 실체가 '허구'임을 깨닫는 순간, 비로소 진짜 미래가 보이기 시작합니다."
 summary: "유발 하라리의 《사피엔스》 리뷰: 인류라는 종이 써 내려간 거대한 허구와 혁명의 기록."
 date: 2025-12-31
-categories: ["Readings", "Perspective"]
+categories: ["Insights"]
 cardimage: "sapiens/cover.jpg"
 featureimage: "sapiens/featured.jpg"
 params:
