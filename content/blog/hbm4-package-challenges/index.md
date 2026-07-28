@@ -3,7 +3,9 @@ title: "[Paper Review] HBM4 패키지 개발의 도전과제"
 subtitle: "12단 스태킹과 Advanced Packaging 환경에서의 열기계적 스트레스 상호작용"
 summary: "SK hynix의 VLSI 2025 발표 논문 리뷰: HBM4 패키지 개발 과정에서 직면한 두께 감소, 갭 충전, ELK 스트레스 문제와 그 해결 방향."
 date: 2026-07-28
-categories: ["Semiconductor", "Physics"]
+categories: ["Semiconductor", "Physics", "Insights"]
+cardimage: "hbm4-package-challenges/fig5.jpg"
+featureimage: "hbm4-package-challenges/image.jpg"
 params:
   math: false
 ---
