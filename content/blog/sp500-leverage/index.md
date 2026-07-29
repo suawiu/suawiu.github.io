@@ -1,5 +1,5 @@
 ---
-title: S&P500 3배 레버리지 장기투자
+title: "[Paper Review] S&P500 3배 레버리지 장기투자"
 subtitle: "Alpha Generation and Risk Smoothing Using Managed Volatility"
 summary: "논문 리뷰로 보는 S&P500 3배 레버리지 장기투자에 대한 고찰"
 date: 2026-01-08
