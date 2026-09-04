@@ -278,7 +278,7 @@ Activities
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Yonsei University Library Student Council</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">Sep 2026 – Present</span>
 </div>
-<div class="text-slate-700 dark:text-slate-300">Member</div>
+<div class="text-slate-700 dark:text-slate-300">Participating in library support and student volunteer activities.</div>
 </div>
 </li>
 <li class="flex items-start group">
