@@ -186,7 +186,7 @@ html.dark .menu-panel {
   transform: translateY(20px);
   /* transition에 transform이 포함되어 있어 호버 애니메이션도 부드럽게 작동합니다 */
   /* Color transition speed increased as requested */
-  transition: color 0.1s ease-out, transform 0.4s cubic-bezier(.16, 1, .3, 1), opacity 0.4s;
+  transition: color 0.3s ease, transform 0.3s ease, opacity 0.4s;
   display: inline-block;
   position: relative;
   color: #000000;
@@ -201,6 +201,12 @@ html.dark .menu-item {
 #fullscreen-menu.active .menu-item {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* 호버 시 transition-delay 리셋 */
+#fullscreen-menu.active .menu-item:hover,
+#fullscreen-menu.active .menu-item:hover::after {
+  transition-delay: 0s !important;
 }
 
 /* 🔥 마우스 호버 효과 (X축 이동으로 변경) */
@@ -226,7 +232,7 @@ html.dark .menu-item:hover {
   bottom: -2px;
   left: 0;
   background-color: currentColor;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .menu-item:hover::after {
@@ -234,16 +240,20 @@ html.dark .menu-item:hover {
 }
 
 /* 등장 딜레이 */
-.menu-item:nth-child(1) {
+#fullscreen-menu.active .menu-item:nth-child(1) {
   transition-delay: 0.2s;
 }
 
-.menu-item:nth-child(2) {
+#fullscreen-menu.active .menu-item:nth-child(2) {
   transition-delay: 0.4s;
 }
 
-.menu-item:nth-child(3) {
+#fullscreen-menu.active .menu-item:nth-child(3) {
   transition-delay: 0.6s;
+}
+
+#fullscreen-menu.active .menu-item:nth-child(4) {
+  transition-delay: 0.8s;
 }
 
 /* =========================

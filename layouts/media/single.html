@@ -1,0 +1,48 @@
+{{ define "main" }}
+<div class="mx-auto mb-16 mt-12 max-w-4xl px-4">
+
+  <div class="mb-10">
+    <h1 class="text-4xl font-extrabold text-black dark:text-slate-200">Media</h1>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    {{ range .Params.items }}
+    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+      class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700/50 bg-white dark:bg-slate-800/50 hover:border-cyan-400 dark:hover:border-cyan-500 hover:shadow-lg transition-all duration-300 no-underline">
+
+      {{ with .image }}
+      <div class="overflow-hidden">
+        <img src="{{ . }}" alt=""
+          class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+      </div>
+      {{ end }}
+
+      <div class="flex flex-col flex-1 p-4 gap-2">
+        <div class="flex items-center justify-between gap-2 flex-wrap">
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-full
+            {{ if eq .source "SK hynix Newsroom" }}bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400
+            {{ else if eq .source "GQ Korea" }}bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300
+            {{ else }}bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400{{ end }}">
+            {{ .source }}
+          </span>
+          <span class="text-xs text-slate-400 dark:text-slate-500 font-mono">{{ .date }}</span>
+        </div>
+
+        <h2 class="text-sm font-bold text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors leading-snug line-clamp-3 flex-1">
+          {{ .title }}
+        </h2>
+
+        <div class="flex items-center gap-1 text-xs font-medium text-cyan-600 dark:text-cyan-400 mt-1">
+          <span>기사 보기</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </div>
+
+    </a>
+    {{ end }}
+  </div>
+
+</div>
+{{ end }}
