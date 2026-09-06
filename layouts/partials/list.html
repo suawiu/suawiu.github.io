@@ -57,32 +57,29 @@ Blog List Partial (우측 하단 절대 고정 버전)
         {{/* 텍스트 영역 */}}
         <div class="flex flex-col p-6 w-3/5 h-full relative">
 
-          {{/* 🚀 1. 상단: 카테고리 (Pill Shape) - Refined Size & Centering */}}
+          {{/* 🚀 1. 상단: 카테고리 (Hashtag Style) */}}
           <div class="mb-4 flex flex-wrap gap-2">
             {{ range .Params.categories }}
-            {{ $colorClass := "!border-slate-600/50 !bg-slate-600/20 !text-slate-700 dark:!text-slate-400" }}
+            {{ $colorClass := "text-slate-500 dark:text-slate-400" }}
             {{ $catLower := lower . }}
             {{ if eq $catLower "physics" }}
-            {{ $colorClass = "!border-cyan-600/50 !bg-cyan-600/20 !text-cyan-700 dark:!text-cyan-400" }}
+            {{ $colorClass = "text-cyan-600 dark:text-cyan-400" }}
             {{ else if eq $catLower "projects" }}
-            {{ $colorClass = "!border-violet-600/50 !bg-violet-600/20 !text-violet-700 dark:!text-violet-400" }}
+            {{ $colorClass = "text-violet-600 dark:text-violet-400" }}
             {{ else if eq $catLower "perspective" }}
-            {{ $colorClass = "!border-emerald-600/50 !bg-emerald-600/20 !text-emerald-700 dark:!text-emerald-400" }}
+            {{ $colorClass = "text-emerald-600 dark:text-emerald-400" }}
             {{ else if eq $catLower "quantum computing" }}
-            {{ $colorClass = "!border-indigo-600/50 !bg-indigo-600/20 !text-indigo-700 dark:!text-indigo-400" }}
+            {{ $colorClass = "text-indigo-600 dark:text-indigo-400" }}
             {{ else if eq $catLower "data analysis" }}
-            {{ $colorClass = "!border-blue-600/50 !bg-blue-600/20 !text-blue-700 dark:!text-blue-400" }}
+            {{ $colorClass = "text-blue-600 dark:text-blue-400" }}
             {{ else if eq $catLower "insights" }}
-            {{ $colorClass = "!border-red-600/50 !bg-red-600/20 !text-red-700 dark:!text-red-400" }}
+            {{ $colorClass = "text-red-500 dark:text-red-400" }}
             {{ else if eq $catLower "optics" }}
-            {{ $colorClass = "!border-yellow-500/50 !bg-yellow-500/20 !text-yellow-700 dark:!text-yellow-400" }}
+            {{ $colorClass = "text-yellow-500 dark:text-yellow-400" }}
             {{ else if eq $catLower "semiconductor" }}
-            {{ $colorClass = "!border-orange-500/50 !bg-orange-500/20 !text-orange-700 dark:!text-orange-400" }}
+            {{ $colorClass = "text-orange-500 dark:text-orange-400" }}
             {{ end }}
-            <span
-              class="flex items-center justify-center rounded-full border px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider {{ $colorClass }}">
-              {{ . }}
-            </span>
+            <span class="text-[10px] font-bold uppercase tracking-wider {{ $colorClass }}">#{{ . }}</span>
             {{ end }}
           </div>
 
