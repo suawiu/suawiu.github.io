@@ -78,7 +78,7 @@ items:
     source: "KC미래장학재단"
     date: "2024-07-25"
     description: "KC미래장학재단 장학생들의 KC 그룹 원데이 투어."
-    image: "http://www.kcffd.org/data/editor/2407/478cd906cf9dccf3355a53ac363e0492_1722238848_7684.jpg"
+    image: "http://www.kcffd.org/data/editor/2407/478cd906cf9dccf3355a53ac363e0492_1722238962_0251.jpg"
     url: "http://www.kcffd.org/bbs/board.php?bo_table=news&wr_id=14"
   - title: "2024년도 KC미래장학재단 7기 장학생 장학증서수여식"
     source: "KC미래장학재단"
