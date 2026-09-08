@@ -146,12 +146,13 @@ html.dark .custom-logo-dark {
   z-index: 9990;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .4s ease;
+  transition: opacity .4s ease, visibility 0s linear .4s;
 }
 
 #fullscreen-menu.active {
   opacity: 1;
   visibility: visible;
+  transition: opacity .4s ease, visibility 0s linear 0s;
 }
 
 /* =========================
