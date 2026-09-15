@@ -3,7 +3,7 @@ title: "손으로 HBM을 해부하다 - HBM Hand Explorer"
 subtitle: "웹캠과 손동작만으로 HBM 3D 구조를 분해·조립하는 Interactive Viewer"
 summary: "Three.js와 MediaPipe를 활용해 HBM을 분해해보자!"
 date: 2026-05-31
-categories: ["Physics", "Semiconductor"]
+categories: ["Physics", "Condensed Matter", "Semiconductor"]
 cardimage: "hbm-post/cover.jpg"
 featureimage: "hbm-post/cover2.jpg"
 caption: "HBM Hand Explorer — 손 제스처로 HBM 구조를 탐험해보세요"

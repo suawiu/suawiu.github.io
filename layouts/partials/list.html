@@ -78,6 +78,8 @@ Blog List Partial (우측 하단 절대 고정 버전)
             {{ $colorClass = "text-yellow-500 dark:text-yellow-400" }}
             {{ else if eq $catLower "semiconductor" }}
             {{ $colorClass = "text-orange-500 dark:text-orange-400" }}
+            {{ else if eq $catLower "condensed matter" }}
+            {{ $colorClass = "text-pink-600 dark:text-pink-400" }}
             {{ end }}
             <span class="text-[10px] font-bold uppercase tracking-wider {{ $colorClass }}">#{{ . }}</span>
             {{ end }}

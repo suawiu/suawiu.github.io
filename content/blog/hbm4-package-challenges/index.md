@@ -3,7 +3,7 @@ title: "[Paper Review] HBM4 패키지 개발의 도전과제"
 subtitle: "12단 스태킹과 Advanced Packaging 환경에서의 열기계적 스트레스 상호작용"
 summary: "SK hynix의 VLSI 2025 발표 논문 리뷰."
 date: 2026-07-28
-categories: ["Semiconductor", "Physics", "Insights"]
+categories: ["Semiconductor", "Physics", "Condensed Matter", "Insights"]
 cardimage: "hbm4-package-challenges/image2.jpg"
 params:
   math: false

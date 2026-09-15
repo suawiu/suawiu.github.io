@@ -3,7 +3,7 @@ title: "[Paper Review] D2W 하이브리드 본딩에서 발생하는 다이 스�
 subtitle: "물리 기반 시뮬레이션으로 본딩 후 다이 변형을 예측하고 70% 저감하는 방법"
 summary: "Applied Materials의 VLSI 2025 발표 논문 리뷰."
 date: 2026-07-29
-categories: ["Semiconductor", "Physics", "Insights"]
+categories: ["Semiconductor", "Physics", "Condensed Matter", "Insights"]
 cardimage: "d2w-die-stretching/image.jpg"
 params:
   math: false

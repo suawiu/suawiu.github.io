@@ -3,7 +3,7 @@ title: "[Paper Review] 웨이퍼 양면을 잇는 고밀도 연결 기술"
 subtitle: "250nm 하이브리드 본딩과 120nm 후면 비아, 그리고 극한 웨이퍼 박형화"
 summary: "IMEC의 VLSI 2025 발표 논문 리뷰."
 date: 2026-07-28
-categories: ["Semiconductor", "Physics", "Insights"]
+categories: ["Semiconductor", "Physics", "Condensed Matter", "Insights"]
 cardimage: "wafer-connectivity-hybrid-bonding/fig2.jpg"
 params:
   math: false

@@ -3,7 +3,7 @@ title: "실리콘 결정 구조와 밀러 지수"
 subtitle: "공유 결합부터 Diamond Cubic 구조, 그리고 Si(100) 웨이퍼가 선택되는 이유까지"
 summary: "실리콘의 공유 결합이 3차원에서 Diamond Cubic 구조를 형성하는 원리, Miller Indices의 정의와 결정 방향 표기법, 그리고 반도체 공정에서 Si(100) 웨이퍼가 표준으로 쓰이는 이유를 정리합니다."
 date: 2026-06-03
-categories: ["Physics", "Semiconductor"]
+categories: ["Physics", "Condensed Matter", "Semiconductor"]
 cardimage: "silicon-crystal/cover.png"
 featureimage: "silicon-crystal/cover.png"
 caption: "Silicon Crystal Structure and Miller Indices"

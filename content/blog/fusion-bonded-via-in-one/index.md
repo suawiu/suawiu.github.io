@@ -3,7 +3,7 @@ title: "[Paper Review] Via-in-One TSV: 9층 웨이퍼 적층 3D 메모리 아키
 subtitle: "Multiple-Wafer (9-layer), Extreme thin (3µm-Si per stack) and Innovative Fusion-bonded Via-in-one Architecture for High Bandwidth 3D Memory"
 summary: "SAIMEMORY/Intel/Powerchip의 VLSI 2025 발표 논문 리뷰."
 date: 2026-07-29
-categories: ["Semiconductor", "Physics", "Insights"]
+categories: ["Semiconductor", "Physics", "Condensed Matter", "Insights"]
 cardimage: "fusion-bonded-via-in-one/fig1.jpg"
 authors:
   - suawiu: author.jpeg

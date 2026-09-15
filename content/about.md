@@ -91,10 +91,10 @@ View posts
 </span>
 </a>
 
-<a href="/categories/semiconductor/" class="flex flex-col justify-between px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
+<a href="/categories/condensed-matter/" class="flex flex-col justify-between px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
 <div>
-<h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Semiconductor</h3>
-<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Semiconductor Fabrication, Device Physics, Process Integration</p>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Condensed Matter</h3>
+<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">2D Materials, Magnetism, Semiconductor Physics, Spectroscopy</p>
 </div>
 <span class="mt-0 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
 View posts

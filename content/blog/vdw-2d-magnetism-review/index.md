@@ -4,7 +4,7 @@ subtitle: "Magnetism in Two-Dimensional van der Waals Materials"
 summary: "Kenneth S. Burch, David Mandrus, Je-Geun Park의 Nature 2018 리뷰 논문."
 date: 2026-09-15
 draft: false
-categories: ["Physics", "Insights"]
+categories: ["Physics", "Condensed Matter", "Insights"]
 cardimage: "vdw-2d-magnetism-review/fig1.jpg"
 authors:
   - suawiu: author.jpeg
