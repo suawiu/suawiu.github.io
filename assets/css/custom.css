@@ -911,3 +911,37 @@ b {
   transform: rotateX(180deg);
   text-align: center;
 }
+
+/* =========================
+   본문 표 모바일 가독성
+   ========================= */
+/* 한글이 글자 단위로 끊기지 않고 어절 단위로 줄바꿈되게 */
+.prose table th,
+.prose table td {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+@media (max-width: 767px) {
+  /* 좁은 화면에서는 표를 가로 스크롤 가능하게 */
+  .prose table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .prose table th,
+  .prose table td {
+    min-width: 7.5em;
+    padding: 0.5em 0.75em;
+    vertical-align: top;
+  }
+
+  .prose table th:first-child,
+  .prose table td:first-child {
+    min-width: 6em;
+  }
+}
