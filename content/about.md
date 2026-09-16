@@ -70,31 +70,30 @@ Education
 Research Interests
 </h2>
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+<a href="/categories/packaging/" class="flex flex-col justify-between px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Advanced Semiconductor Packaging</h3>
+<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Heterogeneous Integration, High-Bandwidth Memory (HBM), 2.5D/3D Integration, Interconnect Technologies, Thermal Management</p>
+</div>
+<span class="mt-0 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
+View posts
+<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+</span>
+</a>
+<a href="/categories/condensed-matter/" class="flex flex-col justify-between px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Condensed Matter Physics</h3>
+<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Semiconductor Physics, Two-Dimensional Materials, Magnetism, Optical Spectroscopy</p>
+</div>
+<span class="mt-0 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
+View posts
+<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+</span>
+</a>
 <a href="/categories/quantum-computing/" class="flex flex-col justify-between px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
 <div>
 <h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Quantum Computing</h3>
-<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Superconducting Qubits, Circuit QED, Quantum Error Correction, Quantum Machine Learning</p>
-</div>
-<span class="mt-0 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
-View posts
-<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-</span>
-</a>
-<a href="/categories/optics/" class="flex flex-col justify-between px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
-<div>
-<h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Optics</h3>
-<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Quantum Optics, Light-Matter Interaction, Quantum Sensing</p>
-</div>
-<span class="mt-0 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
-View posts
-<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-</span>
-</a>
-
-<a href="/categories/condensed-matter/" class="flex flex-col justify-between px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all group min-h-0 no-underline">
-<div>
-<h3 class="font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">Condensed Matter</h3>
-<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">2D Materials, Magnetism, Semiconductor Physics, Spectroscopy</p>
+<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Quantum Machine Learning, Superconducting Qubits, Circuit Quantum Electrodynamics (cQED), Quantum Error Correction</p>
 </div>
 <span class="mt-0 inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-600 dark:text-cyan-400 transition-opacity">
 View posts
@@ -113,6 +112,20 @@ View posts
 Experience
 </h2>
 <ul class="space-y-8">
+<!-- Item New -->
+<li class="flex items-start group">
+<span class="mr-4 mt-2 h-2.5 w-2.5 rounded-full bg-cyan-500 shrink-0 group-hover:scale-125 transition-transform"></span>
+<div class="w-full">
+<div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+<strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Undergraduate Researcher</strong>
+<span class="text-slate-500 font-mono text-sm whitespace-nowrap">Sep 2026 – Present</span>
+</div>
+<div class="text-slate-700 dark:text-slate-300">Solid State Spectroscopy Lab, Yonsei University</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Advisor: Prof. Jae Hoon Kim</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Investigate optical and magneto-optical properties of two-dimensional van der Waals materials.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Perform optical spectroscopy experiments and analyze spectroscopic data to characterize electronic and magnetic properties of low-dimensional materials.</div>
+</div>
+</li>
 <!-- Item New -->
 <li class="flex items-start group">
 <span class="mr-4 mt-2 h-2.5 w-2.5 rounded-full bg-cyan-500 shrink-0 group-hover:scale-125 transition-transform"></span>
