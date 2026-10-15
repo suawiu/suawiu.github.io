@@ -117,20 +117,6 @@ Experience
 <span class="mr-4 mt-2 h-2.5 w-2.5 rounded-full bg-cyan-500 shrink-0 group-hover:scale-125 transition-transform"></span>
 <div class="w-full">
 <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
-<strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Undergraduate Researcher</strong>
-<span class="text-slate-500 font-mono text-sm whitespace-nowrap">Sep 2026 – Present</span>
-</div>
-<div class="text-slate-700 dark:text-slate-300">Solid State Spectroscopy Lab, Yonsei University</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Advisor: Prof. Jae Hoon Kim</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Investigate optical and magneto-optical properties of two-dimensional van der Waals materials.</div>
-<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Perform optical spectroscopy experiments and analyze spectroscopic data to characterize electronic and magnetic properties of low-dimensional materials.</div>
-</div>
-</li>
-<!-- Item New -->
-<li class="flex items-start group">
-<span class="mr-4 mt-2 h-2.5 w-2.5 rounded-full bg-cyan-500 shrink-0 group-hover:scale-125 transition-transform"></span>
-<div class="w-full">
-<div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
 <strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">SK hynix Ambassador</strong>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap">Apr 2026 – Present</span>
 </div>
