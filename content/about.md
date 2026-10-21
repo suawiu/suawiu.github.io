@@ -171,8 +171,35 @@ Experience
 </ul>
 </section>
 
-<!-- 4. Certifications -->
+<!-- 4. Projects -->
 <section class="opacity-0 animate-fade-in-up" style="animation-delay: 400ms;">
+<h2 class="flex items-center text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6 border-b border-slate-200 dark:border-slate-800 pb-2">
+<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+</svg>
+Projects
+</h2>
+<ul class="space-y-8">
+<li class="flex items-start group">
+<span class="mr-4 mt-2 h-2.5 w-2.5 rounded-full bg-cyan-500 shrink-0 group-hover:scale-125 transition-transform"></span>
+<div class="w-full">
+<div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+<strong class="text-lg text-slate-900 dark:text-slate-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Tilted-Array HBM (taHBM)</strong>
+<span class="text-slate-500 font-mono text-sm whitespace-nowrap">Jul 2026 – Present</span>
+</div>
+<div class="text-slate-700 dark:text-slate-300">STOB League</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Co-developed a tilted-die memory packaging concept that uses a patterned support substrate and redistribution layers (RDLs) to connect individual DRAM dies without through-silicon vias (TSVs) or a base die.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Investigated a fabrication approach combining anisotropic silicon etching, inclined-surface metallization, and indium microbump bonding for die placement and electrical interconnection.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Performed preliminary geometric and interconnect calculations to assess die pitch, routing-length differences, and signal propagation skew.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Explored inter-die cooling channels for thermal management and examined fabrication and assembly constraints.</div>
+<div class="text-slate-600 dark:text-slate-400 text-sm mt-1">Preparing invention disclosure documents and technical materials for a patent application on the proposed memory packaging architecture.</div>
+</div>
+</li>
+</ul>
+</section>
+
+<!-- 5. Certifications -->
+<section class="opacity-0 animate-fade-in-up" style="animation-delay: 500ms;">
 <h2 class="flex items-center text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6 border-b border-slate-200 dark:border-slate-800 pb-2">
 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -210,8 +237,8 @@ Certifications
 </ul>
 </section>
 
-<!-- 5. Awards -->
-<section class="opacity-0 animate-fade-in-up" style="animation-delay: 500ms;">
+<!-- 6. Awards -->
+<section class="opacity-0 animate-fade-in-up" style="animation-delay: 600ms;">
 <h2 class="flex items-center text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6 border-b border-slate-200 dark:border-slate-800 pb-2">
 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -261,8 +288,8 @@ Awards and Scholarships
 </ul>
 </section>
 
-<!-- 6. Activities -->
-<section class="opacity-0 animate-fade-in-up" style="animation-delay: 600ms;">
+<!-- 7. Activities -->
+<section class="opacity-0 animate-fade-in-up" style="animation-delay: 700ms;">
 <h2 class="flex items-center text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6 border-b border-slate-200 dark:border-slate-800 pb-2">
 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
