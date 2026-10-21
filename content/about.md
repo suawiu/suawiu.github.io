@@ -55,6 +55,7 @@ Education
 <div class="text-slate-700 dark:text-slate-300 md:pr-6">B.S. in Physics and Intelligent Semiconductor Technology (Double Major)</div>
 <span class="text-slate-500 font-mono text-sm whitespace-nowrap md:text-right">Mar 2022 – Present</span>
 </div>
+<div class="text-slate-700 dark:text-slate-300 mt-1">Minor in Applied Statistics (in progress)</div>
 <div class="text-slate-600 dark:text-slate-400 text-sm mt-2">Relevant coursework: Quantum Mechanics, Electromagnetics, Materials Science, Intelligent Semiconductor Systems, Machine Learning, Deep Learning, Quantum Machine Learning, Statistical Mechanics, Thermodynamics, and Linear Algebra</div>
 </div>
 </li>
