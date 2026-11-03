@@ -59,6 +59,20 @@ html.dark article a.yt-link:hover {
   opacity: 0.8;
 }
 
+a.ig-link,
+html.dark a.ig-link,
+html.dark article a.ig-link {
+  color: #e1306c !important;
+  transition: transform 0.2s ease, opacity 0.2s;
+}
+a.ig-link:hover,
+html.dark a.ig-link:hover,
+html.dark article a.ig-link:hover {
+  color: #e1306c !important;
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
+
 /* =========================
    KaTeX 모바일 overflow 처리
    ========================= */

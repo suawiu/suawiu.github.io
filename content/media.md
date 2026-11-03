@@ -2,6 +2,12 @@
 type: media
 title: Media
 items:
+  - title: "📍SK하이닉스 앰버서더 랩(Lab)ㅣPowers of Ten : AI를 움직이는 가장 작은 세계"
+    source: "SK hynix Ambassador Instagram"
+    date: "2026-10-28"
+    description: "은하에서 원자까지, AI를 움직이는 가장 작은 세계를 따라가는 SK하이닉스 대학생 앰버서더 릴스."
+    image: "/images/powers-of-ten-reel-2026.jpg"
+    url: "https://www.instagram.com/reel/DfBF9ckx1Qg/"
   - title: "📍SK하이닉스 앰버서더 랩(Lab)ㅣ메모리 왁뿌볼"
     source: "SK hynix YouTube"
     date: "2026-08-14"
